@@ -1,9 +1,10 @@
-import "./careerDetailHero.css";
+import "./CareerDetailHero.css";
 import careerDetailHero from "../../../../assets/images/career-detail-hero.jpg";
 import nanoFrame from "../../../../assets/svg/nano.svg";
 import blueIcon from "../../../../assets/svg/blue-icon.svg";
 import ratingIcon from "../../../../assets/svg/rating.svg";
 import langIcon from "../../../../assets/svg/lang.svg";
+
 const CareerDetailHero = () => {
   return (
     <section className="career-detail-hero">
