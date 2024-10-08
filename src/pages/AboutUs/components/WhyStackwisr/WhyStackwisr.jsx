@@ -1,4 +1,4 @@
-import "./whyStackwisr.css";
+import "./WhyStackwisr.css";
 import whyImage from "../../../../assets/images/why.png";
 import stackwisrCardBg from "../../../../assets/svg/back-blue.svg";
 import expertLed from "../../../../assets/images/expert.png";
