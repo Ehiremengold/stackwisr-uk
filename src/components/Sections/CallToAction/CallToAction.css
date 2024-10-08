@@ -1,0 +1,153 @@
+.call-to-action {
+  position: relative;
+  margin: 0;
+
+  background-color: var(--primary-color);
+  padding: 9rem 0;
+}
+.call-to-action .wrapper {
+  place-content: center;
+}
+
+.call-to-action .get-started {
+  width: 15%;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+}
+
+@media (max-width: 425px) {
+  .call-to-action .get-started {
+    width: 25%;
+  }
+}
+
+.call-to-action .orange-man {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+}
+
+.call-to-action .orange-plane {
+  position: absolute;
+  bottom: 20%;
+  right: 10px;
+}
+
+@media (max-width: 785px) {
+  .call-to-action .orange-plane,
+  .call-to-action .orange-man {
+    width: 25%;
+  }
+}
+
+.call-to-action .cta-top-drop {
+  position: absolute;
+  top: 25px;
+  left: 20%;
+}
+
+.cta__section_content {
+  padding: 1rem;
+  border-radius: 15px;
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+}
+@media (max-width: 1024px) {
+  .cta__section_content {
+    width: 95%;
+  }
+}
+.cta__section_content .text-section {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .cta__section_content {
+    width: 90%;
+    margin-inline: auto;
+    flex-direction: column;
+    margin: inherit 0;
+    border-radius: 8px;
+  }
+  .cta__section_content .form-section {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 588px) {
+  .call-to-action .wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 765px) {
+  .text-section {
+    text-align: center;
+  }
+}
+
+.cta__section_content .text-section h2 {
+  font-size: clamp(16px, 2.5vw, 60px);
+}
+
+.cta__section_content .text-section p {
+  font-size: clamp(14px, 1.3vw, 50px);
+}
+
+.form-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2.35rem;
+  max-width: 550px;
+}
+
+@media (max-width: 425px) {
+  .form-section {
+    padding: 1.35rem;
+  }
+}
+
+.form-section form input,
+.form-section form select {
+  padding: 1rem;
+  font-family: "Poppins";
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 425px) {
+  .form-section form input,
+  .form-section form select {
+    padding: 0.5rem;
+  }
+}
+.form-section form input:focus {
+  outline: none;
+}
+.form-section form .name {
+  display: flex;
+  gap: 1rem;
+}
+
+.cta-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75em;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: "Poppins";
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

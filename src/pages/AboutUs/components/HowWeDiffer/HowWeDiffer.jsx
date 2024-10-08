@@ -1,0 +1,77 @@
+import "./HowWeDiffer.css";
+
+import blackLadyLearn from "../../../../assets/images/blackSec.png";
+import orangeUpPlane from "../../../../assets/svg/orange-plane-up.svg";
+import descImg from "../../../../assets/images/top-about.png";
+import arrowImg from "../../../../assets/icons/arrow.png";
+import buttonCircle from "../../../../assets/svg/button-circle.svg";
+import holisiticIcon from "../../../../assets/icons/holistic.png";
+import futureProofIcon from "../../../../assets/icons/futureproofed.png";
+import returnIcon from "../../../../assets/icons/return.png";
+
+const HowWeDiffer = () => {
+  return (
+    <section className="hwd">
+      <div className="wrapper">
+        <div className="hwd-left">
+          <div className="img-container">
+            <img src={orangeUpPlane} className="hwd-orange-plane" alt="" />
+            <img src={blackLadyLearn} alt="" className="black-lady-learn" />
+          </div>
+
+          <div className="hwd hero-content__text">
+            <img src={descImg} className="desc-img" alt="" />
+            <img src={arrowImg} className="desc-img arrow" alt="" />
+            <h1>Our Approach to Empower Your Journey</h1>
+            <p>increase your relevance to employers with valued experience</p>
+            <button className="action-item-btn">
+              <img src={buttonCircle} alt="" />
+              CLICK TO BEGIN
+            </button>
+          </div>
+        </div>
+
+        <div className="hwd-right">
+          <div className="hwd-right-title">
+            <div className="desc-bar"></div>
+            <h1>How we Differ</h1>
+          </div>
+
+          <div className="hwd-right-boxes">
+            <div className="hwd-right-box-card">
+              <div className="box-head-row">
+                <img src={futureProofIcon} alt="" />
+                <h3>Future-Proofed Curriculum</h3>
+              </div>
+              <p>
+                Our programs are designed to anticipate industry shifts and
+                equip learners with skills for the future.
+              </p>
+            </div>
+            <div className="hwd-right-box-card">
+              <div className="box-head-row">
+                <img src={returnIcon} alt="" />
+                <h3>Return on Investment</h3>
+              </div>
+              <p>
+                Achieve significant career progression and professional growth
+                within months of program completion.
+              </p>
+            </div>
+            <div className="hwd-right-box-card">
+              <div className="box-head-row">
+                <img src={holisiticIcon} alt="" />
+                <h3>Holistic Talent Development</h3>
+              </div>
+              <p>
+                We nurture not just technical proficiency, but also essential
+                soft skills and leadership qualities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+export default HowWeDiffer;

@@ -1,0 +1,144 @@
+.blog {
+  position: relative;
+  margin: 6rem 0;
+}
+
+.blog-bg {
+  position: absolute;
+  right: 0;
+  width: 25%;
+}
+
+.blog .wrapper {
+  width: 95%;
+  margin-inline: auto;
+  /* border: 1px solid red; */
+}
+
+@media (min-width: 1024px) {
+  .blog .wrapper {
+    width: 60%;
+  }
+}
+
+.blog-section-title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  gap: 1rem;
+}
+.blog-section__title,
+.blog-section__subtitle {
+  text-align: center;
+}
+
+.blog-section__title {
+  font-size: clamp(16px, 3vw, 50px);
+}
+
+.blog-section__subtitle {
+  font-size: clamp(13px, 1vw, 35px);
+  font-weight: 500;
+}
+
+.blog-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.blog-section-grid .main-post {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.blog-section-grid .main-post .dark-shade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3),
+    /* Top color with 70% opacity */ rgba(0, 0, 0, 0.8)
+  );
+  display: flex;
+  align-items: end;
+}
+.post-desc {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.post-desc h2 {
+  font-size: clamp(15px, 1.5vw, 25px);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.post-desc h2:hover {
+  text-decoration: underline;
+}
+.post-desc h4 {
+  color: #f759bc;
+}
+.post-desc .author-date {
+  display: flex;
+  column-gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-desc .author-date p {
+  font-size: clamp(13px, 0.6vw, 25px);
+}
+.post-desc .author-date .author {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.post-desc .author-date .date {
+  display: flex;
+  gap: 0.4rem;
+}
+.main-post .main-post-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.more-posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.more-posts__card {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  z-index: 5;
+  display: flex;
+}
+.more-posts__card p {
+  color: #777575;
+}
+.more-posts__card h2 {
+  color: var(--primary-color);
+}
+
+.more-post___img {
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  /* height: 150px; */
+}

@@ -1,0 +1,86 @@
+.details-products-pricing {
+  margin: 4rem 0;
+}
+
+.details-products-pricing .wrapper {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.tab-control {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 840px) {
+  .tab-control {
+    place-content: center;
+  }
+}
+.tab-control .tab {
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid  rgb(204, 203, 203);
+}
+
+@media (max-width: 461px) {
+  .tab-control .tab {
+    padding: 0.3rem 0.9rem;
+  }
+}
+
+.tab-control .tab.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+.tab-body {
+  margin-top: 2rem;
+  border: 1px solid rgb(211, 210, 210);
+  border-radius: 25px;
+}
+
+.tab-divider{
+  border: 1px solid rgb(235, 232, 232);
+}
+
+.tab-body-top,
+.tab-body-bottom {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.tab-body h3 {
+  font-weight: 500;
+  color: #777575;
+}
+
+.tab-body p {
+  font-weight: 700;
+}
+
+.program-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.program-types p{
+  margin-top: 0;
+}
+
+.program-types div{
+  padding: .2rem .8rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 25px;
+}
+
+.program-types div:first-of-type{
+  background-color: #F98B03;
+  color: black;
+}

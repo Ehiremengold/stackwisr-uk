@@ -1,0 +1,138 @@
+.hwd {
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 5rem;
+}
+
+.hwd .wrapper {
+  display: flex;
+  gap: 2.5rem;
+  width: 85%;
+}
+
+.hwd-right-title .desc-bar {
+  width: 20%;
+}
+
+.hwd-left {
+  width: fit-content;
+}
+
+.hwd-right-title {
+  color: #fff;
+}
+.hwd-right-title h1 {
+  font-size: clamp(16px, 3vw, 60px);
+}
+.hwd-left .img-container {
+  position: relative;
+  width: fit-content;
+}
+.hwd-left .img-container .hwd-orange-plane {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  left: -70px;
+}
+
+.hwd.hero-content__text {
+  margin-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+@media (max-width:990px) {
+  .hwd.hero-content__text {
+    text-align: center;
+    display: grid ;
+    place-content: center;
+  }
+  .black-lady-learn{
+    display: flex;
+    place-content: center;
+  }
+}
+
+.hwd.hero-content__text h1 {
+  font-size: clamp(16px, 2.3vw, 50px);
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.hwd.hero-content__text p {
+  font-size: clamp(16px, 1.3vw, 40px);
+  font-style: italic;
+  color: #f98b03;
+}
+
+.hwd.hero-content__text .desc-img.arrow {
+  bottom: 0;
+}
+
+.hwd-right-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  /* border: 1px solid red; */
+}
+.black-lady-learn {
+  width: 100%;
+}
+
+.hwd-right-boxes > div:nth-child(2n) {
+  align-self: flex-start;
+}
+
+.hwd-right-box-card {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 1.3rem;
+  color: #fff;
+  width: 50%;
+  align-self: center;
+}
+
+.box-head-row {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1180px) {
+  .hwd .wrapper {
+    flex-wrap: wrap-reverse;
+    place-content: center;
+  }
+}
+
+@media (max-width: 1466px) {
+  .hwd-right-box-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .hwd {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 488px) {
+  .hwd {
+    padding: 1rem;
+  }
+
+  .hwd .wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width:488px) {
+  .hwd-left .img-container .hwd-orange-plane {
+    width: 20%;
+    left:-40px;
+  }
+}

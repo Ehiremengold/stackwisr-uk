@@ -1,0 +1,11 @@
+.girl-get-started .girl-started {
+  margin-inline: auto;
+  display: flex;
+  place-content: center;
+}
+
+@media (max-width:550px) {
+  .girl-get-started .girl-started {
+    width: 100%;
+  }
+}

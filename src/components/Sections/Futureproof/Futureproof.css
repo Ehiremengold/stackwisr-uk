@@ -1,0 +1,107 @@
+.future-proof {
+  margin: 4rem 0;
+}
+.future-proof .wrapper {
+  position: relative;
+  background-color: var(--primary-color);
+  /* height: 400px; */
+  padding: 5rem 0;
+  border-radius: 25px;
+}
+
+@media (max-width:768px) {
+  .future-proof .wrapper {
+    border-radius: 0;
+  }
+}
+
+.future-proof .wrapper .white-spill.top {
+  top: 5px;
+  width: 3%;
+  left: 60%;
+}
+
+@media (max-width:768px) {
+  .future-proof .wrapper .white-spill.top {
+    width: 8%;
+  }
+}
+
+.future-proof .wrapper .white-spill {
+  width: 5%;
+  position: absolute;
+  bottom: 5px;
+  left: 23%;
+}
+
+.future-proof .wrapper .future-proof__content {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+@media (max-width: 1096px) {
+  .future-proof .wrapper .future-proof__content {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .future-proof__text {
+    margin-inline: auto;
+    width: 95%;
+  }
+  .straight-plane {
+    display: none;
+  }
+}
+.future-proof__img {
+  width: 100%;
+}
+.future-proof__img img {
+  width: 100%;
+}
+.future-proof__text {
+  color: #fff;
+  position: relative;
+}
+.future-main-desc {
+  margin-top: 1rem;
+}
+.future-desc-img {
+  width: 50%;
+}
+.future-proof__text .straight-plane {
+  position: absolute;
+  top: 190px;
+  right: 0;
+}
+.future-proof__text h2 {
+  font-size: clamp(15px, 3vw, 45px);
+}
+/* 1096 */
+.future-proof__text p {
+  font-size: clamp(12px, 1.5vw, 30px);
+}
+
+.line-divider {
+  width: 80%;
+}
+
+.job-fields {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.job-fields .field {
+  background-color: var(--tertiary-color);
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.6rem 1.3rem;
+}

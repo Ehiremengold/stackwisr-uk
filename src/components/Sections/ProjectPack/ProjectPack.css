@@ -1,0 +1,125 @@
+.project-pack .wrapper {
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  position: relative;
+  padding: 1rem;
+}
+
+@media (max-width:786px) {
+  .project-pack .wrapper{
+    border-radius: 0;
+  }
+}
+.project-pack .wrapper .two-stroke {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.project-pack .wrapper .title {
+  color: #f98b03;
+  font-style: italic;
+  text-align: center;
+  font-size: clamp(14px, 4vw, 35px);
+}
+
+.project-pack-explained {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: 80%;
+  margin-top: 2rem;
+  gap: 3.5rem;
+}
+/* 1090 */
+@media (max-width: 1090px) {
+  .project-pack-explained {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .project-pack .wrapper .two-stroke {
+    display: none;
+  }
+}
+
+.project-pack-ready {
+  align-self: center;
+  width: 100%;
+}
+
+.project-pack-text-desc {
+  position: relative;
+  width: fit-content;
+}
+
+.project-pack-text-desc h1 {
+  font-size: clamp(20px, 2vw, 40px);
+  color: white;
+  font-style: italic;
+}
+
+.angle-top,
+.angle-bottom {
+  position: absolute;
+}
+.angle-top {
+  top: 0;
+  left: 0;
+}
+.angle-bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.action-item-desc {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.action-item-desc .action-item {
+  white-space: nowrap;
+  padding: 0.7rem;
+  background-color: white;
+  border-radius: 5px;
+  border-left: 7px solid var(--accent-color);
+  z-index: 4;
+}
+
+.project-pack-maximize {
+  width: 100%;
+  align-self: stretch;
+}
+
+.project-pack-maximize h2 {
+  font-size: clamp(16px, 2vw, 50px);
+  color: white;
+}
+
+.project-pack-maximize p {
+  color: #f98b03;
+  font-style: italic;
+  font-size: clamp(14px, 1vw, 30px);
+  font-weight: 600;
+}
+
+.action-item-btn {
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0;
+  border-radius: 35px;
+  color: white;
+  background-color: var(--secondary-color);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+@media (max-width: 1087px) {
+  .action-item-btn {
+    margin-inline: auto;
+  }
+}

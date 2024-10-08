@@ -1,0 +1,158 @@
+.about-career-path {
+  /* margin-top: 4rem; */
+  /* margin-bottom: 2rem; */
+  /* margin: 0; */
+  position: relative;
+}
+
+.opaque-circles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+@media (max-width: 393px) {
+  .opaque-circles {
+    left: -40%;
+  }
+}
+.about-career-path .wrapper {
+  background-color: var(--primary-color);
+  position: relative;
+  padding: 4.5rem;
+  border-radius: 15px;
+}
+
+@media (max-width: 817px) {
+  .about-career-path .wrapper {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-career-path .wrapper {
+    padding: 1rem;
+  }
+}
+
+.about-career-path .wrapper h1 {
+  color: #fff;
+  font-size: clamp(14px, 1.5vw, 50px);
+}
+
+.programme-body {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  gap: 3rem;
+  width: 100%;
+}
+
+.programme-right-section {
+  flex: 1;
+}
+
+.programme-left-section {
+  /* border: 1px solid red; */
+  flex: 1;
+}
+
+.programme-desc p {
+  color: #fff;
+}
+.programme-desc p:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.programme-right-section .why-choose-grid {
+  margin: 0;
+}
+.learn-image-container {
+  border: 4px solid white;
+  width: 100%;
+  height: 200px;
+  /* border-radius: 8px; */
+  margin-bottom: 2rem;
+}
+
+.learn-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.skills-n-potentials .potentials .job-fields .field,
+.skills-n-potentials .skills .job-fields .field {
+  z-index: 5;
+}
+
+.skills-n-potentials .potentials .job-fields,
+.skills-n-potentials .skills .job-fields {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.skills-n-potentials .potentials h4,
+.skills-n-potentials .skills h4 {
+  color: #fff;
+}
+
+.skills-n-potentials .potentials,
+.skills-n-potentials .skills {
+  z-index: 5;
+}
+.skills-n-potentials .skills {
+  margin: 2rem 0;
+}
+
+.what-you-learn {
+  margin: 3rem 0;
+}
+
+.what-you-learn h1 {
+  font-size: clamp(16px, 2vw, 80px);
+}
+
+.what-you-learn-col {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+  color: #fff;
+}
+
+.what-you-learn-item {
+  display: flex;
+  gap: 1rem;
+  z-index: 5;
+}
+
+.what-you-learn-item img {
+  align-self: flex-start;
+}
+.what-you-learn-col .what-you-learn-item:nth-child(2),
+.what-you-learn-col .what-you-learn-item:nth-child(4) {
+  margin-left: 5rem; 
+}
+@media (max-width: 1000px) {
+  .what-you-learn-col .what-you-learn-item:nth-child(2),
+  .what-you-learn-col .what-you-learn-item:nth-child(4) {
+    margin-left: 0; 
+  }
+  .what-you-learn-item img {
+    width: 5%;
+    align-self: auto;
+  }
+}
+.program-plane,
+.programme-plane {
+  position: absolute;
+}
+
+.programme-plane {
+  right: 2rem;
+  bottom: 30%;
+}

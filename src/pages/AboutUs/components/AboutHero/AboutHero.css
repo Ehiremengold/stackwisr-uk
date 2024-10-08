@@ -1,0 +1,126 @@
+.about-hero .wrapper {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .about-hero .wrapper {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+.about-hero__main {
+  margin: 3rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.about-hero__main h1 {
+  font-size: clamp(25px, 4vw, 50px);
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .about-hero__main h1 {
+    /* width: 50%; */
+    margin-inline: auto;
+  }
+}
+.about-hero__main .action-btns {
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  place-content: center;
+  /* flex-wrap: wrap; */
+}
+
+@media (max-width: 365px) {
+  .about-hero__main .action-btns {
+    flex-wrap: wrap;
+  }
+}
+
+.about-hero__main .action-btns button:first-of-type {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.group-img {
+  display: grid;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1170px) {
+  .group-img {
+    width: 100%;
+  }
+}
+
+.about-hero__desc {
+  display: flex;
+  align-items: top;
+  gap: 4rem;
+  width: 80%;
+  margin: 4rem auto;
+  /* flex-wrap: wrap; */
+}
+
+@media (max-width: 803px) {
+  .about-hero__desc {
+    width: 90%;
+  }
+}
+
+.about-hero__desc-left {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  width: fit-content;
+  width: 20%;
+}
+
+@media (max-width: 528px) {
+  .about-hero__desc {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+  }
+
+  .about-hero__desc-left {
+    width: 100%;
+  }
+}
+
+.about-hero__desc-left-top {
+  color: var(--secondary-color);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about-hero__desc-left-top h4 {
+  white-space: nowrap;
+  flex: 1;
+}
+
+.about-hero__desc-left-top .desc-bar {
+  flex: 1;
+}
+
+.our-vision-grid {
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .our-vision-grid {
+    width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+.about-us-explained {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 1.5rem;
+  margin: 3rem auto;
+  width: 70%;
+}
+
+@media (min-width: 1472px) {
+  .about-us-explained {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-us-explained {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-us-explained {
+    width: 85%;
+  }
+}
+
+@media (max-width: 774px) {
+  .about-us-explained {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
+
+.about-us-explained-right h4 {
+  margin-bottom: 1rem;
+}
+
+.wwa-wwd .wrapper {
+  background: url("../../../../assets/bg/aboutwwd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem;
+  border-radius: 10px;
+}
+
+@media (max-width:918px) {
+  .wwa-wwd .wrapper {
+    padding: 2rem;
+  }
+}
+
+@media (max-width:430px) {
+  .wwa-wwd .wrapper {
+    padding: 1rem;
+  }
+}
+.wwd-right-top, .wwa-left-top{
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  gap: 1rem;
+}
+.wwa-wwd .wrapper .wwa {
+  align-self: center;
+  max-width: 700px;
+}
+
+
+.wwa-wwd .wrapper .wwd {
+  align-self: start;
+  max-width: 700px;
+}
