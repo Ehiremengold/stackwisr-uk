@@ -1,0 +1,161 @@
+.how-you-get-the-job {
+  background-color: var(--primary-color);
+  padding: 3rem;
+  margin: 0;
+  position: relative;
+}
+.rocket-img {
+  position: absolute;
+  right: 7%;
+  top: 3%;
+}
+
+@media (max-width:560px) {
+  .rocket-img {
+    width: 20%;
+  }
+}
+
+@media (max-width: 560px) {
+  .how-you-get-the-job {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 432px) {
+  .how-you-get-the-job {
+    padding: 1rem;
+  }
+}
+
+.the-journey {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  /* gap: 1rem; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 994px) {
+  .the-journey {
+    width: 85%;
+  }
+}
+
+@media (max-width: 734px) {
+  .the-journey {
+    width: 100%;
+  }
+}
+.the-journey-right {
+  width: 50%;
+  /* border: 1px solid purple; */
+}
+
+.the-journey-right h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(16px, 2vw, 60px);
+}
+
+.the-journey-right h1,
+.the-journey-right p {
+  color: #fff;
+}
+
+.the-journey-top {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.desc-bar-none {
+  display: none;
+  width: 7%;
+  height: 4px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 1242px) {
+  .the-journey-right {
+    width: 100%;
+  }
+  .the-journey-top {
+    justify-content: center;
+  }
+  .desc-bar-none {
+    display: block;
+  }
+  .the-journey-right {
+    text-align: center;
+  }
+}
+
+.the-journey-top h5 {
+  color: var(--secondary-color);
+}
+.at-stackwisr {
+  color: var(--secondary-color);
+}
+
+.road-map {
+  display: grid;
+  margin: 3rem auto;
+}
+
+@media (max-width: 406px) {
+  .blackdude {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1168px) {
+  .road-map {
+    width: 100%;
+  }
+}
+
+.recruitment-box{
+  display: flex;
+  margin:3rem auto;
+  gap: 1.5rem;
+  align-items: start;
+  color: #fff;
+  width: 80%;
+}
+
+@media (min-width:1440px) {
+  .recruitment-box{
+    width: 60%;
+  }
+}
+
+@media (max-width:884px) {
+  .recruitment-box{
+    width: 90%;
+  }
+}
+
+@media (max-width:619px) {
+  .recruitment-box{
+    width: 98%;
+  }
+}
+.recruitment-box .recruitment-text h1{
+  /* line-height: 20px; */
+  font-style: italic;
+  font-size: clamp(15px, 1.35vw, 60px);
+}
+
+.recruitment-box .recruitment-text p{
+  font-size: clamp(13px, 1vw, 30px);
+}
+
+@media (max-width:425px) {
+  .recruitment-box img{
+    display: none;
+  }
+}

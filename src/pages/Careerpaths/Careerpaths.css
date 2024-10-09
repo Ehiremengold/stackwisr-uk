@@ -1,25 +1,25 @@
-
-.all-paths-with-bg{
+.all-paths-with-bg {
   background: url("../../assets/bg/careerpathsbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 3rem;
+  /* padding: 3rem; */
+  margin: 0;
 }
 
-@media (max-width:534px) {
-  .all-paths-with-bg{
+@media (max-width: 534px) {
+  .all-paths-with-bg {
     padding: 0;
   }
 }
 
-@media (max-width:360px) {
-  .all-paths-with-bg{
+@media (max-width: 360px) {
+  .all-paths-with-bg {
     padding-top: 1rem;
   }
 }
 
-.grow-with-stackwisr{
-  background-color: #F5F7FA;
-
+.get-job-image {
+  width: 100%;
+  margin: 0;
 }

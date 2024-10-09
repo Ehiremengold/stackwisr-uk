@@ -5,7 +5,13 @@
   padding: 3.5rem;
 }
 
-@media (max-width:360px) {
+@media (max-width: 768px) {
+  .careerpaths .wrapper {
+    border-radius: 0;
+    padding: 2rem;
+  }
+}
+@media (max-width: 360px) {
   .careerpaths .wrapper {
     margin: 0;
   }
@@ -37,7 +43,7 @@
   color: #fff;
 }
 
-.careerpaths .wrapper img{
+.careerpaths .wrapper img {
   width: 100%;
   /* margin:100px; */
   margin: 3rem 0;

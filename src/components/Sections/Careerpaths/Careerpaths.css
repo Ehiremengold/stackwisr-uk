@@ -6,9 +6,17 @@
   width: 80%;
   position: relative;
 }
-@media (max-width:360px) {
+
+@media (max-width:768px) {
   .career-paths .wrapper{
     width: 90%;
+  }
+}
+
+
+@media (max-width:360px) {
+  .career-paths .wrapper{
+    width: 95%;
   }
 }
 .career-paths .wrapper
@@ -42,9 +50,12 @@
 .section-header__text h1 {
   font-size: var(--hero-font-main);
 }
+
 .section-header__text h3 {
-  font-size: var(--hero-font-desc);
+  font-size: clamp(16px, 1vw, 25px);
+  font-weight: 500;
 }
+
 .desc-bar {
   width: 7%;
   height: 4px;

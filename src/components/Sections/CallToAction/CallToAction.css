@@ -49,7 +49,7 @@
 }
 
 .cta__section_content {
-  padding: 1rem;
+  padding: 5rem;
   border-radius: 15px;
   width: 80%;
   margin-inline: auto;
@@ -58,6 +58,17 @@
   align-items: center;
   gap: 1rem;
   background-color: var(--secondary-color);
+}
+
+@media (max-width:1434px) {
+  .cta__section_content {
+    padding: 3rem;
+  }
+}
+@media (max-width:1156px) {
+  .cta__section_content {
+    padding: 1.5rem;
+  }
 }
 @media (max-width: 1024px) {
   .cta__section_content {

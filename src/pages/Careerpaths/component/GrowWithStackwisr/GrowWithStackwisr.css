@@ -1,0 +1,98 @@
+.grow-with-stackwisr {
+  background-color: #f5f7fa;
+  padding: 2rem 0 2rem 0;
+  margin: 0;
+}
+
+.grow-with-top {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.grow-with-header {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 851px) {
+  .grow-with-header {
+    width: 50%;
+  }
+}
+
+@media (max-width: 469px) {
+  .grow-with-header {
+    width: 90%;
+  }
+}
+
+.grow-with-header h1 {
+  font-size: var(--hero-font-main);
+}
+
+.grow-with-header p {
+  font-weight: 500;
+}
+.grow-with-header h1,
+.grow-with-header p {
+  color: var(--primary-color);
+}
+
+.grow-with-stackwisr .stackwisr-prog-img {
+  display: grid;
+  margin: 3rem auto;
+  /* width: 100%; */
+}
+
+@media (max-width: 982px) {
+  .grow-with-stackwisr .stackwisr-prog-img {
+    width: 100%;
+  }
+}
+
+.program-cards-grid {
+  display: grid;
+  gap: 1.5rem;
+  place-content: center;
+  margin-inline: auto;
+  margin: 1rem;
+}
+
+.program-cards-grid-1,
+.program-cards-grid-2 {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.program-card-item {
+  height: 111px;
+  width: 220px;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 495px) {
+  .program-card-item {
+    height: initial;
+    width: initial;
+  }
+  .program-cards-grid-1,
+  .program-cards-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.explore-courses {
+  background-color: var(--secondary-color);
+  color: #fff;
+  display: grid;
+  margin: 2.5rem auto;
+}

@@ -28,7 +28,9 @@ const Header = () => {
             <CloseMenu />
           </div>
           <ul className="center-nav-items">
-            <li>Career Paths</li>
+            <a href="/careerpaths">
+              <li>Career Paths</li>
+            </a>
             <li>Our Success</li>
             <li>Blog</li>
           </ul>

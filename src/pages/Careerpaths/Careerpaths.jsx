@@ -1,6 +1,9 @@
 import "./Careerpaths.css";
 import { Careerpaths as CareerpathSection } from "../../components/Sections/export.js";
 import CareerpathHero from "./component/CareerpathHero/CareerpathHero.jsx";
+import GrowWithStackwisr from "./component/GrowWithStackwisr/GrowWithStackwisr.jsx";
+import getJobImage from "../../assets/images/get-job.png";
+import Recruitment from "./component/Recruitment/Recruitment.jsx";
 
 const Careerpaths = () => {
   return (
@@ -9,12 +12,9 @@ const Careerpaths = () => {
       <section className="all-paths-with-bg">
         <CareerpathSection />
       </section>
-      <section className="grow-with-stackwisr">
-        <div className="wwa-left-top">
-          <h4>Grow with Stackwisr</h4>
-          <div className="desc-bar"></div>
-        </div>
-      </section>
+      <GrowWithStackwisr />
+      <img className="get-job-image" src={getJobImage} alt="" />
+      <Recruitment />
     </>
   );
 };

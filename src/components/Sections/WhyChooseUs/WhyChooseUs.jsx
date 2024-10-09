@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
             <h4>Why Choose Us</h4>
             <div className="desc-bar"></div>
           </div>
-          <h1>Get the best From Our Experience Trainers</h1>
+          <h1>Get the best From Our Experienced Trainers</h1>
           <p className="why-choose-subtitle">
             Unlock new career opportunities in the most in-demand fields with
             our expert-led programs
