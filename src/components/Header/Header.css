@@ -2,6 +2,12 @@ header {
   height: 60px;
 }
 
+a.active{
+  color: var(--accent-color);
+  background-color: transparent;
+  padding: 0;
+}
+
 @media (max-width:768px) {
   header {
     height: 40px;

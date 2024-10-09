@@ -1,16 +1,26 @@
 .more-posts.container{
-  display: flex;
+  gap: 1.5rem;
+  display: grid;
   width: 95%;
   margin-inline:auto;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.more-posts.container .more-posts__card{
-  flex: 1;
-}
 
 @media (min-width: 1024px) {
   .more-posts.container {
     width: 60%;
+    flex-wrap: wrap;
   }
+}
+
+.load-more{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.load-more-btn{
+  background-color: var(--accent-color);
+  color: #fff;
 }

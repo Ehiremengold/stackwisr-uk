@@ -1,10 +1,14 @@
 import "./Resources.css";
 import ResourcesHero from "./components/ResourcesHero/ResourcesHero.jsx";
 import pinkBg from "../../assets/svg/pinkbg.svg";
+import { Helmet } from "react-helmet";
 
 const Resources = () => {
   return (
     <>
+    <Helmet>
+      <title>StackwisR | Resources</title>
+    </Helmet>
       <ResourcesHero />
       <section className="resources-body">
         <img src={pinkBg} className="pink-bg" alt="" />

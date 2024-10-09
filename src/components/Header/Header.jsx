@@ -5,8 +5,9 @@ import Menu from "../Menu/Menu.jsx";
 import CloseMenu from "../CloseMenu/CloseMenu.jsx";
 import orangePlane from "../../assets/icons/orange-plane.png";
 import orangeMan from "../../assets/icons/orange-man.png";
-
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
+
 const Header = () => {
   const [menu, setMenu] = useState(false);
 
@@ -28,29 +29,29 @@ const Header = () => {
             <CloseMenu />
           </div>
           <ul className="center-nav-items">
-            <a href="/careerpaths">
+            <NavLink to="/careerpaths">
               <li>Career Paths</li>
-            </a>
-            <li>
-              <a href="/testimonies">Our Success</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
+            </NavLink>
+            <NavLink to="/testimonies">
+              <li>Our Success</li>
+            </NavLink>
+            <NavLink to="/blog">
+              <li>Blog</li>
+            </NavLink>
           </ul>
 
           {menu && <img src={orangePlane} className="asset" alt="" />}
           {menu && <img src={orangeMan} className="man-asset" alt="" />}
           <ul className="right-nav-items">
-            <li>
-              <a href="/about-us">About Us</a>
-            </li>
-            <li>
-              <a href="/events">Events</a>
-            </li>
-            <li>
-              <a href="/resources">Resources</a>
-            </li>
+            <NavLink to="/about-us">
+              <li>About Us</li>
+            </NavLink>
+            <NavLink to="/events">
+              <li>Events</li>
+            </NavLink>
+            <NavLink to="/resources">
+              <li>Resources</li>
+            </NavLink>
           </ul>
         </nav>
       </div>
