@@ -7,7 +7,7 @@ const GirlGetStarted = () => {
     <>
       <section className="call-to-action girl-get-started">
         <img src={girlGetStarted} className="girl-started" alt="" />
-        <img src={getStarted} className="get-started" alt="" />
+        <img src={getStarted} className="girl-get-started-img" alt="" />
       </section>
     </>
   );

@@ -1,8 +1,8 @@
-.call-to-action.girl-get-started{
+.girl-get-started{
   padding: 2rem;
 }
 
-.call-to-action .get-started{
+.girl-get-started-img{
   margin-inline:auto;
   place-content: center;
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 @media (max-width:550px) {
-  .call-to-action .get-started,
+  .girl-get-started-img,
   .girl-get-started .girl-started {
     width: 100%;
   }
