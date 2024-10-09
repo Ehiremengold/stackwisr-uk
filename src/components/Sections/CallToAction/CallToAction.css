@@ -16,7 +16,7 @@
   bottom: 5%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 420px) {
   .call-to-action .get-started {
     width: 25%;
   }
@@ -44,7 +44,7 @@
 
 .call-to-action .cta-top-drop {
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: 20%;
 }
 
@@ -60,12 +60,12 @@
   background-color: var(--secondary-color);
 }
 
-@media (max-width:1434px) {
+@media (max-width: 1434px) {
   .cta__section_content {
     padding: 3rem;
   }
 }
-@media (max-width:1156px) {
+@media (max-width: 1156px) {
   .cta__section_content {
     padding: 1.5rem;
   }
@@ -120,7 +120,7 @@
   max-width: 550px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 420px) {
   .form-section {
     padding: 1.35rem;
   }
@@ -135,7 +135,7 @@
   margin-bottom: 1.25rem;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 420px) {
   .form-section form input,
   .form-section form select {
     padding: 0.5rem;

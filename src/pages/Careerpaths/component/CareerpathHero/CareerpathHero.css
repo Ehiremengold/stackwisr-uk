@@ -1,6 +1,6 @@
 .careerpaths .wrapper {
   background-color: var(--primary-color);
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
   padding: 3.5rem;
 }
@@ -55,7 +55,7 @@
   background-color: var(--secondary-color);
   color: #fff;
   padding: 1.3rem 2.5rem;
-  font-size: clamp(14px, 1vw,  30px);
+  font-size: clamp(14px, 1vw, 30px);
 }
 
 .careerpaths .wrapper img {

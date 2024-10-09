@@ -19,9 +19,9 @@
   }
 }
 .tab-control .tab {
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: white;
-  border: 1px solid  rgb(204, 203, 203);
+  border: 1px solid rgb(204, 203, 203);
 }
 
 @media (max-width: 461px) {
@@ -39,10 +39,10 @@
 .tab-body {
   margin-top: 2rem;
   border: 1px solid rgb(211, 210, 210);
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
-.tab-divider{
+.tab-divider {
   border: 1px solid rgb(235, 232, 232);
 }
 
@@ -69,18 +69,18 @@
   gap: 1rem;
   align-items: center;
 }
-.program-types p{
+.program-types p {
   margin-top: 0;
 }
 
-.program-types div{
-  padding: .2rem .8rem;
+.program-types div {
+  padding: 0.2rem 0.8rem;
   background-color: var(--secondary-color);
   color: #fff;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
-.program-types div:first-of-type{
-  background-color: #F98B03;
+.program-types div:first-of-type {
+  background-color: #f98b03;
   color: black;
 }

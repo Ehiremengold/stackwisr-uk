@@ -7,20 +7,18 @@
   position: relative;
 }
 
-@media (max-width:768px) {
-  .career-paths .wrapper{
+@media (max-width: 768px) {
+  .career-paths .wrapper {
     width: 90%;
   }
 }
 
-
-@media (max-width:360px) {
-  .career-paths .wrapper{
+@media (max-width: 360px) {
+  .career-paths .wrapper {
     width: 95%;
   }
 }
-.career-paths .wrapper
-.career-paths .section-plane,
+.career-paths .wrapper .career-paths .section-plane,
 .career-paths .section-plane-2 {
   position: absolute;
   width: 6%;
@@ -52,7 +50,7 @@
 }
 
 .section-header__text h3 {
-  font-size: clamp(16px, 1vw, 25px);
+  font-size: clamp(16px, 1vw, 20px);
   font-weight: 500;
 }
 
@@ -83,11 +81,11 @@
   background-color: #fff;
 }
 
-.career-paths__card h3{
+.career-paths__card h3 {
   color: var(--primary-color);
 }
 
-.career-paths__card p{
+.career-paths__card p {
   color: grey;
   margin: 1rem 0;
   z-index: 10;
@@ -99,7 +97,7 @@
   right: 0;
 }
 
-button.more-btn{
+button.more-btn {
   display: flex;
   margin-inline: auto;
   border-radius: 35px;

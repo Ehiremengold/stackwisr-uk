@@ -10,7 +10,7 @@
   top: 3%;
 }
 
-@media (max-width:560px) {
+@media (max-width: 560px) {
   .rocket-img {
     width: 20%;
   }
@@ -118,44 +118,44 @@
   }
 }
 
-.recruitment-box{
+.recruitment-box {
   display: flex;
-  margin:3rem auto;
+  margin: 3rem auto;
   gap: 1.5rem;
   align-items: start;
   color: #fff;
   width: 80%;
 }
 
-@media (min-width:1440px) {
-  .recruitment-box{
+@media (min-width: 1440px) {
+  .recruitment-box {
     width: 60%;
   }
 }
 
-@media (max-width:884px) {
-  .recruitment-box{
+@media (max-width: 884px) {
+  .recruitment-box {
     width: 90%;
   }
 }
 
-@media (max-width:619px) {
-  .recruitment-box{
+@media (max-width: 619px) {
+  .recruitment-box {
     width: 98%;
   }
 }
-.recruitment-box .recruitment-text h1{
+.recruitment-box .recruitment-text h1 {
   /* line-height: 20px; */
   font-style: italic;
   font-size: clamp(15px, 1.35vw, 60px);
 }
 
-.recruitment-box .recruitment-text p{
+.recruitment-box .recruitment-text p {
   font-size: clamp(13px, 1vw, 30px);
 }
 
-@media (max-width:425px) {
-  .recruitment-box img{
+@media (max-width: 420px) {
+  .recruitment-box img {
     display: none;
   }
 }

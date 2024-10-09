@@ -1,63 +1,60 @@
 .why-choose-us .wrapper {
   background-color: var(--primary-color);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding: 3rem;
   justify-content: space-evenly;
   display: flex;
   position: relative;
 }
 
-
-.why-choose-us .wrapper .white-spill{
+.why-choose-us .wrapper .white-spill {
   position: absolute;
 }
 
-.why-choose-us .wrapper .white-spill.top{
+.why-choose-us .wrapper .white-spill.top {
   left: 50%;
   top: 10px;
 }
 
-.why-choose-us .wrapper .white-spill.left{
+.why-choose-us .wrapper .white-spill.left {
   /* left: 50%; */
   /* top: 10px; */
   bottom: 35%;
   left: 0;
 }
 
-.why-choose-us .wrapper .white-spill.bottom{
+.why-choose-us .wrapper .white-spill.bottom {
   right: 10%;
   bottom: 10px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .why-choose-us .wrapper {
     padding: 1.5rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .why-choose-us .wrapper .white-spill.top{
+  .why-choose-us .wrapper .white-spill.top {
     left: 0;
   }
 
-  .why-choose-us .wrapper .white-spill.left{
+  .why-choose-us .wrapper .white-spill.left {
     /* left: 50%; */
     /* top: 10px; */
     bottom: 25%;
     left: 0;
   }
 
-  .why-choose-us .wrapper .white-spill.bottom{
+  .why-choose-us .wrapper .white-spill.bottom {
     right: 5%;
     bottom: 10px;
   }
 }
 
-
-
-@media (min-width:1040px) {
-  .why-choose-desc{
+@media (min-width: 1040px) {
+  .why-choose-desc {
     width: 50%;
   }
 }
@@ -114,7 +111,6 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
   margin: 2rem 0;
-
 }
 .why-choose-box {
   border-radius: 15px;
@@ -132,12 +128,12 @@
   color: var(--primary-color);
 }
 
-.why-choose-box h3{
-  font-size: clamp(15px, .6vw, 35px);
+.why-choose-box h3 {
+  font-size: clamp(15px, 0.6vw, 35px);
 }
 
-.why-choose-box p{
-  font-size: clamp(13px, .3vw, 25px);
+.why-choose-box p {
+  font-size: clamp(13px, 0.3vw, 20px);
 }
 
 .why-choose-us .wrapper .img-desc {

@@ -1,0 +1,25 @@
+.resources-body {
+  position: relative;
+  background-color: #f5f7fa;
+  padding-top: 3rem;
+  padding-bottom: 50rem; /* removed later */
+}
+.pink-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.our-resources-title {
+  text-align: center;
+}
+
+.our-resources-title  h1{
+  font-size: clamp(16px, 3vw,  80px);
+}
+.our-resources-title .blue-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+}

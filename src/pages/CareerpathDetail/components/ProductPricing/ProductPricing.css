@@ -292,7 +292,6 @@
   width: 100%;
 }
 
-
 .products-pricing .get-started {
   width: 15%;
   position: absolute;
@@ -300,8 +299,7 @@
   bottom: 2%;
 }
 
-
-@media (max-width:425px) {
+@media (max-width: 420px) {
   .products-pricing .get-started {
     width: 25%;
   }

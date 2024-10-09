@@ -1,12 +1,12 @@
 .project-pack .wrapper {
   background-color: var(--primary-color);
-  border-radius: 25px;
+  border-radius: 20px;
   position: relative;
   padding: 1rem;
 }
 
-@media (max-width:786px) {
-  .project-pack .wrapper{
+@media (max-width: 786px) {
+  .project-pack .wrapper {
     border-radius: 0;
   }
 }

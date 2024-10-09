@@ -45,7 +45,7 @@
   /* flex-wrap: wrap; */
 }
 
-@media (max-width:409px) {
+@media (max-width: 409px) {
   .career-detail-hero .wrapper .left-section .action-btns {
     flex-wrap: wrap;
   }
@@ -100,7 +100,7 @@
   align-items: end;
   padding: 2rem;
 
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .career-rating-lang {
@@ -110,7 +110,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .career-rating,
 .career-lang,
@@ -132,11 +132,11 @@
   background-color: var(--primary-color);
   color: #fff;
   padding: 0.7rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
-.start-date p{
-  font-size: clamp(13px, .3vw, 25px);
+.start-date p {
+  font-size: clamp(13px, 0.3vw, 20px);
   white-space: nowrap;
 }
 .start-active {
@@ -151,5 +151,5 @@
   color: #069949;
   font-weight: 600;
   padding: 0.7rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 20px;
 }

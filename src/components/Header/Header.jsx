@@ -31,7 +31,9 @@ const Header = () => {
             <a href="/careerpaths">
               <li>Career Paths</li>
             </a>
-            <li>Our Success</li>
+            <li>
+              <a href="/testimonies">Our Success</a>
+            </li>
             <li>
               <a href="/blog">Blog</a>
             </li>
@@ -43,7 +45,12 @@ const Header = () => {
             <li>
               <a href="/about-us">About Us</a>
             </li>
-            <li>Resources</li>
+            <li>
+              <a href="/events">Events</a>
+            </li>
+            <li>
+              <a href="/resources">Resources</a>
+            </li>
           </ul>
         </nav>
       </div>

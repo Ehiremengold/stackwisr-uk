@@ -1,4 +1,4 @@
-.stories-more .wrapper {
+.resources .wrapper {
   background-color: var(--primary-color);
   border-radius: 20px;
   color: white;
@@ -6,42 +6,42 @@
 }
 
 @media (max-width: 768px) {
-  .stories-more .wrapper {
+  .resources .wrapper {
     border-radius: 0;
     padding: 2rem;
   }
 }
 
 @media (max-width: 580px) {
-  .stories-more .wrapper {
+  .resources .wrapper {
     padding: 2rem 1rem;
   }
 }
 @media (max-width: 360px) {
-  .stories-more .wrapper {
+  .resources .wrapper {
     margin: 0;
   }
 }
-.stories-more .wrapper h1 {
+.resources .wrapper h1 {
   font-size: clamp(16px, 6vw, 150px);
   text-align: center;
   line-height: 90%;
 }
 
-.stories-more .wrapper p {
+.resources .wrapper p {
   text-align: center;
   font-size: clamp(12px, 1.25vw, 45px);
   margin: 2rem 0;
 }
 
 @media (min-width: 1024px) {
-  .stories-more .wrapper p {
+  .resources .wrapper p {
     width: 60%;
     margin-inline: auto;
   }
 }
 
-.stories-more .wrapper img {
+.resources .wrapper img {
   width: 100%;
   margin: 3rem 0;
 }

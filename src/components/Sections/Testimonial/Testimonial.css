@@ -1,11 +1,18 @@
 .testimonials {
   position: relative;
   margin-bottom: 0;
+  overflow: hidden;
   /* border: 1px solid green; */
 }
 
 .testimonials .wrapper {
   width: 70%;
+}
+
+@media (max-width:568px) {
+  .testimonials .wrapper {
+    width: 76%;
+  }
 }
 
 .testimonials-bg {
@@ -87,11 +94,11 @@
 .testimonial-display-wrapper .testimony__text {
   align-self: center;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 20px;
   z-index: 5;
   padding: 1rem;
   /* border: 1px solid green; */
-  width: 70%;
+  width: 50%;
 }
 
 .testimonial-display-wrapper .testimony__text h2 {
@@ -117,9 +124,14 @@
 
 .testimonial-display-wrapper .testimonial-img {
   align-self: stretch;
+  /* height: 100%; */
+  height: 450px;
+  /* width: 100%; */
 }
 
 .testimonial-display-wrapper .testimonial-img img {
   width: 100%;
-  border-radius: 25px;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
