@@ -1,6 +1,13 @@
 header {
   height: 60px;
 }
+
+@media (max-width:768px) {
+  header {
+    height: 40px;
+  }
+  
+}
 header .wrapper {
   display: flex;
   align-items: center;
