@@ -1,0 +1,16 @@
+.more-posts.container{
+  display: flex;
+  width: 95%;
+  margin-inline:auto;
+  justify-content: space-between;
+}
+
+.more-posts.container .more-posts__card{
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .more-posts.container {
+    width: 60%;
+  }
+}

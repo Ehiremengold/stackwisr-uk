@@ -32,7 +32,9 @@ const Header = () => {
               <li>Career Paths</li>
             </a>
             <li>Our Success</li>
-            <li>Blog</li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
           </ul>
 
           {menu && <img src={orangePlane} className="asset" alt="" />}

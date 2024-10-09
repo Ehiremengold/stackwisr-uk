@@ -80,7 +80,7 @@
   margin: 2rem;
 }
 .post-desc h2 {
-  font-size: clamp(15px, 1.5vw, 25px);
+  font-size: clamp(15px, 1vw, 25px);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -90,6 +90,7 @@
 }
 .post-desc h4 {
   color: #f759bc;
+  font-size: clamp(15px, 1vw, 25px);
 }
 .post-desc .author-date {
   display: flex;
