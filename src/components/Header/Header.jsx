@@ -41,7 +41,7 @@ const Header = () => {
             <li>
               <a href="/about-us">About Us</a>
             </li>
-            <li>Events</li>
+            <li>Resources</li>
           </ul>
         </nav>
       </div>

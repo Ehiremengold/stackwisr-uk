@@ -6,8 +6,7 @@ const CareerpathHero = () => {
     <section className="careerpaths">
         <div className="wrapper">
           <div className="career-paths-title">
-            <h1>CAREER</h1>
-            <h1>&nbsp;&nbsp;&nbsp;PATHS</h1>
+            <h1>CAREER <br/>&nbsp;&nbsp;&nbsp;PATHS</h1>
           </div>
           <p>
             Our flexible programs are designed to fit your work schedule and

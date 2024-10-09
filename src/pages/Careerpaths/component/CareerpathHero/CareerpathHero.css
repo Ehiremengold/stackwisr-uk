@@ -11,26 +11,39 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 580px) {
+  .careerpaths .wrapper {
+    padding: 2rem 1rem;
+  }
+}
 @media (max-width: 360px) {
   .careerpaths .wrapper {
     margin: 0;
   }
 }
 .careerpaths .wrapper h1 {
-  font-size: clamp(16px, 6vw, 150px);
+  font-size: clamp(16px, 4vw, 80px);
   text-align: center;
-  margin: 0;
-  line-height: 90px;
+  line-height: 90%;
 }
+
+/* .career-paths-title{
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin: 2rem 0;
+} */
 
 .careerpaths .wrapper p {
   text-align: center;
-  margin: 2rem;
+  font-size: clamp(12px, 1.25vw, 45px);
+  margin: 3rem 0;
 }
 
 @media (min-width: 1024px) {
   .careerpaths .wrapper p {
-    width: 45%;
+    width: 60%;
     margin-inline: auto;
   }
 }
@@ -41,6 +54,8 @@
   margin-inline: auto;
   background-color: var(--secondary-color);
   color: #fff;
+  padding: 1.3rem 2.5rem;
+  font-size: clamp(14px, 1vw,  30px);
 }
 
 .careerpaths .wrapper img {
