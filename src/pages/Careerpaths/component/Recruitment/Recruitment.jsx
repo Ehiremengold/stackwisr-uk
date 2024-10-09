@@ -1,6 +1,6 @@
 import './Recruitment.css'
 import blackDude from "../../../../assets/images/black-dude.png";
-import roadMap from "../../../../assets/images/roadMap.png";
+import roadMap from "../../../../assets/images/roadmap.png";
 import rocket from "../../../../assets/images/rocket.png";
 import recruitImg from "../../../../assets/images/recruit-img.png";
 

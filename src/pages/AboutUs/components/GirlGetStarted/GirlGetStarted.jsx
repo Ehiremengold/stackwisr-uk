@@ -6,8 +6,8 @@ const GirlGetStarted = () => {
   return (
     <>
       <section className="call-to-action girl-get-started">
-        <img src={getStarted} className="get-started" alt="" />
         <img src={girlGetStarted} className="girl-started" alt="" />
+        <img src={getStarted} className="get-started" alt="" />
       </section>
     </>
   );

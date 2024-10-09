@@ -44,6 +44,7 @@
 
 @media (max-width:990px) {
   .hwd.hero-content__text {
+    padding: 0;
     text-align: center;
     display: grid ;
     place-content: center;
