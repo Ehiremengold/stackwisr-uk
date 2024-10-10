@@ -1,13 +1,15 @@
 .events .wrapper {
   background-color: var(--primary-color);
-  border-radius: 20px;
+  /* border-radius: 20px; */
   color: white;
   padding: 3.5rem;
+  border-radius: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .events .wrapper {
-    border-radius: 0;
+
     padding: 2rem;
   }
 }
