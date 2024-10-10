@@ -1,5 +1,5 @@
 import "./ResourcesHero.css";
-import resourcesHeroImg from "../../../../assets/images/careerPathsHero.png";
+import resourcesHeroImg from "../../../../assets/images/resourceHero.png";
 
 const ResourcesHero = () => {
   return (
