@@ -1,5 +1,5 @@
 import "./Hero.css";
-import heroUser from "../../assets/images/hero.png";
+import heroUser from "../../assets/images/heroo.png";
 import descImg from "../../assets/images/top.svg";
 import arrowImg from "../../assets/icons/arrow.png";
 import planeImg from "../../assets/icons/plane.svg";
@@ -9,26 +9,32 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="wrapper">
-        <div className="hero-content">
-          <div className="hero-content__text">
+        
+      <img className="hero-plane-img" src={planeImg} alt="" />
+        <div className="hero-text-container">
+
+          <div className="desc-container">
             <img src={descImg} className="desc-img" alt="" />
             <img src={arrowImg} className="desc-img arrow" alt="" />
+          </div>
+
+          <div className="hero-text__container">
             <h1>Redefine Possibilities with StackwisR</h1>
             <p>
               Future-proof your career with our AI-driven training and career
               development
             </p>
-            <div className="action-btns">
-              <button>Get Started</button>
-              <button>Learn more</button>
-            </div>
           </div>
-          <img src={nanoFrame} className="nano-description" alt="" />
 
-          <div className="hero-content__img">
-            <img src={heroUser} alt="" />
-            <img className="img-desc" src={planeImg} alt="" />
+          <div className="action-btns">
+            <button>Get Started</button>
+            <button>Learn more</button>
           </div>
+        </div>
+        <div className="hero-img-container">
+          <img src={heroUser} alt="" />
+          <div className="blue-container-blur"></div>
+          <img src={nanoFrame} className="nano-frame" alt="" />
         </div>
       </div>
     </section>

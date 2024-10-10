@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Hero from "../../components/Hero/Hero";
+
 import {
   Careerpaths,
   Futureproof,
@@ -18,14 +19,17 @@ const Home = () => {
       <Helmet>
         <title>StackwisR | Home </title>
       </Helmet>
-      <Hero />
-      <Careerpaths />
-      <Futureproof />
-      <ProjectPack />
-      <WhyChooseUs />
-      <Blog />
-      <Testimonial />
-      <CallToAction />
+
+      <>
+        <Hero />
+        <Careerpaths />
+        <Futureproof />
+        <ProjectPack />
+        <WhyChooseUs />
+        <Blog />
+        <Testimonial />
+        <CallToAction />
+      </>
     </>
   );
 };

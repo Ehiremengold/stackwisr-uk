@@ -3,7 +3,7 @@
   --secondary-color: rgb(41, 149, 226);
   --tertiary-color: rgb(33, 37, 71);
   --accent-color: rgba(247, 89, 188);
-  --hero-font-main: clamp(18px, 3.5vw, 50px);
+  --hero-font-main: clamp(18px, 4vw, 80px);
   --hero-font-desc: clamp(13px, 2vw, 20px);
 }
 

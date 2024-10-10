@@ -1,5 +1,6 @@
 header {
   height: 60px;
+  z-index: 5;
 }
 
 a.active{

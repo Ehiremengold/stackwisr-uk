@@ -1,12 +1,13 @@
 .hero .wrapper {
   background-color: var(--primary-color);
-  max-height: 90dvh;
+  max-height: 100dvh;
   border-radius: 20px;
-  /* border: 1px solid red; */
-  position: relative;
-  display: grid;
-  padding: 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  padding: 6rem 2.5rem;
   place-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -15,127 +16,134 @@
   }
 }
 
-.hero-content {
-  width: 95%;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* border: 1px solid green; */
+.hero-text-container,
+.hero-img-container {
+  flex: 1;
 }
 
-.hero-content__text {
-  color: #fff;
-  place-content: center;
-  position: relative;
-  /* border: 1px solid red; */
-  padding: 3rem 0;
-  height: fit-content;
-}
 
-.hero-content__text h1 {
-  font-size: var(--hero-font-main);
-  margin: 1.25rem 0;
-}
-
-.hero-content__text p {
-  font-size: var(--hero-font-desc);
-}
-.hero-content__img {
-  width: 100%;
-  place-self: center;
-}
-
-@media (max-width: 420px) {
-  .hero-content__img {
-    width: 70%;
-  }
-}
-
-.hero-content__img img {
-  width: 100%;
-}
-
-.hero-content__text .action-btns {
-  margin-top: 3rem;
-  display: flex;
+.hero-text-container {
+  display: grid;
   gap: 1rem;
+  color: #fff;
+}
+.hero-text-container .desc-container {
+  position: relative;
+  width: fit-content;
+}
+.hero-text-container .desc-container .desc-img.arrow {
+  position: absolute;
+  top: -50px;
+  right: -40px;
+}
+
+.hero-text-container h1 {
+  font-size: var(--hero-font-main);
+}
+
+.hero-text-container p {
+  font-size: var(--hero-font-desc);
+  margin: 1.5rem 0;
+}
+
+.hero-text-container .action-btns {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.hero-content__text .action-btns button {
+.hero-text-container .action-btns button {
   white-space: nowrap;
   font-size: clamp(16px, 1rem, 30px);
 }
 
-.hero-content__text .action-btns button:first-of-type {
+.hero-text-container .action-btns button:first-of-type {
   background-color: var(--secondary-color);
   color: white;
 }
 
-@media (max-width: 990px) {
-  .hero-content {
-    /* flex-wrap: wrap-reverse; */
-    text-align: center;
-    display: grid;
-    /* place-content: center; */
-    /* margin-top: 3rem; */
-    margin-bottom: 6rem;
+
+
+.hero-img-container {
+  position: relative;
+  border: none;
+}
+
+.hero-img-container img {
+  width: 100%;
+}
+
+.hero-img-container .blue-container-blur {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    rgba(10, 12, 30, 0.2) 40%,
+    rgba(10, 12, 30, 0.6) 60%,
+    rgba(10, 12, 30, 0.8) 80%
+  );
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.nano-frame {
+  position: absolute;
+  bottom: -20px;
+  height: 20%;
+  left: -300px;
+}
+
+@media (max-width:935px) {
+  .nano-frame{
+    top: 0;
+    left: 100px;
+  }
+}
+
+
+@media (max-width: 1238px) {
+  .hero-text-container,
+  .hero-img-container {
+    flex: initial;
   }
 
-  .hero-content .hero-content__text {
-    order: 2;
-    padding: 0;
+  .hero-text-container{
+    text-align: center;
+    margin: 2.5rem 0;
   }
-  .action-btns {
+  .hero-text-container .action-btns {
     justify-content: center;
   }
-  .desc-img {
+  .hero-text-container .desc-container {
+    display: flex;
+    justify-content: center;
+    margin-inline:auto;
+  }
+  .hero .wrapper {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media (max-width:422px) {
+  .desc-img.arrow{
+    width: 15%;
+  }
+}
+
+@media (max-width:401px) {
+  .desc-img.arrow{
     display: none;
   }
 }
 
-.desc-img {
-  position: absolute;
-  top: 0;
-}
-.desc-img.arrow {
-  top: -40px;
-  left: 290px;
-}
-
-.nano-description {
-  position: absolute;
-  top: 35px;
-  right: 60px;
-  width: 20vw;
-}
-@media (max-width: 420px) {
-  .nano-description {
-    right: 40px;
-  }
-}
-
-.nano-description__text {
-  position: absolute;
-  top: 0;
-  left: -10px;
-  margin: 1.25rem;
-  font-size: clamp(14px, 0.8rem, 24px);
-}
-
-.nano-description__text h3 {
-  white-space: nowrap;
-}
-
-.cut-out {
-  color: #fff;
-}
-.hero-content__img .img-desc {
-  width: 50%;
+.hero-plane-img{
+  /* width: 20%; */
   position: absolute;
   right: 0;
-  bottom: -5px;
+  bottom: 0;
   overflow: hidden;
+  z-index: 2;
 }

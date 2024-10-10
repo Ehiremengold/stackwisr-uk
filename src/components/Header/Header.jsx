@@ -5,15 +5,23 @@ import Menu from "../Menu/Menu.jsx";
 import CloseMenu from "../CloseMenu/CloseMenu.jsx";
 import orangePlane from "../../assets/icons/orange-plane.png";
 import orangeMan from "../../assets/icons/orange-man.png";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+
+  const location = useLocation()
+
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu);
   };
+
+  useEffect(() => {
+    setMenu(false)
+  }, [location])
+  
   return (
     <header>
       <div className="wrapper">
