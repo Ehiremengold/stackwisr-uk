@@ -55,13 +55,13 @@ const Careerpaths = () => {
 
             <button className="more-btn">Learn more</button>
           </div>
-          <div className="career-paths__card">
+          {/* <div className="career-paths__card">
             <img src={careerpathBg} alt="" />
             <h3>Fullstack Developer</h3>
             <p>Fullstack Developer career path prepares you to design,
             build, and manage data...</p>
-            <button className="more-btn">Read more</button>
-          </div>
+            <button className="more-btn">Learn more</button>
+          </div> */}
         </div>
       </div>
     </section>

@@ -55,7 +55,6 @@ const Event = () => {
         </p>
       </motion.div>
 
-      {/* Event Sections */}
       <motion.div
         ref={section1Ref} // Attach ref for in-view trigger
         initial={{ opacity: 0, y: 50 }} // Initial offscreen state

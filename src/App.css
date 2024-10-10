@@ -1,6 +1,7 @@
 .wrapper {
   width: 90%;
   margin-inline: auto;
+  overflow: hidden;
 }
 
 @media (max-width:768px) {
