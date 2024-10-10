@@ -1,0 +1,31 @@
+.event-body-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid red; */
+  width: fit-content;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.event-body-title h1{
+  font-size: clamp(18px, 2.3vw, 50px);
+}
+.events .wrapper p{
+  margin: 0;
+}
+
+.event-body-title .blue-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--secondary-color);
+}
+
+.event-body-section{
+  border: 1px solid red;
+  width: 90%;
+  margin:2rem auto;
+}

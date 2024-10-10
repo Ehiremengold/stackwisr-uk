@@ -98,7 +98,7 @@
 
 @media (max-width:935px) {
   .nano-frame{
-    top: 0;
+    top: 20px;
     left: 100px;
   }
 }
