@@ -8,8 +8,13 @@ import buttonCircle from "../../../../assets/svg/button-circle.svg";
 import holisiticIcon from "../../../../assets/icons/holistic.png";
 import futureProofIcon from "../../../../assets/icons/futureproofed.png";
 import returnIcon from "../../../../assets/icons/return.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const HowWeDiffer = () => {
+  const cardRef = useRef(null);
+  const cardInView = useInView(cardRef);
+
   return (
     <section className="hwd">
       <div className="wrapper">
@@ -18,12 +23,17 @@ const HowWeDiffer = () => {
             <img src={orangeUpPlane} className="hwd-orange-plane" alt="" />
             <img src={blackLadyLearn} alt="" className="black-lady-learn" />
           </div>
+          <div className="hero-text-container">
+            <div className="desc-container">
+              <img src={descImg} className="desc-img" alt="" />
+              <img src={arrowImg} className="desc-img arrow" alt="" />
+            </div>
 
-          <div className="hwd hero-content__text">
-            <img src={descImg} className="desc-img" alt="" />
-            <img src={arrowImg} className="desc-img arrow" alt="" />
-            <h1>Our Approach to Empower Your Journey</h1>
-            <p>increase your relevance to employers with valued experience</p>
+            <div className="hero-text__container">
+              <h1>Our Approach to Empower Your Journey</h1>
+              <p>increase your relevance to employers with valued experience</p>
+            </div>
+
             <button className="action-item-btn">
               <img src={buttonCircle} alt="" />
               CLICK TO BEGIN
@@ -38,7 +48,15 @@ const HowWeDiffer = () => {
           </div>
 
           <div className="hwd-right-boxes">
-            <div className="hwd-right-box-card">
+            <motion.div
+              ref={cardRef}
+              className="hwd-right-box-card"
+              initial={{ opacity: 0, y: -100 }} // Starts off-screen and transparent
+              animate={
+                cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+              }
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} // Customize the speed and easing
+            >
               <div className="box-head-row">
                 <img src={futureProofIcon} alt="" />
                 <h3>Future-Proofed Curriculum</h3>
@@ -47,8 +65,16 @@ const HowWeDiffer = () => {
                 Our programs are designed to anticipate industry shifts and
                 equip learners with skills for the future.
               </p>
-            </div>
-            <div className="hwd-right-box-card">
+            </motion.div>
+            <motion.div
+              ref={cardRef}
+              className="hwd-right-box-card"
+              initial={{ opacity: 0, x: -100 }} // Starts off-screen and transparent
+              animate={
+                cardInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Customize the speed and easing
+            >
               <div className="box-head-row">
                 <img src={returnIcon} alt="" />
                 <h3>Return on Investment</h3>
@@ -57,8 +83,16 @@ const HowWeDiffer = () => {
                 Achieve significant career progression and professional growth
                 within months of program completion.
               </p>
-            </div>
-            <div className="hwd-right-box-card">
+            </motion.div>
+            <motion.div
+              ref={cardRef}
+              className="hwd-right-box-card"
+              initial={{ opacity: 0, y: -100 }} // Starts off-screen and transparent
+              animate={
+                cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+              }
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} // Customize the speed and easing
+            >
               <div className="box-head-row">
                 <img src={holisiticIcon} alt="" />
                 <h3>Holistic Talent Development</h3>
@@ -67,7 +101,7 @@ const HowWeDiffer = () => {
                 We nurture not just technical proficiency, but also essential
                 soft skills and leadership qualities.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

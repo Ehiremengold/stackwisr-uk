@@ -3,7 +3,7 @@ import './Base.css'
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { motion } from "framer-motion";
-import logo from "./assets/logo/logo.png";
+import logo from "./assets/logo/logo-white.png";
 import { useState, useEffect } from "react";
 
 const Base = ({ children }) => {

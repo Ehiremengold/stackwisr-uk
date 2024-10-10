@@ -9,6 +9,7 @@ import {
   Blog,
   Resources,
   Testimonies,
+  Event,
 } from "./pages/pages";
 
 function App() {
@@ -19,9 +20,15 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about-us" element={<AboutUs />} />
           <Route exact path="/careerpaths" element={<Careerpaths />} />
+          <Route
+            exact
+            path="/careerpath/:slug"
+            element={<CareerpathDetail />}
+          />
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/resources" element={<Resources />} />
           <Route exact path="/testimonies" element={<Testimonies />} />
+          <Route exact path="/events" element={<Event />} />
           <Route
             exact
             path="/careerpath/:slug"

@@ -5,6 +5,7 @@ import AboutUs from "./AboutUs/AboutUs.jsx";
 import Blog from "./Blog/Blog.jsx";
 import Resources from "./Resources/Resources.jsx";
 import Testimonies from "./Testimonies/Testimonies.jsx";
+import Event from "./Event/Event.jsx";
 
 export {
   Home,
@@ -14,4 +15,5 @@ export {
   Blog,
   Resources,
   Testimonies,
+  Event
 };

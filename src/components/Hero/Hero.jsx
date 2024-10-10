@@ -5,38 +5,44 @@ import arrowImg from "../../assets/icons/arrow.png";
 import planeImg from "../../assets/icons/plane.svg";
 import nanoFrame from "../../assets/svg/nano.svg";
 
-const Hero = () => {
+const Hero = ({ heroRef, heroIsInView }) => {
   return (
-    <section className="hero">
-      <div className="wrapper">
-        
-      <img className="hero-plane-img" src={planeImg} alt="" />
-        <div className="hero-text-container">
+    <section className="hero" ref={heroRef}>
+      <span
+        style={{
+          transform: heroIsInView ? "none" : "translateX(-200px)",
+          opacity: heroIsInView ? 1 : 0,
+          transition: "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+        }}
+      >
+        <div className="wrapper">
+          <img className="hero-plane-img" src={planeImg} alt="" />
+          <div className="hero-text-container">
+            <div className="desc-container">
+              <img src={descImg} className="desc-img" alt="" />
+              <img src={arrowImg} className="desc-img arrow" alt="" />
+            </div>
 
-          <div className="desc-container">
-            <img src={descImg} className="desc-img" alt="" />
-            <img src={arrowImg} className="desc-img arrow" alt="" />
+            <div className="hero-text__container">
+              <h1>Redefine Possibilities with StackwisR</h1>
+              <p>
+                Future-proof your career with our AI-driven training and career
+                development
+              </p>
+            </div>
+
+            <div className="action-btns">
+              <button>Get Started</button>
+              <button>Learn more</button>
+            </div>
           </div>
-
-          <div className="hero-text__container">
-            <h1>Redefine Possibilities with StackwisR</h1>
-            <p>
-              Future-proof your career with our AI-driven training and career
-              development
-            </p>
-          </div>
-
-          <div className="action-btns">
-            <button>Get Started</button>
-            <button>Learn more</button>
+          <div className="hero-img-container">
+            <img src={heroUser} alt="" />
+            <div className="blue-container-blur"></div>
+            <img src={nanoFrame} className="nano-frame" alt="" />
           </div>
         </div>
-        <div className="hero-img-container">
-          <img src={heroUser} alt="" />
-          <div className="blue-container-blur"></div>
-          <img src={nanoFrame} className="nano-frame" alt="" />
-        </div>
-      </div>
+      </span>
     </section>
   );
 };

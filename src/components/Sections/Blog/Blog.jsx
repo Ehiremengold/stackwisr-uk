@@ -38,7 +38,7 @@ const Blog = () => {
                   </div>
                 </div>
                 <h2>Top ten tech skills to learn in 2024 to earn 6 figures</h2>
-                <a href="#">
+                <a href="/blog">
                   <h4>Explore More</h4>
                 </a>
               </div>

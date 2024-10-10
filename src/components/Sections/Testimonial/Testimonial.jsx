@@ -3,7 +3,8 @@ import pinkBg from "../../../assets/svg/pinkbg.svg";
 import testimonyBanner from "../../../assets/svg/real-story.svg";
 import testifier from "../../../assets/images/testifier.jpg";
 import testifier2 from "../../../assets/images/testifier-2.jpg";
-import './Testimonial.css'
+import "./Testimonial.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonial = () => {
   const testimonials = [
@@ -44,6 +45,8 @@ const Testimonial = () => {
     }
   };
 
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
     <section className="testimonials">
       <img src={pinkBg} className="testimonials-bg" alt="" />
@@ -60,16 +63,28 @@ const Testimonial = () => {
             &larr;
           </button>
 
-          <div className="testimonial-display-wrapper">
-            <div className="testimony__text">
-              <h2>{testimonials[currentIndex].name}</h2>
-              <h4>Company: {testimonials[currentIndex].company}</h4>
-              <p>{testimonials[currentIndex].testimony}</p>
-            </div>
-            <div className="testimonial-img">
-              <img src={testimonials[currentIndex].image} alt="" />
-            </div>
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              className="testimonial-display-wrapper"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="testimony__text">
+                <h2>{currentTestimonial.name}</h2>
+                <h4>Company: {currentTestimonial.company}</h4>
+                <p>{currentTestimonial.testimony}</p>
+              </div>
+              <div className="testimonial-img">
+                <img
+                  src={currentTestimonial.image}
+                  alt={currentTestimonial.name}
+                />
+              </div>
+            </motion.div>
+          </AnimatePresence>
 
           <button
             className="right-control"

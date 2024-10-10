@@ -4,10 +4,21 @@ import stackwisrCardBg from "../../../../assets/svg/back-blue.svg";
 import expertLed from "../../../../assets/images/expert.png";
 import payment from "../../../../assets/images/payment.png";
 import proven from "../../../../assets/images/proven.png";
+import { motion, useInView } from "framer-motion"; // Import useInView
+import { useRef } from "react";
 
 const WhyStackwisr = () => {
+  const ref = useRef(null); // Create a ref to track the section
+  const isInView = useInView(ref, { once: true, threshold: 0.3 }); // Check if in view
+
   return (
-    <section className="why-stackwisr">
+    <motion.section
+      ref={ref} // Attach the ref to the section
+      className="why-stackwisr"
+      initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and slide down
+      animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
+      transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+    >
       <div className="wrapper">
         <div className="why-stackwisr-title">
           <div className="line-bar"></div>
@@ -24,7 +35,12 @@ const WhyStackwisr = () => {
 
           <div className="why-stackwisr-right">
             <div className="left-cards">
-              <div className="why-stackwisr-card">
+              <motion.div
+                className="why-stackwisr-card"
+                initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and slide up
+                animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate to full opacity and original position when in view
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }} // Smooth transition
+              >
                 <img
                   src={stackwisrCardBg}
                   alt=""
@@ -39,8 +55,14 @@ const WhyStackwisr = () => {
                   expert mentorship and continuous on-the-job support to help
                   you thrive in your new career.
                 </p>
-              </div>
-              <div className="why-stackwisr-card col-2">
+              </motion.div>
+
+              <motion.div
+                className="why-stackwisr-card col-2"
+                initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and slide up
+                animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate to full opacity and original position when in view
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }} // Smooth transition
+              >
                 <img
                   src={stackwisrCardBg}
                   alt=""
@@ -54,11 +76,16 @@ const WhyStackwisr = () => {
                   at training; we provide continuous guidance and job placement
                   assistance to ensure your success.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
             <div className="right-cards">
-              <div className="why-stackwisr-card">
+              <motion.div
+                className="why-stackwisr-card"
+                initial={{ opacity: 0, y: 20 }} // Start with opacity 0 and slide up
+                animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate to full opacity and original position when in view
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }} // Smooth transition
+              >
                 <img
                   src={stackwisrCardBg}
                   alt=""
@@ -71,14 +98,15 @@ const WhyStackwisr = () => {
                   developed, 500+ businesses benefited, and a 4.7+ customer
                   satisfaction score. Our programs boast a 98% job placement
                   rate, ensuring that our delegates not only learn but also
-                  secure employment in their desired fields
+                  secure employment in their desired fields.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
+
 export default WhyStackwisr;

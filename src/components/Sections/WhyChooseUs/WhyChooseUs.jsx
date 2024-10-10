@@ -6,8 +6,9 @@ import resources from "../../../assets/svg/resources.svg";
 import training from "../../../assets/svg/training-icon.svg";
 import topDrop from "../../../assets/svg/top-drop.svg";
 import bottomDrop from "../../../assets/svg/bottom-drop.svg";
+import { motion } from "framer-motion";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ imageInContainerRef, imageInWhyChooseUsSection }) => {
   return (
     <section className="why-choose-us">
       <div className="wrapper">
@@ -62,9 +63,20 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="img-desc">
-          <img src={trainer} alt="" />
-        </div>
+        <motion.div className="img-desc">
+          <motion.img
+            src={trainer}
+            alt="Trainer"
+            ref={imageInContainerRef}
+            initial={{ opacity: 0, y: 100 }} // Starts with opacity 0 and translated 100px down
+            animate={imageInWhyChooseUsSection ? { opacity: 1, y: 0 } : {}} // Animate to opacity 1 and original position
+            transition={{
+              duration: 0.8,
+              ease: [0.17, 0.55, 0.55, 1], // Smooth easing
+              delay: 0.2,
+            }}
+          />
+        </motion.div>
       </div>
     </section>
   );

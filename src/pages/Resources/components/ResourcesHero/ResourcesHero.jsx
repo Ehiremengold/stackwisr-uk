@@ -1,5 +1,5 @@
 import "./ResourcesHero.css";
-import resourcesImg from "../../../../assets/images/stories-more.png";
+import resourcesHeroImg from "../../../../assets/images/careerPathsHero.png";
 
 const ResourcesHero = () => {
   return (
@@ -14,7 +14,7 @@ const ResourcesHero = () => {
           valuable materials surrounding how tech skills intersect with other
           industries
         </p>
-        <img src={resourcesImg} alt="" />
+        <img src={resourcesHeroImg} alt="" />
       </div>
     </section>
   );
