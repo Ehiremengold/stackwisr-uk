@@ -42,10 +42,10 @@ const Header = () => {
             <NavLink to="/testimonies">
               <li>Our Success</li>
             </NavLink>
-            <NavLink to="/blog">
+            <NavLink to="/blog" className="disable-link">
               <li>Blog</li>
             </NavLink>
-            <NavLink to="/resources">
+            <NavLink to="/resources" className="disable-link">
               <li>Resources</li>
             </NavLink>
           </ul>

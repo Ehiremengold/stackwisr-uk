@@ -7,11 +7,13 @@
   place-content: center;
   overflow: hidden;
   position: relative;
+  margin-top: 3.5rem;
 }
 
 @media (max-width: 768px) {
   .hero .wrapper {
     border-radius: 0;
+    margin-top: 0;
   }
 }
 

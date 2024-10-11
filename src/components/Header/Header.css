@@ -162,3 +162,9 @@ nav {
     bottom: 0;
   }
 }
+
+.disable-link{
+  color: grey;
+  cursor: not-allowed;
+  pointer-events: none;
+}

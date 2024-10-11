@@ -4,9 +4,6 @@ import date from "../../../assets/svg/date.svg";
 import darkAuthor from "../../../assets/svg/dark-author.svg";
 import darkDate from "../../../assets/svg/dark-date.svg";
 import blogBg from "../../../assets/svg/blog-bg.svg";
-import main from "../../../assets/images/main.jpg";
-import side from "../../../assets/images/side.png";
-
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { latestBlogPosts } from "../../../features/blog/blogSlice";
@@ -46,7 +43,6 @@ const Blog = () => {
       </div>
     );
   }
-  console.log(latestPosts.slice(1));
   const mainPost = latestPosts[0];
 
   return (
@@ -84,8 +80,8 @@ const Blog = () => {
                   </div>
                 </div>
                 <h2>{mainPost.title}</h2>
-                <a href={`/blog/${mainPost.slug}`}>
-                  <h4>Explore More</h4>
+                <a href="/">
+                  <h4>Explore more like this</h4>
                 </a>
               </div>
             </div>
@@ -94,15 +90,11 @@ const Blog = () => {
           <div className="more-posts">
             {latestPosts.slice(1).map((post) => {
               return (
-                <div key={post.id} className="more-posts__card">
-                  <div className="more-post-img__container">
-                    <img
-                      className="more-post___img"
-                      src={ROOT_URL + post.image}
-                      alt=""
-                    />
+                <div key={post.id} className="more-post-card">
+                  <div className="card-img-container">
+                    <img src={ROOT_URL + post.image} alt="" />
                   </div>
-                  <div className="post-desc">
+                  <div className="card-post-desc-container">
                     <div className="author-date">
                       <div className="author">
                         <img src={darkAuthor} alt="" />
