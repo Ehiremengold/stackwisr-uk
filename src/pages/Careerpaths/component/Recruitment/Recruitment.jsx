@@ -1,5 +1,5 @@
 import "./Recruitment.css";
-import blackDude from "../../../../assets/images/black-dude.png";
+import blackDude from "../../../../assets/svg/blackdude.svg";
 import roadMap from "../../../../assets/svg/roadmap.svg";
 import rocket from "../../../../assets/images/rocket.png";
 import recruitImg from "../../../../assets/images/recruit-img.png";

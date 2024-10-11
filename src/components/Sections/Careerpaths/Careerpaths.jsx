@@ -10,7 +10,6 @@ import { getCareerpaths } from "../../../features/careerpaths/careerpathSlice.js
 // import PageLoader from "../../components/PageLoader/PageLoader.jsx";
 
 const Careerpaths = () => {
-
   const dispatch = useDispatch();
 
   const { isLoading, isError, careerpaths } = useSelector(
@@ -44,23 +43,48 @@ const Careerpaths = () => {
           </div>
         )}
         {isLoading ? (
-          <PageLoader />
-        ) : (
-          <div className="career-paths__cards">
-            {careerpaths.map((careerpath) => {
-              const { id, career_name, slug, description } = careerpath;
-              return (
-                <div key={id} className="career-paths__card">
-                  <img src={careerpathBg} alt="" />
-                  <h3>{career_name}</h3>
-                  <p>{truncateText(description, 90)}</p>
-                  <a href={`/careerpaths/${slug}`}>
-                    <button className="more-btn">Learn more</button>
-                  </a>
-                </div>
-              );
-            })}
+          <div className="center-loader">
+            <PageLoader />
           </div>
+        ) : (
+          <>
+            <div className="career-paths__cards-grid">
+              
+              <div className="career-paths__cards">
+                {careerpaths.slice(0, 4).map((careerpath) => {
+                  const { id, career_name, slug, description } = careerpath;
+                  return (
+                    <div key={id} className="career-paths__card">
+                      <img src={careerpathBg} alt="" />
+                      <h3>{career_name}</h3>
+                      <p>{truncateText(description, 90)}</p>
+                      <a href={`/careerpaths/${slug}`}>
+                        <button className="more-btn">Learn more</button>
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="career-paths__cards row-two">
+                {careerpaths.slice(4).map((careerpath) => {
+                  const { id, career_name, slug, description } = careerpath;
+                  return (
+                    <div key={id} className="career-paths__card">
+                      <img src={careerpathBg} alt="" />
+                      <h3>{career_name}</h3>
+                      <p>{truncateText(description, 90)}</p>
+                      <a href={`/careerpaths/${slug}`}>
+                        <button className="more-btn">Learn more</button>
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+
+              
+            </div>
+          </>
         )}
       </div>
     </section>

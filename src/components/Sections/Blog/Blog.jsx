@@ -40,7 +40,11 @@ const Blog = () => {
   }
 
   if (!latestPosts || latestPosts.length < 1) {
-    return <h2>No posts Available</h2>;
+    return (
+      <div className="center-loader">
+        <h2>No posts Available</h2>
+      </div>
+    );
   }
   console.log(latestPosts.slice(1));
   const mainPost = latestPosts[0];

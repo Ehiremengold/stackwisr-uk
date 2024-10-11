@@ -50,7 +50,13 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+@media (max-width:320px) {
+  .hero-text-container .action-btns {
+    flex-wrap: wrap;
+  }
 }
 
 .hero-text-container .action-btns button {
@@ -62,8 +68,6 @@
   background-color: var(--secondary-color);
   color: white;
 }
-
-
 
 .hero-img-container {
   position: relative;
@@ -91,7 +95,7 @@
 .nano-frame {
   position: absolute;
   top: 0;
-  height: 15%;
+  height: 19%;
   width: 5%;
   left: -300px;
 }
@@ -142,8 +146,8 @@
 .hero-plane-img{
   /* width: 20%; */
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -20px;
+  bottom: 27px;
   overflow: hidden;
   z-index: 2;
 }

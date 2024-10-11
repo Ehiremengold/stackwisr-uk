@@ -21,9 +21,10 @@ const Footer = () => {
             <h3>Career Paths</h3>
             <ul className="footer-items">
               <li>Data Analyst</li>
-              <li>Business Analyst</li>
-              <li>Cybersecurity</li>
-              <li>HR Analyst</li>
+              <li>IT Business Analyst</li>
+              <li>Data Engineer</li>
+              <li>Data Analytics Engineer</li>
+              <li>Data Science AI</li>
             </ul>
           </div>
           <div className="col col-2">
