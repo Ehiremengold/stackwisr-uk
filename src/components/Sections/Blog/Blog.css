@@ -96,7 +96,7 @@
 .post-desc h6 {
   cursor: pointer;
   color: #f759bc;
-  font-size: clamp(15px, .5vw, 20px);
+  font-size: clamp(15px, 0.5vw, 20px);
 }
 .post-desc .author-date {
   display: flex;
@@ -142,10 +142,9 @@
   color: var(--primary-color);
 }
 
-.more-post-img__container{
+.more-post-img__container {
   width: 200px;
   height: 100%;
-  border: 1px solid goldenrod;
 }
 
 .more-post___img {
