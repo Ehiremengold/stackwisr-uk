@@ -24,9 +24,14 @@
   border-radius: 15px;
 }
 
+@media (max-width: 768px) {
+  .about-career-path .wrapper {
+    border-radius: 0;
+  }
+}
 @media (max-width: 817px) {
   .about-career-path .wrapper {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
@@ -46,7 +51,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: top;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -133,14 +138,13 @@
 .what-you-learn-item img {
   align-self: flex-start;
 }
-.what-you-learn-col .what-you-learn-item:nth-child(2),
-.what-you-learn-col .what-you-learn-item:nth-child(4) {
-  margin-left: 5rem; 
+.what-you-learn-col .what-you-learn-item:nth-child(2n){
+  margin-left: 5rem;
 }
 @media (max-width: 1000px) {
   .what-you-learn-col .what-you-learn-item:nth-child(2),
   .what-you-learn-col .what-you-learn-item:nth-child(4) {
-    margin-left: 0; 
+    margin-left: 0;
   }
   .what-you-learn-item img {
     width: 5%;

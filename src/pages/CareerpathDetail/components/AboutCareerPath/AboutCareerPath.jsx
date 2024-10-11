@@ -10,21 +10,7 @@ import resources from "../../../../assets/svg/resources.svg";
 import training from "../../../../assets/svg/training-icon.svg";
 import opaqueCircles from "../../../../assets/svg/opaque-circles.svg";
 
-const AboutCareerPath = () => {
-  const wyl = [
-    `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Deleniti obcaecati qui est, assumenda natus in maiores
-    `,
-    `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Deleniti obcaecati qui est, assumenda natus in maiores
-    `,
-    `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Deleniti obcaecati qui est, assumenda natus in maiores
-    `,
-    `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Deleniti obcaecati qui est, assumenda natus in maiores
-    `,
-  ];
+const AboutCareerPath = ({ wyl = [], pj = [], sywg = [], description }) => {
   return (
     <section className="about-career-path">
       <img src={opaqueCircles} className="opaque-circles" alt="" />
@@ -41,32 +27,30 @@ const AboutCareerPath = () => {
         <div className="programme-body">
           <div className="programme-left-section">
             <div className="learn-image-container">
-              <img src={learnImg} alt="" />
+              <img src={learnImg} alt="Student Learning" />
             </div>
             <div className="programme-desc">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                fugiat provident dolores incidunt excepturi. Aspernatur sit
-                nesciunt libero, alias illo architecto nostrum eveniet maxime
-                quo, dolor hic impedit distinctio in.
+                {description}
               </p>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum,
                 reiciendis nulla. Debitis assumenda hic minus veritatis, quaerat
                 eaque cupiditate. Harum nemo corrupti repellat voluptatem
                 inventore aliquid totam, numquam iure assumenda!
-              </p>
+              </p> */}
             </div>
             <div className="skills-n-potentials">
               <div className="skills">
                 <h4>Skills you&apos;ll gain</h4>
                 <div className="job-fields">
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
+                  {sywg.map((sy, index) => {
+                    return (
+                      <div key={index} className="field">
+                        {sy}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <div className="potentials">
@@ -74,11 +58,13 @@ const AboutCareerPath = () => {
                   Potential Jobs available after completion
                 </h4>
                 <div className="job-fields">
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
-                  <div className="field">Process Modelling</div>
+                  {pj.map((item, index) => {
+                    return (
+                      <div key={index} className="field">
+                        {item}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -121,7 +107,6 @@ const AboutCareerPath = () => {
 
             <div className="what-you-learn">
               <h1>What You&apos;ll Learn</h1>
-
               <div className="what-you-learn-col">
                 {wyl.map((wy, index) => {
                   return (

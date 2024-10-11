@@ -12,10 +12,14 @@ import { useRef } from "react";
 
 const AboutUs = () => {
   const projectPackRef = useRef(null);
-  const projectPackSection = useInView(projectPackRef, { once: true });
+  const projectPackSection = useInView(projectPackRef, {
+    threshold: 0.4,
+  });
 
   const careerpathsRef = useRef(null);
-  const careerpathsIsInView = useInView(careerpathsRef, { once: true });
+  const careerpathsIsInView = useInView(careerpathsRef, {
+    threshold: 0.4,
+  });
   return (
     <>
       <Helmet>

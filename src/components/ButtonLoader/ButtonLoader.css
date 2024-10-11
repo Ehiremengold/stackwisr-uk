@@ -6,6 +6,7 @@
   border-top: 5px solid black;
   animation: spin 1s linear infinite;
   /* margin: 5rem 0; */
+  position: absolute;
 }
 
 @keyframes spin {

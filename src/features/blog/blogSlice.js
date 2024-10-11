@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ROOT_URL } from "../../utils.js";
 
-const initialData = {
+const initialState = {
   isLoading: true,
   isError: false,
   more: false,
@@ -53,7 +53,7 @@ const latestBlogPosts = createAsyncThunk(
 
 export const blogSlice = createSlice({
   name: "blog",
-  initialData,
+  initialState,
   reducers: {
     incrementPage: (state) => {
       state.page += 1;

@@ -4,19 +4,20 @@ import nanoFrame from "../../../../assets/svg/nano.svg";
 import blueIcon from "../../../../assets/svg/blue-icon.svg";
 import ratingIcon from "../../../../assets/svg/rating.svg";
 import langIcon from "../../../../assets/svg/lang.svg";
+import { ROOT_URL } from "../../../../utils";
 
-const CareerDetailHero = () => {
+const CareerDetailHero = ({
+  career_name,
+  description,
+  rating,
+  img_display,
+}) => {
   return (
     <section className="career-detail-hero">
       <div className="wrapper">
         <div className="left-section">
-          <h1>IT Business Analyst</h1>
-          <p className="career-path-intro">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            soluta modi, architecto quas amet natus fugit! Atque sapiente illo
-            sint voluptates voluptatibus! Explicabo corrupti, cum minus ad natus
-            autem deleniti.
-          </p>
+          <h1>{career_name}</h1>
+          <p className="career-path-intro">{description}</p>
 
           <div className="action-btns">
             <button className="enroll-now">Enroll Now</button>
@@ -43,14 +44,18 @@ const CareerDetailHero = () => {
           </div>
         </div>
         <div className="right-section">
-          <img src={careerDetailHero} className="career-hero-img" alt="" />
+          <img
+            src={ROOT_URL + img_display}
+            className="career-hero-img"
+            alt=""
+          />
           <div className="dark-shade">
             <div className="course-detail-banner">
-              <img className="nano-description" src={nanoFrame} alt="" />
+              {/* <img className="nano-description" src={nanoFrame} alt="" /> */}
               <div className="career-rating-lang">
                 <div className="career-rating">
                   <img src={ratingIcon} alt="" />
-                  <h2>4.9</h2>
+                  <h2>{rating}</h2>
                 </div>
                 <div className="career-lang">
                   <img src={langIcon} alt="" />

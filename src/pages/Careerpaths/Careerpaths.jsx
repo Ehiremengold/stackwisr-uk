@@ -10,7 +10,7 @@ import { useRef } from "react";
 
 const Careerpaths = () => {
   const careerpathsRef = useRef(null);
-  const careerpathsIsInView = useInView(careerpathsRef, { once: true });
+  const careerpathsIsInView = useInView(careerpathsRef, { once: true, threshold: 0.4 });
   return (
     <>
       <Helmet>

@@ -17,6 +17,22 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 const Home = () => {
+  // if (isLoading) {
+  //   return (
+  //     <div className="wrapper">
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
+
+  // if (isError) {
+  //   return (
+  //     <div className="wrapper">
+  //       <h4>Error Loading Blog posts</h4>
+  //     </div>
+  //   );
+  // }
+
   const heroRef = useRef(null);
   const careerpathsRef = useRef(null);
   const blogRef = useRef(null);
@@ -26,13 +42,26 @@ const Home = () => {
   const imageInContainerRef = useRef(null);
 
   const heroIsInView = useInView(heroRef, { once: true });
-  const careerpathsIsInView = useInView(careerpathsRef, { once: true });
-  const blogSectionIsInView = useInView(blogRef, { once: true });
-  const futureProofSection = useInView(futureProofRef, { once: true });
-  const projectPackSection = useInView(projectPackRef, { once: true });
+  const careerpathsIsInView = useInView(careerpathsRef, {
+    once: true,
+    threshold: 0.4,
+  });
+  const blogSectionIsInView = useInView(blogRef, {
+    once: true,
+    threshold: 0.4,
+  });
+  const futureProofSection = useInView(futureProofRef, {
+    once: true,
+    threshold: 0.4,
+  });
+  const projectPackSection = useInView(projectPackRef, {
+    once: true,
+    threshold: 0.4,
+  });
 
   const imageInWhyChooseUsSection = useInView(imageInContainerRef, {
     once: true,
+    threshold: 0.4,
   });
 
   return (

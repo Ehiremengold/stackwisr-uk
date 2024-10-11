@@ -2,18 +2,19 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ROOT_URL } from "../../utils";
 
-const initialData = {
+const initialState = {
   isLoading: false,
-  isError: true,
+  isError: false,
   careerpaths: [],
   careerpath: [],
 };
 
-const getCareerpaths = createAsyncThunk(
+export const getCareerpaths = createAsyncThunk(
   "careerpaths/getCareerpaths",
   async (_, thunkAPI) => {
     try {
       const response = await axios(`${ROOT_URL}/api/careerpaths/`);
+      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -21,11 +22,13 @@ const getCareerpaths = createAsyncThunk(
   }
 );
 
-const getCareerpathDetail = createAsyncThunk(
+export const getCareerpathDetail = createAsyncThunk(
   "careerpaths/getCareerpathsDetail",
   async (slug, thunkAPI) => {
     try {
-      const response = await axios(`${ROOT_URL}/api/careerpaths/${slug}/`);
+      const response = await axios(`${ROOT_URL}/api${slug}/`);
+      console.log(response.data);
+      
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -35,7 +38,7 @@ const getCareerpathDetail = createAsyncThunk(
 
 const careerpathSlice = createSlice({
   name: "careerpaths",
-  initialData,
+  initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder

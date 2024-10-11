@@ -1,6 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import blogReducer from "./features/blog/blogSlice.js"
+import blogReducer from "./features/blog/blogSlice.js";
+import careerpathReducer from "./features/careerpaths/careerpathSlice.js";
 
 export const store = configureStore({
-  blog: blogReducer
-})
+  reducer: {
+    blog: blogReducer,
+    careerpath: careerpathReducer,
+  },
+});

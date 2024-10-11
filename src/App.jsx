@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/careerpaths" element={<Careerpaths />} />
             <Route
               exact
-              path="/careerpath/:slug"
+              path="/careerpaths/:slug"
               element={<CareerpathDetail />}
             />
             <Route exact path="/blog" element={<Blog />} />

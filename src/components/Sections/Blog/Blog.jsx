@@ -6,7 +6,45 @@ import darkDate from "../../../assets/svg/dark-date.svg";
 import blogBg from "../../../assets/svg/blog-bg.svg";
 import main from "../../../assets/images/main.jpg";
 import side from "../../../assets/images/side.png";
+
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { latestBlogPosts } from "../../../features/blog/blogSlice";
+import PageLoader from "../../PageLoader/PageLoader";
+import { ROOT_URL } from "../../../utils";
+
 const Blog = () => {
+  const dispatch = useDispatch();
+
+  const { isLoading, isError, latestPosts } = useSelector(
+    (store) => store.blog
+  );
+
+  useEffect(() => {
+    dispatch(latestBlogPosts());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return (
+      <div className="center-loader">
+        <PageLoader />
+      </div>
+    );
+  }
+  if (isError) {
+    return (
+      <div className="center-loader">
+        <div className="error-msg">Error fetching posts</div>
+      </div>
+    );
+  }
+
+  if (!latestPosts || latestPosts.length < 1) {
+    return <h2>No posts Available</h2>;
+  }
+  console.log(latestPosts.slice(1));
+  const mainPost = latestPosts[0];
+
   return (
     <section className="blog">
       <img src={blogBg} className="blog-bg" alt="" />
@@ -24,21 +62,25 @@ const Blog = () => {
 
         <div className="blog-section-grid">
           <div className="main-post">
-            <img className="main-post-img" src={main} alt="" />
+            <img
+              className="main-post-img"
+              src={ROOT_URL + mainPost.image}
+              alt=""
+            />
             <div className="dark-shade">
               <div className="post-desc">
                 <div className="author-date">
                   <div className="author">
                     <img src={author} alt="" />
-                    <p>By Admin</p>
+                    <p>{mainPost.author}</p>
                   </div>
                   <div className="date">
                     <img src={date} alt="" />
-                    <p>Sept 29, 2024</p>
+                    <p>{mainPost.created}</p>
                   </div>
                 </div>
-                <h2>Top ten tech skills to learn in 2024 to earn 6 figures</h2>
-                <a href="/blog">
+                <h2>{mainPost.title}</h2>
+                <a href={`/blog/${mainPost.slug}`}>
                   <h4>Explore More</h4>
                 </a>
               </div>
@@ -46,46 +88,35 @@ const Blog = () => {
           </div>
 
           <div className="more-posts">
-            {/* card 1 */}
-            <div className="more-posts__card">
-              <img className="more-post___img" src={side} alt="" />
-              <div className="post-desc">
-                <div className="author-date">
-                  <div className="author">
-                    <img src={darkAuthor} alt="" />
-                    <p>By Admin</p>
+            {latestPosts.slice(1).map((post) => {
+              return (
+                <div key={post.id} className="more-posts__card">
+                  <div className="more-post-img__container">
+                    <img
+                      className="more-post___img"
+                      src={ROOT_URL + post.image}
+                      alt=""
+                    />
                   </div>
-                  <div className="date">
-                    <img src={darkDate} alt="" />
-                    <p>Sept 29, 2024</p>
-                  </div>
-                </div>
-                <h2>Top ten tech skills to learn...</h2>
-                <a href="#">
-                  <h4>Read More</h4>
-                </a>
-              </div>
-            </div>
-            {/* card 2 */}
-            <div className="more-posts__card">
-              <img className="more-post___img" src={side} alt="" />
-              <div className="post-desc">
-                <div className="author-date">
-                  <div className="author">
-                    <img src={darkAuthor} alt="" />
-                    <p>By Admin</p>
-                  </div>
-                  <div className="date">
-                    <img src={darkDate} alt="" />
-                    <p>Sept 29, 2024</p>
+                  <div className="post-desc">
+                    <div className="author-date">
+                      <div className="author">
+                        <img src={darkAuthor} alt="" />
+                        <p>{post.author}</p>
+                      </div>
+                      <div className="date">
+                        <img src={darkDate} alt="" />
+                        <p>{post.created}</p>
+                      </div>
+                    </div>
+                    <h5>{post.title}</h5>
+                    <a href="#">
+                      <h6>Read More</h6>
+                    </a>
                   </div>
                 </div>
-                <h2>Top ten tech skills to learn...</h2>
-                <a href="#">
-                  <h4>Read More</h4>
-                </a>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,3 +1,9 @@
+.center-loader{
+  display: grid;
+  margin: 4rem 0;
+  place-content: center;
+}
+
 .page-loading {
   width: 100px;
   height: 100px;
@@ -5,7 +11,8 @@
   border: 5px solid rgba(233, 233, 233);
   border-top: 5px solid black;
   animation: spin 1s linear infinite;
-  margin: 5rem auto;
+  /* margin: 5rem auto; */
+  position: absolute;
 }
 
 @keyframes spin {

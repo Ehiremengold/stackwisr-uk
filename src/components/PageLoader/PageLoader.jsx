@@ -1,8 +1,10 @@
-import './PageLoader.css'
+import "./PageLoader.css";
 
 const PageLoader = () => {
   return (
-    <div className='page-loading'></div>
-  )
-}
-export default PageLoader
+    <div className="center-loader">
+      <div className="page-loading"></div>
+    </div>
+  );
+};
+export default PageLoader;

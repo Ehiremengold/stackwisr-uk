@@ -7,6 +7,12 @@
   margin-inline: auto;
 }
 
+@media (max-width:786px) {
+  .details-products-pricing .wrapper {
+    width: 90%;
+  }
+}
+
 .tab-control {
   display: flex;
   align-items: center;

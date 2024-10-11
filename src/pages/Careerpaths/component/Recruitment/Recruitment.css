@@ -102,6 +102,7 @@
 }
 
 .road-map {
+  width: 65%;
   display: grid;
   margin: 3rem auto;
 }

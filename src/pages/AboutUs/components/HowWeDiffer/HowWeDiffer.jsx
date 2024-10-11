@@ -13,7 +13,7 @@ import { useRef } from "react";
 
 const HowWeDiffer = () => {
   const cardRef = useRef(null);
-  const cardInView = useInView(cardRef);
+  const cardInView = useInView(cardRef, {threshold: 0.4});
 
   return (
     <section className="hwd">

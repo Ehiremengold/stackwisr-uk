@@ -1,6 +1,6 @@
 import "./Recruitment.css";
 import blackDude from "../../../../assets/images/black-dude.png";
-import roadMap from "../../../../assets/images/roadmap.png";
+import roadMap from "../../../../assets/svg/roadmap.svg";
 import rocket from "../../../../assets/images/rocket.png";
 import recruitImg from "../../../../assets/images/recruit-img.png";
 import { motion, useInView } from "framer-motion";
@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 const Recruitment = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, threshold: 0.4 });
   return (
     <section className="how-you-get-the-job" ref={ref}>
       <motion.img
