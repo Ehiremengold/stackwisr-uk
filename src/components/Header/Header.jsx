@@ -9,8 +9,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-
-  const location = useLocation()
+  const location = useLocation();
 
   const [menu, setMenu] = useState(false);
 
@@ -19,9 +18,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setMenu(false)
-  }, [location])
-  
+    setMenu(false);
+  }, [location]);
+
   return (
     <header>
       <div className="wrapper">
@@ -46,6 +45,9 @@ const Header = () => {
             <NavLink to="/blog">
               <li>Blog</li>
             </NavLink>
+            <NavLink to="/resources">
+              <li>Resources</li>
+            </NavLink>
           </ul>
 
           {menu && <img src={orangePlane} className="asset" alt="" />}
@@ -56,9 +58,6 @@ const Header = () => {
             </NavLink>
             <NavLink to="/events">
               <li>Events</li>
-            </NavLink>
-            <NavLink to="/resources">
-              <li>Resources</li>
             </NavLink>
           </ul>
         </nav>
