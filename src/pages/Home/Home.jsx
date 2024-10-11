@@ -17,22 +17,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  // if (isLoading) {
-  //   return (
-  //     <div className="wrapper">
-  //       <Loading />
-  //     </div>
-  //   );
-  // }
-
-  // if (isError) {
-  //   return (
-  //     <div className="wrapper">
-  //       <h4>Error Loading Blog posts</h4>
-  //     </div>
-  //   );
-  // }
-
   const heroRef = useRef(null);
   const careerpathsRef = useRef(null);
   const blogRef = useRef(null);

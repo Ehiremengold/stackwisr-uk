@@ -10,7 +10,6 @@ const Base = ({ children }) => {
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 
   useEffect(() => {
-    // Hide logo after 3 seconds
     const timer = setTimeout(() => {
       setIsLogoVisible(false);
     }, 3000);
@@ -27,13 +26,11 @@ const Base = ({ children }) => {
           transition={{ duration: 2, ease: "easeInOut" }}
           className="logo-container"
         >
-          {/* Replace with your company logo */}
           <img src={logo} alt="Company Logo" className="logo" />
         </motion.div>
       ) : (
         <>
           <Header />
-
           {children}
           <Footer />
         </>
