@@ -4,6 +4,7 @@ import facebook from "../../assets/social/facebook.svg";
 import instagram from "../../assets/social/instagram.svg";
 import x from "../../assets/social/x.svg";
 import youtube from "../../assets/social/youtube.svg";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,10 +31,18 @@ const Footer = () => {
           <div className="col col-2">
             <h3>Company</h3>
             <ul className="footer-items">
-              <li>About</li>
-              <li>Success</li>
-              <li>Products</li>
-              <li>Blog</li>
+              <NavLink to="/about">
+                <li>About</li>
+              </NavLink>
+              <NavLink to="/testimonies">
+                <li>Success</li>
+              </NavLink>
+              <NavLink to="/careerpaths">
+                <li>Products</li>
+              </NavLink>
+              <NavLink to="/blog">
+                <li>Blog</li>
+              </NavLink>
             </ul>
           </div>
           <div className="col col-3">
