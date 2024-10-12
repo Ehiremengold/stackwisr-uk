@@ -6,6 +6,7 @@
   margin-inline: auto;
   height: 100vh;
   background-color: var(--primary-color); /* Adjust background if necessary */
+  overflow: hidden;
 }
 
 .logo {

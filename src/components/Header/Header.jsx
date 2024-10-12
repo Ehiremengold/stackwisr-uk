@@ -21,6 +21,20 @@ const Header = () => {
     setMenu(false);
   }, [location]);
 
+  useEffect(() => {
+    // Set body overflow based on the menu state
+    if (menu) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    // Clean up the effect when the component unmounts or menu changes
+    return () => {
+      document.body.style.overflow = "auto"; // Reset to default when unmounting
+    };
+  }, [menu]);
+
   return (
     <header>
       <div className="wrapper">

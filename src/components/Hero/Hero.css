@@ -54,8 +54,12 @@
   align-items: center;
   /* flex-wrap: wrap; */
 }
-
-@media (max-width:320px) {
+@media (max-width:365px) {
+  .hero-text-container .action-btns {
+    gap: 1rem;
+  }
+}
+@media (max-width:351px) {
   .hero-text-container .action-btns {
     flex-wrap: wrap;
   }
