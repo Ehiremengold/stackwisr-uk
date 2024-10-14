@@ -5,7 +5,7 @@ import darkAuthor from "../../assets/svg/dark-author.svg";
 import darkDate from "../../assets/svg/dark-date.svg";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-
+import { NavLink } from "react-router-dom";
 const Blog = () => {
   return (
     <>
@@ -39,9 +39,9 @@ const Blog = () => {
               </div>
             </div>
             <h5>title</h5>
-            <a href="#">
+            <NavLink to="#">
               <h6>Read More</h6>
-            </a>
+            </NavLink>
           </div>
         </div>
         {/* card 2 */}
@@ -61,9 +61,9 @@ const Blog = () => {
               </div>
             </div>
             <h5>title</h5>
-            <a href="#">
+            <NavLink to="#">
               <h6>Read More</h6>
-            </a>
+            </NavLink>
           </div>
         </div>
 
@@ -84,9 +84,9 @@ const Blog = () => {
               </div>
             </div>
             <h5>title</h5>
-            <a href="#">
+            <NavLink to="#">
               <h6>Read More</h6>
-            </a>
+            </NavLink>
           </div>
         </div>
         {/* card 4 */}
@@ -107,9 +107,9 @@ const Blog = () => {
               </div>
             </div>
             <h5>title</h5>
-            <a href="#">
+            <NavLink to="#">
               <h6>Read More</h6>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

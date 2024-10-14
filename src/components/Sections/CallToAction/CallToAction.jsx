@@ -4,7 +4,7 @@ import orangeMan from "../../../assets/icons/orange-man.png";
 import orangePlane from "../../../assets/icons/orange-plane.png";
 import topDrop from "../../../assets/svg/top-drop.svg";
 // import ctaBackdrop from "../../assets/svg/cta-backdrop.svg";
-
+import { NavLink } from "react-router-dom";
 const CallToAction = () => {
   return (
     <section className="call-to-action">
@@ -36,9 +36,9 @@ const CallToAction = () => {
                 </select>
                 <input type="text" placeholder="Phone" />
               </form>
-              <a href="tel:+2348009078235">
+              <NavLink to="tel:+2348009078235">
                 <div className="cta-btn">BOOK A CALL</div>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

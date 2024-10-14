@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { latestBlogPosts } from "../../../features/blog/blogSlice";
 import PageLoader from "../../PageLoader/PageLoader";
 import { ROOT_URL } from "../../../utils";
+import { NavLink } from "react-router-dom";
 
 const Blog = () => {
   const dispatch = useDispatch();
@@ -80,9 +81,9 @@ const Blog = () => {
                   </div>
                 </div>
                 <h2>{mainPost.title}</h2>
-                <a href="/">
+                <NavLink to="/blog">
                   <h4>Explore more like this</h4>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -106,9 +107,9 @@ const Blog = () => {
                       </div>
                     </div>
                     <h5>{post.title}</h5>
-                    <a href="#">
+                    <NavLink to="#">
                       <h6>Read More</h6>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               );

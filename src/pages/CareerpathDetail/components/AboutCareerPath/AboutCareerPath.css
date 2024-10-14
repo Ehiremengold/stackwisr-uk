@@ -136,6 +136,7 @@
 }
 
 .what-you-learn-item img {
+  width: 3%;
   align-self: flex-start;
 }
 .what-you-learn-col .what-you-learn-item:nth-child(2n){

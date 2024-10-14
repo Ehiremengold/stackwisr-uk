@@ -39,7 +39,6 @@ const CareerpathDetail = () => {
   }
 
   const {
-    id,
     img_display,
     career_name,
     description,

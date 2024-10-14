@@ -5,8 +5,13 @@ import instagram from "../../assets/social/instagram.svg";
 import x from "../../assets/social/x.svg";
 import youtube from "../../assets/social/youtube.svg";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
+  // Access career paths from the Redux store
+  const careerPathsStore = useSelector((store) => store.careerpath);
+  
+
   return (
     <footer>
       <div className="wrapper">
@@ -21,11 +26,14 @@ const Footer = () => {
           <div className="col">
             <h3>Career Paths</h3>
             <ul className="footer-items">
-              <li>Data Analyst</li>
-              <li>IT Business Analyst</li>
+              {careerPathsStore.careerpaths.map((careerpath) => {
+                const { id, career_name } = careerpath;
+                return <li key={id}>{career_name}</li>;
+              })}
+              {/* <li>IT Business Analyst</li>
               <li>Data Engineer</li>
               <li>Data Analytics Engineer</li>
-              <li>Data Science AI</li>
+              <li>Data Science AI</li> */}
             </ul>
           </div>
           <div className="col col-2">
@@ -64,31 +72,31 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="left-section">
             <p>All Right Reserved &copy; 2024</p>
-            <a href="https://www.stackwisr.co.uk">
+            <NavLink to="https://www.stackwisr.co.uk">
               <span className="footer-link"> www.stackwisr.co.uk</span>
-            </a>
+            </NavLink>
           </div>
           <d3v className="right-section">
             <ul className="socials-icons">
               <li>
-                <a href="#">
+                <NavLink to="#">
                   <img src={instagram} alt="" />
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#">
+                <NavLink to="#">
                   <img src={facebook} alt="" />
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#">
+                <NavLink to="#">
                   <img src={x} alt="" />
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#">
+                <NavLink to="#">
                   <img src={youtube} alt="" />
-                </a>
+                </NavLink>
               </li>
             </ul>
           </d3v>

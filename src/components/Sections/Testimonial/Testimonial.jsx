@@ -5,6 +5,7 @@ import testifier from "../../../assets/images/testifier.jpg";
 import testifier2 from "../../../assets/images/testifier-2.jpg";
 import "./Testimonial.css";
 import { motion, AnimatePresence } from "framer-motion";
+// import { NavLink } from "react-router-dom";
 
 const Testimonial = () => {
   const testimonials = [

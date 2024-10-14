@@ -95,8 +95,14 @@ footer .wrapper .footer-bottom .left-section p {
 }
 .footer-items li {
   color: #c0bebe;
-
+  margin: .6rem  0;
   list-style: none;
+  cursor: pointer;
+  transition: text-decoration .3s ease-in-out;
+}
+
+.footer-items li:hover{
+  text-decoration: underline;
 }
 .request-call-desc {
   color: #c0bebe;

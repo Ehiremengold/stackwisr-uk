@@ -38,9 +38,9 @@ const Header = () => {
   return (
     <header>
       <div className="wrapper">
-        <a href="/">
+        <NavLink to="/">
           <img src={logo} alt="" />
-        </a>
+        </NavLink>
         <div className="menu-btn" onClick={toggleMenu}>
           <Menu />
         </div>
