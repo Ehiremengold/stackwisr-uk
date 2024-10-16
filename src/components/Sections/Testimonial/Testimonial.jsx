@@ -2,7 +2,7 @@ import { useState } from "react";
 import pinkBg from "../../../assets/svg/pinkbg.svg";
 import testimonyBanner from "../../../assets/svg/real-story.svg";
 import testifier from "../../../assets/images/testifier.jpg";
-import testifier2 from "../../../assets/images/testifier2.jpg";
+import testifier2 from "../../../assets/images/testifier2.png";
 import "./Testimonial.css";
 import { motion, AnimatePresence } from "framer-motion";
 
