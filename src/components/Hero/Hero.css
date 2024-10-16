@@ -27,6 +27,7 @@
   gap: 1rem;
   color: #fff;
 }
+
 .hero-text-container .desc-container {
   position: relative;
   width: fit-content;
@@ -41,7 +42,7 @@
 .hero-text-container h1 {
   font-size: var(--hero-font-main);
   margin-bottom: 2rem;
-  /* line-height: 95px; */
+  line-height: clamp(2.5vw, 5.2vw, 8vw);
 }
 
 .hero-text-container p {
