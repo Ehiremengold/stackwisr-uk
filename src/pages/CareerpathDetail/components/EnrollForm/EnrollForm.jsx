@@ -1,30 +1,9 @@
 import "./EnrollForm.css";
 import cancelIcon from "../../../../assets/svg/cancel.svg";
-import { useDispatch, useSelector } from "react-redux";
-import PageLoader from "../../../../components/PageLoader/PageLoader";
-import { useEffect, useRef } from "react";
-import { getCountries } from "../../../../features/countries/countriesSlice";
+import { useSelector } from "react-redux";
 
 const EnrollForm = ({ enrollNow, career_name }) => {
-
-
-  const dispatch = useDispatch();
-
-  const { countries, isLoading, isError } = useSelector(
-    (store) => store.countries
-  );
-
-  useEffect(() => {
-    dispatch(getCountries());
-  }, [dispatch]);
-
-  if (isLoading) {
-    return (
-      <div className="center-loader">
-        <PageLoader />
-      </div>
-    );
-  }
+  const { countries, isError } = useSelector((store) => store.countries);
 
   return (
     <div className="grey-shade js-grey-shade">
@@ -52,6 +31,11 @@ const EnrollForm = ({ enrollNow, career_name }) => {
             <div className="country-phone">
               <select name="" id="">
                 <option value="Choose a country">Choose a country</option>
+                {isError && (
+                  <div className="center-loader">
+                    <h4>Error Loading Countries</h4>
+                  </div>
+                )}
                 {countries.map((country, index) => {
                   return (
                     <option key={index} value={country}>
@@ -59,11 +43,6 @@ const EnrollForm = ({ enrollNow, career_name }) => {
                     </option>
                   );
                 })}
-                {/* {isError && (
-                  <div className="center-loader">
-                    <h4>Error Loading Countries</h4>
-                  </div>
-                )} */}
               </select>
               <input type="text" placeholder="Phone" />
             </div>
@@ -79,7 +58,7 @@ const EnrollForm = ({ enrollNow, career_name }) => {
                 <option value="Instagram">Instagram</option>
                 <option value="Job Boards">Job Boards</option>
                 <option value="Trust Pilot">Trust Pilot</option>
-                <option value=" Email" id="">
+                <option value="Email" id="">
                   Email
                 </option>
 

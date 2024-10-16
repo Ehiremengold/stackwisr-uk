@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 const Footer = () => {
   // Access career paths from the Redux store
   const careerPathsStore = useSelector((store) => store.careerpath);
-  
 
   return (
     <footer>
@@ -66,7 +65,12 @@ const Footer = () => {
               Book a consultation today to speak with one of our career experts
               and get started
             </p>
-            <button>Book Call</button>
+            <NavLink
+              target="_blank"
+              to="https://calendly.com/stackwisr/request-a-call-with-us"
+            >
+              <button>Book Call</button>
+            </NavLink>
           </div>
         </div>
         <div className="footer-bottom">

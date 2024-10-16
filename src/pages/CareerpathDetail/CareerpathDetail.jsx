@@ -19,13 +19,6 @@ const CareerpathDetail = () => {
     (store) => store.careerpath
   );
 
-  useEffect(() => {
-    // Add event listener when the component is mounted
-    document.addEventListener("mousedown", () =>
-      document.querySelector(".js-grey-shade").classList.remove("show")
-    );
-  }, []);
-
   const location = useLocation();
   useEffect(() => {
     dispatch(getCareerpathDetail(location.pathname));
@@ -69,7 +62,7 @@ const CareerpathDetail = () => {
   return (
     <>
       <Helmet>
-        <title>StackwisR | {career_name}</title>
+        <title>{`Careerpath | ${career_name} `}</title>
       </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent
