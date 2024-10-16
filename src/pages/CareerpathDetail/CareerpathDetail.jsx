@@ -10,6 +10,7 @@ import { getCareerpathDetail } from "../../features/careerpaths/careerpathSlice.
 import PageLoader from "../../components/PageLoader/PageLoader.jsx";
 import { useEffect } from "react";
 import EnrollForm from "./components/EnrollForm/EnrollForm.jsx";
+import { Helmet } from "react-helmet";
 
 const CareerpathDetail = () => {
   const dispatch = useDispatch();
@@ -67,6 +68,9 @@ const CareerpathDetail = () => {
   } = careerpath;
   return (
     <>
+      <Helmet>
+        <title>StackwisR | {career_name}</title>
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent
         animate={{ opacity: 1, y: 0 }} // Moves into view and becomes fully visible

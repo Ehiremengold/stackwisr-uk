@@ -30,10 +30,10 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }} // Moves into view and becomes fully visible
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }} // Customize the speed and easing
       >
-        <NavLinkboutHero />
+        <AboutHero />
       </motion.div>
       <motion.div />
-      <NavLinkboutUsExplained />
+      <AboutUsExplained />
       <WhyStackwisr />
       <HowWeDiffer />
       <motion.div

@@ -3,7 +3,6 @@ import heroUser from "../../assets/images/heroo.png";
 import descImg from "../../assets/images/top.png";
 import arrowImg from "../../assets/icons/arrow.png";
 import planeImg from "../../assets/icons/plane.svg";
-import nanoFrame from "../../assets/svg/nano.svg";
 
 const Hero = ({ heroRef, heroIsInView }) => {
   return (
@@ -42,7 +41,6 @@ const Hero = ({ heroRef, heroIsInView }) => {
           <div className="hero-img-container">
             <img src={heroUser} alt="" />
             <div className="blue-container-blur"></div>
-            {/* <img src={nanoFrame} className="nano-frame" alt="" /> */}
           </div>
         </div>
       </span>

@@ -76,7 +76,7 @@ const Footer = () => {
               <span className="footer-link"> www.stackwisr.co.uk</span>
             </NavLink>
           </div>
-          <d3v className="right-section">
+          <div className="right-section">
             <ul className="socials-icons">
               <li>
                 <NavLink to="#">
@@ -99,7 +99,7 @@ const Footer = () => {
                 </NavLink>
               </li>
             </ul>
-          </d3v>
+          </div>
         </div>
       </div>
     </footer>

@@ -22,13 +22,13 @@ const Testimonial = () => {
         "StackwisR gave me not only the theoretical foundation of Data Science but also practical industry experience. They dedicatedly helped me from end to end until my first employment with a Financial Services company in London. My CV has been sought after dramatically since then. Thank you for unlocking my job opportunities that I never had after my university graduation.",
       image: testifier2,
     },
-    {
-      name: "Chinwe Okafor",
-      company: "Tech Solutions",
-      testimony:
-        "Dolores provident porro vero tempore labore nostrum adipisci dicta eos ex asperiores nisi suscipit ipsa eveniet rem consequatur est obcaecati.",
-      image: testifier2,
-    },
+    // {
+    //   name: "Chinwe Okafor",
+    //   company: "Tech Solutions",
+    //   testimony:
+    //     "Dolores provident porro vero tempore labore nostrum adipisci dicta eos ex asperiores nisi suscipit ipsa eveniet rem consequatur est obcaecati.",
+    //   image: testifier2,
+    // },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
