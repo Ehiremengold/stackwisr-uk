@@ -30,6 +30,7 @@
   /* border: 1px solid purple; */
 }
 .event-section .wrapp {
+  overflow: hidden;
   width: 60%;
   margin: 0 auto;
 }
@@ -49,6 +50,12 @@
 @media (max-width: 850px) {
   .event-section .wrapp h1 {
     width: 60%;
+  }
+}
+
+@media (max-width: 355px) {
+  .event-section .wrapp h1 {
+    width: 80%;
   }
 }
 
@@ -191,4 +198,22 @@
   .right-one {
     display: none;
   }
+}
+
+.register-date {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.register-date button{
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.register-date .btn-secondary{
+  background-color: var(--secondary-color);
+  color: #fff;
 }

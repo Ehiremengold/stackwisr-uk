@@ -11,6 +11,7 @@ const CareerDetailHero = ({
   description,
   rating,
   img_display,
+  enrollNow,
 }) => {
   return (
     <section className="career-detail-hero">
@@ -20,7 +21,12 @@ const CareerDetailHero = ({
           <p className="career-path-intro">{description}</p>
 
           <div className="action-btns">
-            <button className="enroll-now">Enroll Now</button>
+            <button
+              onClick={() => enrollNow()}
+              className="enroll-now js-enroll-now"
+            >
+              Enroll Now
+            </button>
             <button className="consultant">Book a Consultant</button>
           </div>
 

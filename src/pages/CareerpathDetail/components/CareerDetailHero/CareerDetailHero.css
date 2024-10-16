@@ -38,8 +38,30 @@
   gap: 1rem;
   /* flex-wrap: wrap; */
 }
+@media (max-width: 768px) {
+  .career-detail-hero .wrapper .left-section .action-btns {
+    justify-content: center;
+  }
+  .career-students-details {
+    justify-content: center;
+    text-align: center;
+  }
+}
 
-@media (max-width: 409px) {
+@media (max-width: 425px) {
+  .career-detail-hero .wrapper .left-section .action-btns {
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+  .career-students-details {
+    text-align: left;
+  }
+  .career-detail-hero .wrapper .left-section .action-btns button{
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
   .career-detail-hero .wrapper .left-section .action-btns {
     flex-wrap: wrap;
   }
@@ -62,22 +84,8 @@
   .career-detail-hero .wrapper .left-section .career-path-intro {
     width: 60%;
   }
-  /* .career-students-details .left-section p,
-  .career-students-details .right-section p {
-    width: 70%;
-  } */
-}
-/* .career-students-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1.5rem 0;
 }
 
-.career-students-details .left-section p,
-.career-students-details .right-section p{
-  font-size: clamp(13px, 1vw, 25px);
-} */
 .career-detail-hero .wrapper .right-section {
   position: relative;
   width: 100%;

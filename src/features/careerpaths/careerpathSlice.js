@@ -14,7 +14,6 @@ export const getCareerpaths = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await axios(`${ROOT_URL}/api/careerpaths/`);
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);

@@ -50,6 +50,7 @@ button:active {
   transform: scale(0.7);
 }
 
+select,
 input {
   font-family: "Poppins";
 }

@@ -9,18 +9,36 @@ import { useLocation } from "react-router-dom";
 import { getCareerpathDetail } from "../../features/careerpaths/careerpathSlice.js";
 import PageLoader from "../../components/PageLoader/PageLoader.jsx";
 import { useEffect } from "react";
+import EnrollForm from "./components/EnrollForm/EnrollForm.jsx";
 
 const CareerpathDetail = () => {
   const dispatch = useDispatch();
+
   const { isLoading, careerpath, isError } = useSelector(
     (store) => store.careerpath
   );
+
+  useEffect(() => {
+    // Add event listener when the component is mounted
+    document.addEventListener("mousedown", () =>
+      document.querySelector(".js-grey-shade").classList.remove("show")
+    );
+  }, []);
+
   const location = useLocation();
   useEffect(() => {
     dispatch(getCareerpathDetail(location.pathname));
   }, [dispatch, location.pathname]);
 
-  console.log(location);
+  const enrollNow = () => {
+    if (document.querySelector(".js-grey-shade").classList.contains("show")) {
+      document.body.style.overflow = "auto";
+      document.querySelector(".js-grey-shade").classList.remove("show");
+    } else {
+      document.body.style.overflow = "hidden";
+      document.querySelector(".js-grey-shade").classList.add("show");
+    }
+  };
 
   if (isLoading) {
     return (
@@ -59,6 +77,7 @@ const CareerpathDetail = () => {
           career_name={career_name}
           description={description}
           rating={rating}
+          enrollNow={enrollNow}
         />
       </motion.div>
       <CareerDetail />
@@ -69,6 +88,7 @@ const CareerpathDetail = () => {
         description={description}
       />
       <ProductPricing />
+      <EnrollForm career_name={career_name} enrollNow={enrollNow} />
     </>
   );
 };

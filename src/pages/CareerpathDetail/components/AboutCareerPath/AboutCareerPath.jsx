@@ -30,9 +30,7 @@ const AboutCareerPath = ({ wyl = [], pj = [], sywg = [], description }) => {
               <img src={learnImg} alt="Student Learning" />
             </div>
             <div className="programme-desc">
-              <p>
-                {description}
-              </p>
+              <p>{description}</p>
               {/* <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum,
                 reiciendis nulla. Debitis assumenda hic minus veritatis, quaerat
@@ -75,32 +73,33 @@ const AboutCareerPath = ({ wyl = [], pj = [], sywg = [], description }) => {
                 <img src={handsOn} alt="" />
                 <h3>70% Hands-on Projects</h3>
                 <p className="box-subtitle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cupiditate consequuntur libero illo expedita odit.
+                  Our programs feature 70% hands-on projects, allowing you to
+                  apply your learning directly to real-world scenarios.
                 </p>
               </div>
               <div className="why-choose-box">
                 <img src={training} alt="" />
                 <h3>30% Training</h3>
                 <p className="box-subtitle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cupiditate consequuntur libero illo expedita odit.
+                  Our hands-on training focuses on practical learning, allowing
+                  you to apply concepts through real-world projects.
                 </p>
               </div>
               <div className="why-choose-box">
                 <img src={resources} alt="" />
                 <h3>Access to Resources</h3>
                 <p className="box-subtitle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cupiditate consequuntur libero illo expedita odit.
+                  We provide the tools and information needed for growth and
+                  success, whether in education, career development, or
+                  problem-solving.
                 </p>
               </div>
               <div className="why-choose-box">
                 <img src={liveClasses} alt="" />
                 <h3>Live Classes</h3>
                 <p className="box-subtitle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Cupiditate consequuntur libero illo expedita odit.
+                  Live Classes provide an interactive learning experience,
+                  allowing real-time engagement with instructors and peers.
                 </p>
               </div>
             </div>

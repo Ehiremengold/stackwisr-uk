@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import leftEventIcon from "../../assets/icons/left-events-icon.png";
 import rightEventIcon from "../../assets/icons/right-events-icon.png";
 import { useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 const Event = () => {
   // Create refs for each section
@@ -74,7 +75,12 @@ const Event = () => {
             candidate screening, streamlining the recruitment process, and
             providing data-driven insights for decision-making.
           </p>
-          <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+          <div className="register-date">
+            <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+            <NavLink to="">
+              <button className="register-btn btn-secondary">Register</button>
+            </NavLink>
+          </div>
         </div>
       </motion.div>
 
@@ -97,7 +103,12 @@ const Event = () => {
             candidate screening, streamlining the recruitment process, and
             providing data-driven insights for decision-making.
           </p>
-          <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+          <div className="register-date">
+            <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+            <NavLink to="">
+              <button className="register-btn">Register</button>
+            </NavLink>
+          </div>
         </div>
       </motion.div>
 
@@ -119,7 +130,12 @@ const Event = () => {
             candidate screening, streamlining the recruitment process, and
             providing data-driven insights for decision-making.
           </p>
-          <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+          <div className="register-date">
+            <p className="date-time">Wednesday, October 09, 11 AM ET</p>
+            <NavLink to="">
+              <button className="register-btn btn-secondary">Register</button>
+            </NavLink>
+          </div>
         </div>
       </motion.div>
     </>

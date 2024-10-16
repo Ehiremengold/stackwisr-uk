@@ -21,8 +21,9 @@ const Futureproof = () => {
             <img src={futureDesc} className="future-desc-img" alt="" />
             <h2>Your Journey to a Leading Tech Role Begins Here</h2>
             <p className="future-main-desc">
-              Kickstart your ascent to a top tech position with the right tools
-              and guidance.
+              Our programs equip you with the skills, knowledge, and confidence
+              needed to succeed when opportunities arise, ensuring you're ready
+              to seize the moment and advance your professional journey.
             </p>
             <img className="line-divider" src={line} alt="" />
             <div className="job-fields">

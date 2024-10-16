@@ -7,7 +7,7 @@
   place-content: center;
   overflow: hidden;
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -31,6 +31,7 @@
   position: relative;
   width: fit-content;
 }
+
 .hero-text-container .desc-container .desc-img.arrow {
   position: absolute;
   top: -50px;
@@ -39,7 +40,8 @@
 
 .hero-text-container h1 {
   font-size: var(--hero-font-main);
-  line-height: 85px;
+  margin-bottom: 2rem;
+  /* line-height: 95px; */
 }
 
 .hero-text-container p {

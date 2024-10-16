@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../../assets/logo/logo.svg";
+import logo from "../../assets/logo/logo.png";
 import logoWhite from "../../assets/logo/logo-white.png";
 import Menu from "../Menu/Menu.jsx";
 import CloseMenu from "../CloseMenu/CloseMenu.jsx";

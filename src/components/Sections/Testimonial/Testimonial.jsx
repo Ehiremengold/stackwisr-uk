@@ -2,19 +2,25 @@ import { useState } from "react";
 import pinkBg from "../../../assets/svg/pinkbg.svg";
 import testimonyBanner from "../../../assets/svg/real-story.svg";
 import testifier from "../../../assets/images/testifier.jpg";
-import testifier2 from "../../../assets/images/testifier-2.jpg";
+import testifier2 from "../../../assets/images/testifier2.jpg";
 import "./Testimonial.css";
 import { motion, AnimatePresence } from "framer-motion";
-// import { NavLink } from "react-router-dom";
 
 const Testimonial = () => {
   const testimonials = [
     {
       name: "Nedum Obi",
-      company: "UPS Services",
+      company: "Data Science Specialist",
       testimony:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe sed iste dicta exercitationem et ipsum nostrum nam in illo fugiat ex quaerat repudiandae veritatis veniam, cumque commodi consequatur excepturi!",
+        "The return on my investment in the Stackwisr programme was above 1000% in the first 12 months after my completion and continued to grow to above 1500% within the next 6 months.",
       image: testifier,
+    },
+    {
+      name: "Naw Nen Chyangmaja",
+      company: "Head of Analytics and Customer Insights",
+      testimony:
+        "StackwisR gave me not only the theoretical foundation of Data Science but also practical industry experience. They dedicatedly helped me from end to end until my first employment with a Financial Services company in London. My CV has been sought after dramatically since then. Thank you for unlocking my job opportunities that I never had after my university graduation.",
+      image: testifier2,
     },
     {
       name: "Chinwe Okafor",
@@ -22,13 +28,6 @@ const Testimonial = () => {
       testimony:
         "Dolores provident porro vero tempore labore nostrum adipisci dicta eos ex asperiores nisi suscipit ipsa eveniet rem consequatur est obcaecati.",
       image: testifier2,
-    },
-    {
-      name: "Kunle Adewale",
-      company: "Fintech Corp",
-      testimony:
-        "Quam facilis accusantium assumenda repellendus laboriosam molestiae. Libero maiores est autem magni dolor voluptatem numquam pariatur odit.",
-      image: testifier,
     },
   ];
 
