@@ -1,6 +1,6 @@
 import "./Hero.css";
 import heroUser from "../../assets/images/heroo.png";
-import descImg from "../../assets/images/top.png";
+import descImg from "../../assets/svg/top.svg";
 import arrowImg from "../../assets/icons/arrow.png";
 import planeImg from "../../assets/icons/plane.svg";
 
