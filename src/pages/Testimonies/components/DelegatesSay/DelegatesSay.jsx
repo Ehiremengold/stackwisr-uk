@@ -33,20 +33,26 @@ const DelegatesSay = () => {
             </div>
           )}
 
-          {testimonials.map(({ id, name, job_description, feedback }) => {
-            return (
-              <div key={id} className="delegates-say-card">
-                <img
-                  src={stackwisrLogo}
-                  alt="stackwisr logo"
-                  className="logo"
-                />
-                <h3>{name}</h3>
-                <p className="company-name">{job_description}</p>
-                <p>{feedback}</p>
-              </div>
-            );
-          })}
+          {testimonials &&
+            testimonials.map(({ id, name, job_description, feedback }) => {
+              return (
+                <div key={id} className="delegates-say-card">
+                  <img
+                    src={stackwisrLogo}
+                    alt="stackwisr logo"
+                    className="logo"
+                  />
+                  <h3>{name}</h3>
+                  <p
+                    style={{ marginBottom: "1rem", fontWeight: "500" }}
+                    className="company-name"
+                  >
+                    {job_description}
+                  </p>
+                  <p>{feedback}</p>
+                </div>
+              );
+            })}
         </div>
       </div>
     </section>
