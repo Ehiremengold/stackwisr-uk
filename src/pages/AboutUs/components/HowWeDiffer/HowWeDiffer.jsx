@@ -1,5 +1,4 @@
 import "./HowWeDiffer.css";
-
 import blackLadyLearn from "../../../../assets/images/blackSec.png";
 import orangeUpPlane from "../../../../assets/svg/orange-plane-up.svg";
 import descImg from "../../../../assets/images/top-about.png";
