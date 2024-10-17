@@ -1,0 +1,75 @@
+.delegates-say {
+  background-color: var(--primary-color);
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.delegates-say .wrapper {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.delegates-say .wrapper .hear-what {
+  color: #fff;
+  font-weight: 500;
+  font-size: clamp(16px, 2.3vw, 25px);
+  margin-top: 2rem;
+}
+
+.delegates-say-grid {
+  /* width: 80%; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* border: 1px solid red; */
+  place-content: center;
+  margin: 4rem 0;
+  gap: 2rem;
+}
+
+.delegates-say-card {
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+  border-bottom: 7px solid var(--secondary-color);
+}
+
+.delegates-say-card h3 {
+  color: var(--primary-color);
+  margin-top: 2rem;
+  font-weight: 600;
+}
+.delegates-say-card .company-name {
+  font-style: italic;
+}
+.delegates-say-card .logo {
+  position: absolute;
+  top: -17px;
+  left: 5%;
+  width: 15%;
+}
+
+@media (max-width: 768px) {
+  .delegates-say-card .logo {
+    width: 10%;
+  }
+}
+@media (max-width: 561px) {
+  .delegates-say .wrapper {
+    width: 90%;
+    /* margin: 1rem; */
+  }
+}
+
+
+
+@media (max-width: 503px) {
+  .delegates-say .wrapper {
+    width: 95%;
+    /* margin: 2rem 0; */
+  }
+  .delegates-say-card {
+    padding: 1rem;
+  }
+}
