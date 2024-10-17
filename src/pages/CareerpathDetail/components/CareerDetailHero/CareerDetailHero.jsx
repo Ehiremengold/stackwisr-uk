@@ -42,11 +42,13 @@ const CareerDetailHero = ({
           </div>
 
           <div className="start-active">
+            <div className="active">
+              Starting from <span>£149</span>
+            </div>
             <div className="start-date">
               <img src={blueIcon} className="start-icon" alt="" />
               <p>Starts - Sept 29, 2024</p>
             </div>
-            <div className="active">Active</div>
           </div>
         </div>
         <div className="right-section">

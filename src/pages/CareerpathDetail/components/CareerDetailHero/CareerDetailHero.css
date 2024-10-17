@@ -14,7 +14,6 @@
   }
 }
 
-
 .career-detail-hero .wrapper .left-section {
   align-self: center;
   width: 100%;
@@ -55,7 +54,7 @@
   .career-students-details {
     text-align: left;
   }
-  .career-detail-hero .wrapper .left-section .action-btns button{
+  .career-detail-hero .wrapper .left-section .action-btns button {
     width: 100%;
   }
 }
@@ -138,7 +137,7 @@
   background-color: var(--primary-color);
   color: #fff;
   padding: 0.7rem 1.5rem;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .start-date p {
@@ -152,12 +151,13 @@
   flex-wrap: wrap;
 }
 
-.active {
+.start-active .active {
   background-color: #cfffda;
   color: #069949;
   font-weight: 600;
   padding: 0.7rem 1.5rem;
-  border-radius: 20px;
+  border-radius: 30px;
+  border: 2px solid #069949;
 }
 
 @media (max-width: 842px) {
@@ -167,15 +167,15 @@
     gap: 1.5rem;
   }
   .career-detail-hero .wrapper .left-section,
-  .career-detail-hero .wrapper .right-section{
+  .career-detail-hero .wrapper .right-section {
     margin: 2rem;
   }
 
-  .career-detail-hero .wrapper .left-section{
+  .career-detail-hero .wrapper .left-section {
     margin-top: 0;
   }
 
-  .start-active{
+  .start-active {
     justify-content: center;
   }
   /* .career-students-details {
@@ -183,33 +183,34 @@
   } */
 }
 
-@media (max-width:496px) {
+@media (max-width: 496px) {
   .career-detail-hero .wrapper .left-section,
-  .career-detail-hero .wrapper .right-section{
+  .career-detail-hero .wrapper .right-section {
     margin: 1rem;
   }
 }
 
-.career-students-details{
+.career-students-details {
   display: flex;
   margin: 1rem 0;
 }
 
-@media (max-width:404px) {
-  .career-students-details{
+@media (max-width: 404px) {
+  .career-students-details {
     flex-wrap: wrap;
   }
 }
 
-.career-students-details .left-section , .career-students-details .right-section{
+.career-students-details .left-section,
+.career-students-details .right-section {
   width: fit-content;
   height: fit-content;
 }
 
 .career-students-details .left-section p,
-.career-students-details .right-section p{
-  font-size: clamp(15px, .8vw, 25px);
-} 
-.career-students-details h1{
+.career-students-details .right-section p {
+  font-size: clamp(15px, 0.8vw, 25px);
+}
+.career-students-details h1 {
   font-weight: 600;
 }

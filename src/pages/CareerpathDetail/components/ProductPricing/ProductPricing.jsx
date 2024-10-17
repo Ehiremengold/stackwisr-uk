@@ -15,9 +15,28 @@ const ProductPricing = () => {
   const [activeProductTab, setActiveProductTab] = useState(0);
 
   const projectPacked = [
-    "70% hands-on project",
-    "30% learning",
-    "6 months duration",
+    "Senior-level hands-on training",
+    "Recruitment support phase",
+    "On-the-job support",
+    "Professional Certificate"
+  ];
+
+  const careerGrowthAccelerator = [
+    "Hands-on professional training",
+    "Mid-level hands-on training",
+    "Recruitment support phase",
+    "On-the-job support",
+    "Professional Certificate",
+    "Reference",
+  ];
+
+  const exceptionalCareerLauncher = [
+    "Hands-on professional training",
+    "Senior-level hands-on training",
+    "Recruitment support phase",
+    "On-the-job support",
+    "Professional Certificate",
+    "Reference",
   ];
 
   return (
@@ -81,11 +100,11 @@ const ProductPricing = () => {
               <h4>For your career progression</h4>
 
               <div className="end-results-list">
-                {[1, 2, 3, 4, 5].map((_, index) => {
+                {careerGrowthAccelerator.map((item, index) => {
                   return (
                     <div key={index} className="end-result-list-item">
                       <img src={greyCheckIcon} alt="" />
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <p>{item}</p>
                     </div>
                   );
                 })}
@@ -113,11 +132,11 @@ const ProductPricing = () => {
               <h4>For your career progression</h4>
 
               <div className="end-results-list">
-                {[1, 2, 3, 4, 5].map((_, index) => {
+                {exceptionalCareerLauncher.map((item, index) => {
                   return (
                     <div key={index} className="end-result-list-item">
                       <img src={greyCheckIcon} alt="" />
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <p>{item}</p>
                     </div>
                   );
                 })}
