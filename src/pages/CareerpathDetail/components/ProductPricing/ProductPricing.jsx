@@ -11,7 +11,7 @@ import getStarted from "../../../../assets/svg/get-started.svg";
 import orangeMan from "../../../../assets/icons/orange-man.png";
 import { useState } from "react";
 
-const ProductPricing = ({ enrollNow }) => {
+const ProductPricing = ({ enrollNow, careerPathName, setProductPlan }) => {
   const [activeProductTab, setActiveProductTab] = useState(0);
 
   const projectPacked = [
@@ -39,6 +39,14 @@ const ProductPricing = ({ enrollNow }) => {
     "Reference",
   ];
 
+  const handlePlanSelection = (e, planType) => {
+    const selectedPlan = e.target.getAttribute(`data-${planType}`);
+    enrollNow();
+    setProductPlan({
+      selectedPlan,
+      careerPathName,
+    });
+  };
   return (
     <section className="products-pricing" id="products-pricing">
       <div className="wrapper">
@@ -110,9 +118,10 @@ const ProductPricing = ({ enrollNow }) => {
               </div>
             </div>
             <button
-              data-career-growth="career-growth"
-              onClick={() => enrollNow()}
-              // (e) => console.log(e.target.dataset.careerGrowth)
+              data-career-growth-accelerator="career-growth-accelerator"
+              onClick={(e) =>
+                handlePlanSelection(e, "career-growth-accelerator")
+              }
             >
               Get started on Growth
             </button>
@@ -148,8 +157,9 @@ const ProductPricing = ({ enrollNow }) => {
             </div>
             <button
               data-executive-career-launcher="executive-career-launcher"
-              onClick={() => enrollNow()}
-              // (e) => console.log(e.target.dataset.executiveCareerLauncher)
+              onClick={(e) =>
+                handlePlanSelection(e, "executive-career-launcher")
+              }
             >
               Get started on ECL
             </button>
@@ -184,8 +194,7 @@ const ProductPricing = ({ enrollNow }) => {
               <button
                 className="growth-project-pack-white"
                 data-growth-project-pack="growth-project-pack"
-                onClick={() => enrollNow()}
-                // (e) => console.log(e.target.dataset.growthProjectPack)
+                onClick={(e) => handlePlanSelection(e, "growth-project-pack")}
               >
                 <h3>Growth - Project Packed</h3>
               </button>
@@ -202,8 +211,7 @@ const ProductPricing = ({ enrollNow }) => {
               <button
                 className="growth-project-pack-white"
                 data-ecl-project-pack="ecl-project-pack"
-                onClick={() => enrollNow()}
-                // (e) => console.log(e.target.dataset.eclProjectPack)
+                onClick={(e) => handlePlanSelection(e, "ecl-project-pack")}
               >
                 <h3>ECL - Project Packed</h3>
               </button>

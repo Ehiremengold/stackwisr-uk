@@ -8,18 +8,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { getCareerpathDetail } from "../../features/careerpaths/careerpathSlice.js";
 import PageLoader from "../../components/PageLoader/PageLoader.jsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import EnrollForm from "./components/EnrollForm/EnrollForm.jsx";
 import { Helmet } from "react-helmet";
+import { createLead } from "../../features/lead/leadSlice.js";
 
 const CareerpathDetail = () => {
   const dispatch = useDispatch();
+
+  const [productPlan, setProductPlan] = useState(null);
+  const [enrollFormData, setEnrollFormData] = useState(null);
 
   const { isLoading, careerpath, isError } = useSelector(
     (store) => store.careerpath
   );
 
+  if (productPlan && enrollFormData) {
+    dispatch(createLead({ ...productPlan, ...enrollFormData }));
+  }
+
   const location = useLocation();
+  
   useEffect(() => {
     dispatch(getCareerpathDetail(location.pathname));
   }, [dispatch, location.pathname]);
@@ -83,8 +92,16 @@ const CareerpathDetail = () => {
         pj={potential_jobs}
         description={description}
       />
-      <ProductPricing enrollNow={enrollNow} />
-      <EnrollForm career_name={career_name} enrollNow={enrollNow} />
+      <ProductPricing
+        enrollNow={enrollNow}
+        careerPathName={careerpath.career_name}
+        setProductPlan={setProductPlan}
+      />
+      <EnrollForm
+        career_name={career_name}
+        enrollNow={enrollNow}
+        setEnrollFormData={setEnrollFormData}
+      />
     </>
   );
 };
