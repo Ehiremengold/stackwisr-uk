@@ -11,14 +11,14 @@ import getStarted from "../../../../assets/svg/get-started.svg";
 import orangeMan from "../../../../assets/icons/orange-man.png";
 import { useState } from "react";
 
-const ProductPricing = () => {
+const ProductPricing = ({ enrollNow }) => {
   const [activeProductTab, setActiveProductTab] = useState(0);
 
   const projectPacked = [
     "Senior-level hands-on training",
     "Recruitment support phase",
     "On-the-job support",
-    "Professional Certificate"
+    "Professional Certificate",
   ];
 
   const careerGrowthAccelerator = [
@@ -40,7 +40,7 @@ const ProductPricing = () => {
   ];
 
   return (
-    <section className="products-pricing">
+    <section className="products-pricing" id="products-pricing">
       <div className="wrapper">
         <img src={dbIcon} className="db-icon" alt="" />
         <img src={serverIcon} className="server-icon" alt="" />
@@ -84,13 +84,12 @@ const ProductPricing = () => {
         <div className="pricing-list-container">
           <div className="pricing-list">
             <div className="pricing-list-header">
-              <h1>Growth</h1>
+              <h1>Career Growth Accelerator</h1>
 
               <div className="pricing-popular">
                 <p>Popular</p>
               </div>
             </div>
-
             <div className="price-description">
               <h1>$149</h1>
               <p>Per user/month, billed monthly</p>
@@ -110,13 +109,18 @@ const ProductPricing = () => {
                 })}
               </div>
             </div>
-
-            <button>Get started on Growth</button>
+            <button
+              data-career-growth="career-growth"
+              onClick={() => enrollNow()}
+              // (e) => console.log(e.target.dataset.careerGrowth)
+            >
+              Get started on Growth
+            </button>
           </div>
 
           <div className="pricing-list">
             <div className="pricing-list-header">
-              <h1 className="ecl">Exceptional Career Launcher</h1>
+              <h1 className="ecl">Executive Career Launcher</h1>
 
               <div className="pricing-popular bc">
                 <p>Best Choice</p>
@@ -142,8 +146,13 @@ const ProductPricing = () => {
                 })}
               </div>
             </div>
-
-            <button>Get started on ECL</button>
+            <button
+              data-executive-career-launcher="executive-career-launcher"
+              onClick={() => enrollNow()}
+              // (e) => console.log(e.target.dataset.executiveCareerLauncher)
+            >
+              Get started on ECL
+            </button>
           </div>
 
           <div className="pricing-list odd">
@@ -153,7 +162,6 @@ const ProductPricing = () => {
                 <p>Project/Experience</p>
               </div>
             </div>
-
             <div className="product-description">
               <p>Per user/month, billed annually</p>
               <h4>Get job ready with us</h4>
@@ -173,22 +181,32 @@ const ProductPricing = () => {
 
                 <h1>$299</h1>
               </div>
-              <div className="growth-project-pack-white">
+              <button
+                className="growth-project-pack-white"
+                data-growth-project-pack="growth-project-pack"
+                onClick={() => enrollNow()}
+                // (e) => console.log(e.target.dataset.growthProjectPack)
+              >
                 <h3>Growth - Project Packed</h3>
-              </div>
+              </button>
             </div>
 
             <div className="white-line"></div>
 
             <div className="growth-project-pack">
               <div className="product-descc">
-                <h3>Exceptional Career Launcher</h3>
+                <h3>Executive Career Launcher</h3>
 
                 <h1>$329</h1>
               </div>
-              <div className="growth-project-pack-white">
+              <button
+                className="growth-project-pack-white"
+                data-ecl-project-pack="ecl-project-pack"
+                onClick={() => enrollNow()}
+                // (e) => console.log(e.target.dataset.eclProjectPack)
+              >
                 <h3>ECL - Project Packed</h3>
-              </div>
+              </button>
             </div>
           </div>
         </div>

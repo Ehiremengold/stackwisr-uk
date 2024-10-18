@@ -74,7 +74,6 @@ const CareerpathDetail = () => {
           career_name={career_name}
           description={description}
           rating={rating}
-          enrollNow={enrollNow}
         />
       </motion.div>
       <CareerDetail />
@@ -84,7 +83,7 @@ const CareerpathDetail = () => {
         pj={potential_jobs}
         description={description}
       />
-      <ProductPricing />
+      <ProductPricing enrollNow={enrollNow} />
       <EnrollForm career_name={career_name} enrollNow={enrollNow} />
     </>
   );

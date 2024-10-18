@@ -73,9 +73,14 @@
   font-size: clamp(16px, 1rem, 30px);
 }
 
-.hero-text-container .action-btns button:first-of-type {
+.hero-text-container .action-btns a button {
   background-color: var(--secondary-color);
   color: white;
+}
+
+.hero-text-container .action-btns a .learn-more-btn{
+  background-color: white;
+  color: black;
 }
 
 .hero-img-container {

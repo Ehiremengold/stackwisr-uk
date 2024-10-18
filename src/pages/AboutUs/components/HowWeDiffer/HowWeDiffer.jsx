@@ -9,10 +9,11 @@ import futureProofIcon from "../../../../assets/icons/futureproofed.png";
 import returnIcon from "../../../../assets/icons/return.png";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 const HowWeDiffer = () => {
   const cardRef = useRef(null);
-  const cardInView = useInView(cardRef, {threshold: 0.4});
+  const cardInView = useInView(cardRef, { threshold: 0.4 });
 
   return (
     <section className="hwd">
@@ -32,11 +33,12 @@ const HowWeDiffer = () => {
               <h1>Our Approach to Empower Your Journey</h1>
               <p>increase your relevance to employers with valued experience</p>
             </div>
-
-            <button className="action-item-btn">
-              <img src={buttonCircle} alt="" />
-              CLICK TO BEGIN
-            </button>
+            <a href="/careerpaths">
+              <button className="action-item-btn">
+                <img src={buttonCircle} alt="" />
+                CLICK TO BEGIN
+              </button>
+            </a>
           </div>
         </div>
 

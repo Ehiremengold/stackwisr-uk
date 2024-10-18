@@ -1,9 +1,20 @@
 import "./EnrollForm.css";
 import cancelIcon from "../../../../assets/svg/cancel.svg";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 
 const EnrollForm = ({ enrollNow, career_name }) => {
   const { countries, isError } = useSelector((store) => store.countries);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    console.log(Object.fromEntries(formData));
+  };
+
+  // product plan
+  // career
+  // enroll now form
 
   return (
     <div className="grey-shade js-grey-shade">
@@ -16,20 +27,20 @@ const EnrollForm = ({ enrollNow, career_name }) => {
             className="cancel-icon"
           />
           <h1>{career_name}</h1>
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
             <div className="names">
-              <input type="text" placeholder="Firstname" />
-              <input type="text" placeholder="Lastname" />
+              <input type="text" required placeholder="Firstname" name="firstname" />
+              <input type="text" required placeholder="Lastname" name="lastname"/>
             </div>
             <div className="email">
-              <input type="text" placeholder="Email" />
+              <input type="text" required placeholder="Email" name="email"/>
             </div>
             <div className="job-title-company">
-              <input type="text" placeholder="Job Title" />
-              <input type="text" placeholder="Company" />
+              <input type="text" placeholder="Job Title" name="job-title" />
+              <input type="text" placeholder="Company" name="company" />
             </div>
             <div className="country-phone">
-              <select name="" id="">
+              <select name="country" id="">
                 <option value="Choose a country">Choose a country</option>
                 {isError && (
                   <div className="center-loader">
@@ -44,13 +55,13 @@ const EnrollForm = ({ enrollNow, career_name }) => {
                   );
                 })}
               </select>
-              <input type="text" placeholder="Phone" />
+              <input type="text" required placeholder="Phone" name="phone"/>
             </div>
             <div className="message">
-              <input type="text" placeholder="Message" />
+              <input type="text" placeholder="Message"name="message" />
             </div>
             <div className="means-of-info">
-              <select name="" id="">
+              <select name="source" id="">
                 <option value="">How did you hear about StackwisR</option>
                 <option value="A Friend">A Friend</option>
                 <option value="LinkedIn">LinkedIn</option>
@@ -67,15 +78,13 @@ const EnrollForm = ({ enrollNow, career_name }) => {
               </select>
             </div>
             <div className="more-insights">
-              <input type="checkbox" />
+              <input name="subscribe" type="checkbox" />
               <p>
                 I want to hear about exciting jobs and events in DataTech, free
                 tutorials, solutions and insights that may benefit my career
               </p>
             </div>
-            <button type="submit" onClick={(e) => e.preventDefault()}>
-              SUBMIT
-            </button>
+            <button type="submit">SUBMIT</button>
           </form>
         </div>
       </div>

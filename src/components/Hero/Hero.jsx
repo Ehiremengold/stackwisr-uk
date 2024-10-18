@@ -3,6 +3,7 @@ import heroUser from "../../assets/images/heroo.png";
 import descImg from "../../assets/svg/top.svg";
 import arrowImg from "../../assets/icons/arrow.png";
 import planeImg from "../../assets/icons/plane.svg";
+import { NavLink } from "react-router-dom";
 
 const Hero = ({ heroRef, heroIsInView }) => {
   return (
@@ -34,8 +35,12 @@ const Hero = ({ heroRef, heroIsInView }) => {
             </div>
 
             <div className="action-btns">
-              <button>Get Started</button>
-              <button>Learn more</button>
+              <NavLink to="/careerpaths">
+                <button>Get Started</button>
+              </NavLink>
+              <a href="/about-us">
+                <button className="learn-more-btn">Learn more</button>
+              </a>
             </div>
           </div>
           <div className="hero-img-container">

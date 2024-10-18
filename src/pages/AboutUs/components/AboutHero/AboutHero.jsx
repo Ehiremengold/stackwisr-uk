@@ -8,10 +8,10 @@ const AboutHero = () => {
       <div className="wrapper">
         <div className="about-hero__main">
           <h1>We&apos;re changing the whole game in Career Development</h1>
-          <div className="action-btns">
+          {/* <div className="action-btns">
             <button>Get Started</button>
             <button>Learn About Us</button>
-          </div>
+          </div> */}
         </div>
         <img src={groupImage} className="group-img" alt="" />
 

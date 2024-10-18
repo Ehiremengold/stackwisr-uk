@@ -7,9 +7,20 @@ import orangePlane from "../../assets/icons/orange-plane.png";
 import orangeMan from "../../assets/icons/orange-man.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { getCountries } from "../../features/countries/countriesSlice.js";
+import { getCareerpaths } from "../../features/careerpaths/careerpathSlice.js";
 
 const Header = () => {
   const location = useLocation();
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCareerpaths());
+    
+    dispatch(getCountries());
+  }, [dispatch]);
 
   const [menu, setMenu] = useState(false);
 

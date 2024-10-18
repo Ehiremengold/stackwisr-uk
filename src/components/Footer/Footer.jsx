@@ -6,10 +6,10 @@ import x from "../../assets/social/x.svg";
 import youtube from "../../assets/social/youtube.svg";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { calendly_URL } from "../../utils";
 
 const Footer = () => {
-  // Access career paths from the Redux store
-  const careerPathsStore = useSelector((store) => store.careerpath);
+  const { careerpaths } = useSelector((store) => store.careerpath);
 
   return (
     <footer>
@@ -25,20 +25,20 @@ const Footer = () => {
           <div className="col">
             <h3>Career Paths</h3>
             <ul className="footer-items">
-              {careerPathsStore.careerpaths.map((careerpath) => {
-                const { id, career_name } = careerpath;
-                return <li key={id}>{career_name}</li>;
+              {careerpaths.map((careerpath) => {
+                const { id, career_name, slug } = careerpath;
+                return (
+                  <a href={`/careerpaths/${slug}`} key={id}>
+                    <li>{career_name}</li>
+                  </a>
+                );
               })}
-              {/* <li>IT Business Analyst</li>
-              <li>Data Engineer</li>
-              <li>Data Analytics Engineer</li>
-              <li>Data Science AI</li> */}
             </ul>
           </div>
           <div className="col col-2">
             <h3>Company</h3>
             <ul className="footer-items">
-              <NavLink to="/about">
+              <NavLink to="/about-us">
                 <li>About</li>
               </NavLink>
               <NavLink to="/testimonies">
@@ -65,10 +65,7 @@ const Footer = () => {
               Book a consultation today to speak with one of our career experts
               and get started
             </p>
-            <NavLink
-              target="_blank"
-              to="https://calendly.com/stackwisr/request-a-call-with-us"
-            >
+            <NavLink target="_blank" to={calendly_URL}>
               <button>Book Call</button>
             </NavLink>
           </div>
@@ -77,7 +74,7 @@ const Footer = () => {
           <div className="left-section">
             <p>All Right Reserved &copy; 2024</p>
             <NavLink to="https://www.stackwisr.co.uk">
-              <span className="footer-link"> www.stackwisr.co.uk</span>
+              <span className="footer-link">www.stackwisr.co.uk</span>
             </NavLink>
           </div>
           <div className="right-section">

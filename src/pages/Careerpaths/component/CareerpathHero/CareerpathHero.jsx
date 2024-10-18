@@ -2,6 +2,12 @@ import "./CareerpathHero.css";
 import careerPathsHero from "../../../../assets/images/careerpathshero.png";
 
 const CareerpathHero = () => {
+  // all-paths-with-bg
+  const handleScroll = () => {
+    document.getElementById("all-paths-with-bg").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <section className="careerpaths">
       <div className="wrapper">
@@ -17,7 +23,9 @@ const CareerpathHero = () => {
           market.
         </p>
         <div className="action-btns">
-          <button className="get-started">Get Started</button>
+          <button className="get-started" onClick={handleScroll}>
+            Get Started
+          </button>
         </div>
         <img src={careerPathsHero} alt="" />
       </div>

@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 const Base = ({ children }) => {
   const [isLogoVisible, setIsLogoVisible] = useState(true);
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLogoVisible(false);

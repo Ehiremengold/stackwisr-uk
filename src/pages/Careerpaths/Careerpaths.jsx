@@ -25,7 +25,7 @@ const Careerpaths = () => {
         <CareerpathHero />
       </motion.div>
 
-      <section className="all-paths-with-bg">
+      <section className="all-paths-with-bg" id="all-paths-with-bg">
         <motion.div
           ref={careerpathsRef}
           initial={{ opacity: 0, y: 100 }}

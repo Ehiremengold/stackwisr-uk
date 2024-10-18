@@ -4,14 +4,13 @@ import nanoFrame from "../../../../assets/svg/nano.svg";
 import blueIcon from "../../../../assets/svg/blue-icon.svg";
 import ratingIcon from "../../../../assets/svg/rating.svg";
 import langIcon from "../../../../assets/svg/lang.svg";
-import { ROOT_URL } from "../../../../utils";
+import { calendly_URL, ROOT_URL } from "../../../../utils";
 
 const CareerDetailHero = ({
   career_name,
   description,
   rating,
   img_display,
-  enrollNow,
 }) => {
   return (
     <section className="career-detail-hero">
@@ -22,12 +21,18 @@ const CareerDetailHero = ({
 
           <div className="action-btns">
             <button
-              onClick={() => enrollNow()}
+              onClick={() => {
+                document.getElementById("products-pricing").scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
               className="enroll-now js-enroll-now"
             >
               Enroll Now
             </button>
-            <button className="consultant">Book a Consultant</button>
+            <a href={calendly_URL} target="_blank" rel="noopener noreferrer">
+              <button className="consultant">Book a Career Consultant</button>
+            </a>
           </div>
 
           <div className="career-students-details">

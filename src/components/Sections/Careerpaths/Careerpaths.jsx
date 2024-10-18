@@ -2,23 +2,16 @@ import "./Careerpaths.css";
 import greyPlane from "../../../assets/svg/grey-plane.svg";
 import greyPlaneDown from "../../../assets/svg/grey-plane-down.svg";
 import careerpathBg from "../../../assets/images/careerpathBg.png";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import PageLoader from "../../PageLoader/PageLoader.jsx";
 import { truncateText } from "../../../utils.js";
-import { getCareerpaths } from "../../../features/careerpaths/careerpathSlice.js";
-// import PageLoader from "../../components/PageLoader/PageLoader.jsx";
-import { NavLink } from "react-router-dom";
-const Careerpaths = () => {
-  const dispatch = useDispatch();
 
+
+
+const Careerpaths = () => {
   const { isLoading, isError, careerpaths } = useSelector(
     (store) => store.careerpath
   );
-
-  useEffect(() => {
-    dispatch(getCareerpaths());
-  }, [dispatch]);
 
   return (
     <section className="career-paths">
@@ -48,22 +41,20 @@ const Careerpaths = () => {
           </div>
         ) : (
           <>
-              <div className="career-paths__cards">
-                {careerpaths.map((careerpath) => {
-                  const { id, career_name, slug, description } = careerpath;
-                  return (
-                    <div key={id} className="career-paths__card">
-                      <img src={careerpathBg} alt="" />
-                      <h3>{career_name}</h3>
-                      <p>{truncateText(description, 90)}</p>
-                      <NavLink to={`/careerpaths/${slug}`}>
-                        <button className="more-btn">Learn more</button>
-                      </NavLink>
-                    </div>
-                  );
-                })}
-
-
+            <div className="career-paths__cards">
+              {careerpaths.map((careerpath) => {
+                const { id, career_name, slug, description } = careerpath;
+                return (
+                  <div key={id} className="career-paths__card">
+                    <img src={careerpathBg} alt="" />
+                    <h3>{career_name}</h3>
+                    <p>{truncateText(description, 90)}</p>
+                    <a href={`/careerpaths/${slug}`}>
+                      <button className="more-btn">Learn more</button>
+                    </a>
+                  </div>
+                );
+              })}
             </div>
           </>
         )}

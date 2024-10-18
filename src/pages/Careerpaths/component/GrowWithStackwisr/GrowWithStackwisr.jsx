@@ -4,6 +4,7 @@ import ProgramCards from "./component/ProgramCards/ProgramCards";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const GrowWithStackwisr = () => {
   const ref = useRef(null); // Create a ref for the image container
@@ -33,7 +34,11 @@ const GrowWithStackwisr = () => {
       </motion.div>
 
       <ProgramCards />
-      <button className="explore-courses">Explore Courses</button>
+      <a href="/testimonies">
+        <button className="explore-courses">
+          <h2>Explore Stories</h2>
+        </button>
+      </a>
     </section>
   );
 };

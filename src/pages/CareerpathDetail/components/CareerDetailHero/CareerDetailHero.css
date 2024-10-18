@@ -1,12 +1,13 @@
 @media (min-width: 846px) {
   .career-detail-hero {
-    height: 90dvh;
+    /* height: 90dvh; */
   }
 }
 .career-detail-hero .wrapper {
   display: flex;
   gap: 4rem;
   margin-top: 2rem;
+  margin-bottom: 6rem;
 }
 @media (min-width: 841px) {
   .career-detail-hero .wrapper {
@@ -35,6 +36,10 @@
   display: flex;
   gap: 1rem;
   /* flex-wrap: wrap; */
+}
+
+.career-detail-hero .wrapper .left-section .action-btns a button.consultant {
+  background-color: var(--primary-color);
 }
 @media (max-width: 768px) {
   .career-detail-hero .wrapper .left-section .action-btns {
@@ -146,7 +151,7 @@
 }
 .start-active {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }

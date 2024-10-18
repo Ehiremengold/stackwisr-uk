@@ -4,21 +4,10 @@ import orangeMan from "../../../assets/icons/orange-man.png";
 import orangePlane from "../../../assets/icons/orange-plane.png";
 import topDrop from "../../../assets/svg/top-drop.svg";
 import { NavLink } from "react-router-dom";
-import { getCountries } from "../../../features/countries/countriesSlice";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useSelector } from "react-redux";
 
 const CallToAction = () => {
-  const dispatch = useDispatch();
-
-  const { countries  } = useSelector(
-    (store) => store.countries
-  );
-
-  useEffect(() => {
-    dispatch(getCountries());
-  }, [dispatch]);
+  const { countries } = useSelector((store) => store.countries);
 
   return (
     <section className="call-to-action">
