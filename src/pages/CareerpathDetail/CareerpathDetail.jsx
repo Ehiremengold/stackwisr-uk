@@ -67,6 +67,7 @@ const CareerpathDetail = () => {
     what_you_will_learn_list,
     skills_you_will_gain,
     potential_jobs,
+    course_start_date
   } = careerpath;
   return (
     <>
@@ -83,6 +84,7 @@ const CareerpathDetail = () => {
           career_name={career_name}
           description={description}
           rating={rating}
+          course_start_date={course_start_date}
         />
       </motion.div>
       <CareerDetail />

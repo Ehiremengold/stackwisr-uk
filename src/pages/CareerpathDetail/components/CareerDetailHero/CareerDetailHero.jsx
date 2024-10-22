@@ -11,6 +11,7 @@ const CareerDetailHero = ({
   description,
   rating,
   img_display,
+  course_start_date,
 }) => {
   return (
     <section className="career-detail-hero">
@@ -52,7 +53,7 @@ const CareerDetailHero = ({
             </div>
             <div className="start-date">
               <img src={blueIcon} className="start-icon" alt="" />
-              <p>Starts - Sept 29, 2024</p>
+              <p>Starts - {course_start_date}</p>
             </div>
           </div>
         </div>
