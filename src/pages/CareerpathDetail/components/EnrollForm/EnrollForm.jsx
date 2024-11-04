@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./EnrollForm.css";
 import cancelIcon from "../../../../assets/svg/cancel.svg";
 import { useSelector } from "react-redux";
@@ -7,7 +8,7 @@ import lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 import PageLoader from "../../../../components/PageLoader/PageLoader.jsx";
 
-const EnrollForm = ({ enrollNow, career_name, setEnrollFormData }) => {
+const EnrollForm = ({ clearForm, enrollNow, career_name, setEnrollFormData }) => {
   const { countries, isError: gettingCountryError } = useSelector(
     (store) => store.countries
   );
@@ -76,7 +77,7 @@ const EnrollForm = ({ enrollNow, career_name, setEnrollFormData }) => {
           <img
             src={cancelIcon}
             alt="cancel-icon"
-            onClick={() => enrollNow()}
+            onClick={() => clearForm()}
             className="cancel-icon"
           />
           {isLoading ? (
@@ -86,13 +87,15 @@ const EnrollForm = ({ enrollNow, career_name, setEnrollFormData }) => {
           ) : isSuccess || isError ? (
             <div ref={animationContainer}>
               {isSuccess && (
-                <h2>Welcome! A representative will reach out to you shortly</h2>
+                <h2 className="welcome-message-top">
+                  Welcome! A representative will reach out to you shortly
+                </h2>
               )}
             </div>
           ) : (
             <>
               <h1>{career_name}</h1>
-              <form action="" onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>
                 <div className="names">
                   <input
                     type="text"

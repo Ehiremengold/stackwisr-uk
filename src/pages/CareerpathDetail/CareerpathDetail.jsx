@@ -23,24 +23,33 @@ const CareerpathDetail = () => {
     (store) => store.careerpath
   );
 
-  if (productPlan && enrollFormData) {
-    dispatch(createLead({ ...productPlan, ...enrollFormData }));
-  }
+  useEffect(() => {
+    // Trigger lead creation only when both states are set
+    if (productPlan && enrollFormData) {
+      dispatch(
+        createLead({
+          careerPathName: careerpath.career_name,
+          selectedPlan: productPlan,
+          ...enrollFormData,
+        })
+      );
+    }
+  }, [productPlan, careerpath.career_name, enrollFormData, dispatch]);
 
   const location = useLocation();
-  
+
   useEffect(() => {
     dispatch(getCareerpathDetail(location.pathname));
   }, [dispatch, location.pathname]);
 
   const enrollNow = () => {
-    if (document.querySelector(".js-grey-shade").classList.contains("show")) {
-      document.body.style.overflow = "auto";
-      document.querySelector(".js-grey-shade").classList.remove("show");
-    } else {
-      document.body.style.overflow = "hidden";
-      document.querySelector(".js-grey-shade").classList.add("show");
-    }
+    document.body.style.overflow = "hidden";
+    document.querySelector(".js-grey-shade").classList.add("show");
+  };
+
+  const clearForm = () => {
+    document.body.style.overflow = "auto";
+    document.querySelector(".js-grey-shade").classList.remove("show");
   };
 
   if (isLoading) {
@@ -67,7 +76,7 @@ const CareerpathDetail = () => {
     what_you_will_learn_list,
     skills_you_will_gain,
     potential_jobs,
-    course_start_date
+    course_start_date,
   } = careerpath;
   return (
     <>
@@ -94,13 +103,10 @@ const CareerpathDetail = () => {
         pj={potential_jobs}
         description={description}
       />
-      <ProductPricing
-        enrollNow={enrollNow}
-        careerPathName={careerpath.career_name}
-        setProductPlan={setProductPlan}
-      />
+      <ProductPricing enrollNow={enrollNow} setProductPlan={setProductPlan} />
       <EnrollForm
         career_name={career_name}
+        clearForm={clearForm}
         enrollNow={enrollNow}
         setEnrollFormData={setEnrollFormData}
       />

@@ -35,9 +35,9 @@ const Hero = ({ heroRef, heroIsInView }) => {
             </div>
 
             <div className="action-btns">
-              <NavLink to="/careerpaths">
+              <a href="/careerpaths">
                 <button>Get Started</button>
-              </NavLink>
+              </a>
               <a href="/about-us">
                 <button className="learn-more-btn">Learn more</button>
               </a>

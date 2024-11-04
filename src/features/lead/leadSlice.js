@@ -17,6 +17,7 @@ export const createLead = createAsyncThunk(
           "Content-Type": "application/json",
         },
       });
+      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);

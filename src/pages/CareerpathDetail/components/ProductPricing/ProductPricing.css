@@ -157,7 +157,7 @@
 }
 
 .pricing-list button{
-  font-size: clamp(18px, 1vw, 35px);
+  font-size: clamp(16px, .8vw, 35px);
 }
 
 .pricing-list-container .pricing-list .ecl {

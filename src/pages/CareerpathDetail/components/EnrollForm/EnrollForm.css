@@ -14,7 +14,7 @@
 }
 
 .enroll-form-container {
-  height: 100vh;
+  height: 80vh;
   place-content: center;
 }
 
@@ -23,7 +23,7 @@
   position: relative;
   width: 95%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
@@ -80,4 +80,8 @@
   padding: 0.8rem 1rem;
   border-radius: 6px;
   border: 1px solid grey;
+}
+
+.welcome-message-top {
+  margin-top: 3rem;
 }

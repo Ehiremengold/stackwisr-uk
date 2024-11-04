@@ -32,7 +32,7 @@ const CareerDetailHero = ({
               Enroll Now
             </button>
             <a href={calendly_URL} target="_blank" rel="noopener noreferrer">
-              <button className="consultant">Book a Career Consultant</button>
+              <button className="consultant">Speak to a Career Expert</button>
             </a>
           </div>
 
