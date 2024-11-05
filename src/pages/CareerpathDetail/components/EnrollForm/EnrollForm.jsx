@@ -8,7 +8,12 @@ import lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 import PageLoader from "../../../../components/PageLoader/PageLoader.jsx";
 
-const EnrollForm = ({ clearForm, enrollNow, career_name, setEnrollFormData }) => {
+const EnrollForm = ({
+  clearForm,
+  enrollNow,
+  career_name,
+  setEnrollFormData,
+}) => {
   const { countries, isError: gettingCountryError } = useSelector(
     (store) => store.countries
   );
@@ -86,9 +91,14 @@ const EnrollForm = ({ clearForm, enrollNow, career_name, setEnrollFormData }) =>
             </div>
           ) : isSuccess || isError ? (
             <div ref={animationContainer}>
-              {isSuccess && (
+              {isSuccess ? (
                 <h2 className="welcome-message-top">
                   Welcome! A representative will reach out to you shortly
+                </h2>
+              ) : (
+                <h2 className="error  welcome-message-top">
+                  There was an issue somewhere. Please refresh the page and try
+                  again
                 </h2>
               )}
             </div>

@@ -14,8 +14,11 @@
 }
 
 .enroll-form-container {
-  height: 80vh;
+  height: 100vh;
+  display: grid;
   place-content: center;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
 .enroll-form {
@@ -27,6 +30,8 @@
   padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .enroll-form .cancel-icon {

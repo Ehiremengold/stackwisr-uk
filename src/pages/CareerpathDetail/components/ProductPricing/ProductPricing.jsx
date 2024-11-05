@@ -41,18 +41,7 @@ const ProductPricing = ({ enrollNow, setProductPlan }) => {
     "Reference",
   ];
 
-  // careerName
-  // user data
-  // plan
-
-  // const handlePlanSelection = (e, planType) => {
-  //   const selectedPlan = e.target.getAttribute(`data-${planType}`);
-  //   enrollNow();
-  //   setProductPlan({
-  //     selectedPlan,
-  //     careerPathName,
-  //   });
-  // };
+  
   return (
     <section className="products-pricing" id="products-pricing">
       <div className="wrapper">

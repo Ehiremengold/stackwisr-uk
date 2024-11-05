@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     dispatch(getCareerpaths());
-    
+
     dispatch(getCountries());
   }, [dispatch]);
 
