@@ -1,0 +1,29 @@
+.all-resources {
+  max-width: 1000px;
+  width: 95%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.all-resources .resource-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: 2px 3px 4px 4px rgba(33, 33, 33, 0.2);
+}
+.all-resources .resource-card p {
+  /* margin: 1rem 0; */
+}
+
+.all-resources .resource-card h5 {
+  color: var(--accent-color);
+  cursor: pointer;
+
+}

@@ -3,7 +3,7 @@ import ResourcesHero from "./components/ResourcesHero/ResourcesHero.jsx";
 import pinkBg from "../../assets/svg/pinkbg.svg";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-
+import AllResources from "./components/AllResources/AllResources.jsx";
 const Resources = () => {
   return (
     <>
@@ -27,8 +27,13 @@ const Resources = () => {
               <div className="desc-bar"></div>
             </div>
             <h1>Our Resources</h1>
+            <p>
+              Get latest materials and equip yourself with what you will help
+              you succeed in the industry
+            </p>
           </div>
         </div>
+        <AllResources />
       </section>
     </>
   );

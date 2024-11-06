@@ -29,11 +29,11 @@ function App() {
           <Route exact path="/resources" element={<Resources />} />
           <Route exact path="/testimonies" element={<Testimonies />} />
           <Route exact path="/events" element={<Event />} />
-          <Route
+          {/* <Route
             exact
             path="/careerpath/:slug"
             element={<CareerpathDetail />}
-          />
+          /> */}
         </Routes>
       </Base>
     </Router>

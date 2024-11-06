@@ -15,5 +15,5 @@ export {
   Blog,
   Resources,
   Testimonies,
-  Event
+  Event,
 };

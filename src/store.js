@@ -4,6 +4,7 @@ import careerpathReducer from "./features/careerpaths/careerpathSlice.js";
 import countriesReducer from "./features/countries/countriesSlice.js";
 import testimonialReducer from "./features/testimonials/testimonialSlice.js";
 import leadReducer from "./features/lead/leadSlice.js";
+import resourcesReducer from "./features/resources/resourcesSlice.js";
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     countries: countriesReducer,
     testimonials: testimonialReducer,
     leads: leadReducer,
+    resources: resourcesReducer,
   },
 });

@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { latestBlogPosts } from "../../../features/blog/blogSlice";
 import PageLoader from "../../PageLoader/PageLoader";
 import { ROOT_URL } from "../../../utils";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Blog = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,8 @@ const Blog = () => {
     (store) => store.blog
   );
 
+  const location = useLocation();
+  
   useEffect(() => {
     dispatch(latestBlogPosts());
   }, [dispatch]);
@@ -81,15 +83,17 @@ const Blog = () => {
                   </div>
                 </div>
                 <h2>{mainPost.title}</h2>
-                <NavLink to="/blog">
-                  <h4>Explore more like this</h4>
-                </NavLink>
+                {location.pathname === "/blog" || (
+                  <NavLink to="/blog">
+                    <h4>Explore more like this</h4>
+                  </NavLink>
+                )}
               </div>
             </div>
           </div>
 
           <div className="more-posts">
-            {latestPosts.slice(1).map((post) => {
+            {latestPosts.slice(1, 3).map((post) => {
               return (
                 <div key={post.id} className="more-post-card">
                   <div className="card-img-container">

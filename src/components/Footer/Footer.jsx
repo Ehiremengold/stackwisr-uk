@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <div className="left-section">
-            <p>All Right Reserved &copy; 2024</p>
+            <p>All Right Reserved &copy; 2024</p>&nbsp;
             <NavLink to="https://www.stackwisr.co.uk">
               <span className="footer-link">www.stackwisr.co.uk</span>
             </NavLink>

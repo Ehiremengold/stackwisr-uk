@@ -67,10 +67,10 @@ const Header = () => {
             <NavLink to="/testimonies">
               <li>Our Success</li>
             </NavLink>
-            <NavLink to="/blog" className="disable-link">
+            <NavLink to="/blog">
               <li>Blog</li>
             </NavLink>
-            <NavLink to="/resources" className="disable-link">
+            <NavLink to="/resources">
               <li>Resources</li>
             </NavLink>
           </ul>

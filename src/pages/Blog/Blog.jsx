@@ -6,7 +6,25 @@ import darkDate from "../../assets/svg/dark-date.svg";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts, incrementPage } from "../../features/blog/blogSlice";
+import { ROOT_URL } from "../../utils";
+
 const Blog = () => {
+  const { posts, more, page } = useSelector((store) => store.blog);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts(page));
+  }, [dispatch, page]);
+
+  const handleLoadMore = () => {
+    dispatch(incrementPage()); // Increment page for the next batch
+    dispatch(getPosts(page + 1)); // Fetch the next page of posts
+  };
+
   return (
     <>
       <Helmet>
@@ -22,100 +40,37 @@ const Blog = () => {
       <BlogSection />
 
       <div className="more-posts container">
-        {/* card 1 */}
-        <div className="more-post-card">
-          <div className="card-img-container">
-            <img src="" alt="" />
-          </div>
-          <div className="card-post-desc-container">
-            <div className="author-date">
-              <div className="author">
-                <img src={darkAuthor} alt="" />
-                <p>author</p>
-              </div>
-              <div className="date">
-                <img src={darkDate} alt="" />
-                <p>created</p>
-              </div>
-            </div>
-            <h5>title</h5>
-            <NavLink to="#">
-              <h6>Read More</h6>
-            </NavLink>
-          </div>
-        </div>
-        {/* card 2 */}
-        <div className="more-post-card">
-          <div className="card-img-container">
-            <img src="" alt="" />
-          </div>
-          <div className="card-post-desc-container">
-            <div className="author-date">
-              <div className="author">
-                <img src={darkAuthor} alt="" />
-                <p>author</p>
-              </div>
-              <div className="date">
-                <img src={darkDate} alt="" />
-                <p>created</p>
-              </div>
-            </div>
-            <h5>title</h5>
-            <NavLink to="#">
-              <h6>Read More</h6>
-            </NavLink>
-          </div>
-        </div>
+        {posts.slice(3).map((post) => {
+          const { id, image, slug, author, title, created } = post;
 
-        {/* card 3 */}
-        <div className="more-post-card">
-          <div className="card-img-container">
-            <img src="" alt="" />
-          </div>
-          <div className="card-post-desc-container">
-            <div className="author-date">
-              <div className="author">
-                <img src={darkAuthor} alt="" />
-                <p>author</p>
+          return (
+            <div className="more-post-card" key={id}>
+              <div className="card-img-container">
+                <img src={ROOT_URL + image} alt="" />
               </div>
-              <div className="date">
-                <img src={darkDate} alt="" />
-                <p>created</p>
-              </div>
-            </div>
-            <h5>title</h5>
-            <NavLink to="#">
-              <h6>Read More</h6>
-            </NavLink>
-          </div>
-        </div>
-        {/* card 4 */}
-
-        <div className="more-post-card">
-          <div className="card-img-container">
-            <img src="" alt="" />
-          </div>
-          <div className="card-post-desc-container">
-            <div className="author-date">
-              <div className="author">
-                <img src={darkAuthor} alt="" />
-                <p>author</p>
-              </div>
-              <div className="date">
-                <img src={darkDate} alt="" />
-                <p>created</p>
+              <div className="card-post-desc-container">
+                <div className="author-date">
+                  <div className="author">
+                    <img src={darkAuthor} alt="" />
+                    <p>{author}</p>
+                  </div>
+                  <div className="date">
+                    <img src={darkDate} alt="" />
+                    <p>{created}</p>
+                  </div>
+                </div>
+                <h5>{title}</h5>
+                <NavLink to={`blog/${slug}`}>
+                  <h6>Read More</h6>
+                </NavLink>
               </div>
             </div>
-            <h5>title</h5>
-            <NavLink to="#">
-              <h6>Read More</h6>
-            </NavLink>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
       <div className="load-more">
-        <button className="load-more-btn">Load more</button>
+        {more && <button className="load-more-btn" onClick={handleLoadMore}>Load more</button>}
       </div>
     </>
   );
