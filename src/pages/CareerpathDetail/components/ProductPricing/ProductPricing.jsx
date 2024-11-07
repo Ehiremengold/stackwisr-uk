@@ -96,7 +96,7 @@ const ProductPricing = ({ enrollNow, setProductPlan }) => {
               </div>
             </div>
             <div className="price-description">
-              <h1>$149</h1>
+              <h1>£149</h1>
               <p>Per user/month, billed monthly</p>
             </div>
 
@@ -138,7 +138,7 @@ const ProductPricing = ({ enrollNow, setProductPlan }) => {
             </div>
 
             <div className="price-description">
-              <h1>$269</h1>
+              <h1>£269</h1>
               <p>Per contracted user/month, billed annually</p>
             </div>
 
@@ -194,7 +194,7 @@ const ProductPricing = ({ enrollNow, setProductPlan }) => {
               <div className="product-descc">
                 <h3>Growth project Pack</h3>
 
-                <h1>$299</h1>
+                <h1>£299</h1>
               </div>
               <button
                 className="growth-project-pack-white"
@@ -217,7 +217,7 @@ const ProductPricing = ({ enrollNow, setProductPlan }) => {
               <div className="product-descc">
                 <h3>Executive Career Launcher</h3>
 
-                <h1>$329</h1>
+                <h1>£329</h1>
               </div>
               <button
                 className="growth-project-pack-white"
