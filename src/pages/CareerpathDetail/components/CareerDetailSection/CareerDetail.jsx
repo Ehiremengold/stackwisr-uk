@@ -43,7 +43,7 @@ const CareerDetail = () => {
             </div>
             <div className="col">
               <h3>Avg. Earnings</h3>
-              <p>$50k - $65k</p>
+              <p>£50k - £65k</p>
             </div>
             <div className="col">
               <h3>Focus</h3>
