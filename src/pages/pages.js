@@ -6,6 +6,7 @@ import Blog from "./Blog/Blog.jsx";
 import Resources from "./Resources/Resources.jsx";
 import Testimonies from "./Testimonies/Testimonies.jsx";
 import Event from "./Event/Event.jsx";
+import BlogDetail from "./BlogDetail/BlogDetail.jsx";
 
 export {
   Home,
@@ -13,6 +14,7 @@ export {
   CareerpathDetail,
   AboutUs,
   Blog,
+  BlogDetail,
   Resources,
   Testimonies,
   Event,

@@ -3,7 +3,7 @@ import axios from "axios";
 import { ROOT_URL } from "../../utils.js";
 
 const initialState = {
-  isLoading: true,
+  isLoading: false,
   isError: false,
   more: false,
   posts: [],

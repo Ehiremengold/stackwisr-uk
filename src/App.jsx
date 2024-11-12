@@ -10,6 +10,7 @@ import {
   Resources,
   Testimonies,
   Event,
+  BlogDetail,
 } from "./pages/pages";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             element={<CareerpathDetail />}
           />
           <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/blog/:slug" element={<BlogDetail />} />
           <Route exact path="/resources" element={<Resources />} />
           <Route exact path="/testimonies" element={<Testimonies />} />
           <Route exact path="/events" element={<Event />} />

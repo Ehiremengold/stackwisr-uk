@@ -111,7 +111,7 @@ const Blog = () => {
                       </div>
                     </div>
                     <h5>{post.title}</h5>
-                    <NavLink to="#">
+                    <NavLink to={`blog/${post.slug}`}>
                       <h6>Read More</h6>
                     </NavLink>
                   </div>

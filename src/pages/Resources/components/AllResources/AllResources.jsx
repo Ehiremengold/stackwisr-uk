@@ -6,13 +6,22 @@ import {
   incrementResources,
 } from "../../../../features/resources/resourcesSlice";
 import PageLoader from "../../../../components/PageLoader/PageLoader";
+import darkAuthor from "../../../../assets/svg/dark-author.svg";
+import darkDate from "../../../../assets/svg/dark-date.svg";
+import { div } from "framer-motion/client";
+import { useState } from "react";
 
-const AllResources = () => {
+const AllResources = ({ openModal, setOpenModal }) => {
   const dispatch = useDispatch();
 
   const { resources, more, isLoading, isError, page } = useSelector(
     (store) => store.resources
   );
+
+  const toggleOverlay = () => {
+    setOpenModal(true);
+  };
+
   useEffect(() => {
     dispatch(getResources(page));
   }, [dispatch, page]);
@@ -49,12 +58,22 @@ const AllResources = () => {
     <>
       <div className="all-resources">
         {resources.map((resource) => {
-          const { id, title, slug, description, created } = resource;
+          const { id, title, description, created } = resource;
           return (
             <div className="resource-card" key={id}>
               <h3>{title}</h3>
               <p>{description}</p>
-              <h5 onClick>Get Now</h5>
+              <h5 onClick={() => toggleOverlay()}>Get Now</h5>
+              <div className="author-date">
+                <div className="author">
+                  <img src={darkAuthor} alt="" />
+                  <p>By Admin</p>
+                </div>
+                <div className="date">
+                  <img src={darkDate} alt="" />
+                  <p>{created}</p>
+                </div>
+              </div>
             </div>
           );
         })}
