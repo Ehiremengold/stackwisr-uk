@@ -1,6 +1,5 @@
 import "./Resources.css";
 import ResourcesHero from "./components/ResourcesHero/ResourcesHero.jsx";
-import pinkBg from "../../assets/svg/pinkbg.svg";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import AllResources from "./components/AllResources/AllResources.jsx";
@@ -9,7 +8,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { getCountries } from "../../features/countries/countriesSlice.js";
 import { useDispatch, useSelector } from "react-redux";
-import PageLoader from "../../components/PageLoader/PageLoader.jsx";
 import leftEventIcon from "../../assets/icons/left-events-icon.png";
 import rightEventIcon from "../../assets/svg/pink-white.svg";
 import sidePink from "../../assets/svg/side-pink.svg";
@@ -17,7 +15,7 @@ import sidePink from "../../assets/svg/side-pink.svg";
 const Resources = () => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const { countries, isLoading, isError } = useSelector(
+  const { countries, isError } = useSelector(
     (store) => store.countries
   );
 
@@ -36,12 +34,14 @@ const Resources = () => {
   }, [dispatch]);
 
   const clearForm = () => {
-    setOpenModal(false)
+    setOpenModal(false);
     document.body.style.overflow = "auto";
     document.querySelector(".js-modal-dark ").classList.remove("show");
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -83,49 +83,51 @@ const Resources = () => {
                 onClick={() => clearForm()}
                 className="cancel-icon"
               />
-                <h3>Register to get resource</h3>
-                <form onSubmit={handleSubmit}>
-                  <div className="names">
-                    <input
-                      type="text"
-                      required
-                      placeholder="Firstname"
-                      name="firstName"
-                    />
-                    <input
-                      type="text"
-                      required
-                      placeholder="Lastname"
-                      name="lastName"
-                    />
-                  </div>
-                  <div className="email">
-                    <input
-                      type="email"
-                      required
-                      placeholder="Email"
-                      name="email"
-                    />
-                  </div>
-                  <div className="country-phone">
-                    <select name="country" id="">
-                      <option value="Choose a country">Choose a country</option>
-                      {isError && (
-                        <div className="center-loader">
-                          <h4>Error Loading Countries</h4>
-                        </div>
-                      )}
-                      {countries.map((country, index) => {
-                        return (
-                          <option key={index} value={country}>
-                            {country}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <button className="download-resource-btn" type="submit">Download to my email</button>
-                </form>
+              <h3>Register to get resource</h3>
+              <form onSubmit={(e) => handleSubmit(e)}>
+                <div className="names">
+                  <input
+                    type="text"
+                    required
+                    placeholder="Firstname"
+                    name="firstName"
+                  />
+                  <input
+                    type="text"
+                    required
+                    placeholder="Lastname"
+                    name="lastName"
+                  />
+                </div>
+                <div className="email">
+                  <input
+                    type="email"
+                    required
+                    placeholder="Email"
+                    name="email"
+                  />
+                </div>
+                <div className="country-phone">
+                  <select name="country" id="">
+                    <option value="Choose a country">Choose a country</option>
+                    {isError && (
+                      <div className="center-loader">
+                        <h4>Error Loading Countries</h4>
+                      </div>
+                    )}
+                    {countries.map((country, index) => {
+                      return (
+                        <option key={index} value={country}>
+                          {country}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+                <button className="download-resource-btn" type="submit">
+                  Download to my email
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -139,7 +141,6 @@ const Resources = () => {
         <img src={rightEventIcon} className="right-one-testimony" alt="" />
       </section>
       <section className="after-test join">
-      
         <img src={sidePink} alt="" />
         <h1>
           Join over 1000+ delegates who used StackwisR to upskill and handle
