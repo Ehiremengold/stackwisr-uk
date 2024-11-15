@@ -7,6 +7,7 @@ import DOMPurify from "dompurify";
 import PageLoader from "../../components/PageLoader/PageLoader";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+import { ROOT_URL } from "../../utils";
 
 const BlogDetail = () => {
   const param = useParams();
@@ -49,7 +50,7 @@ const BlogDetail = () => {
       >
         <section
           className="detail"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${ROOT_URL + image})` }}
         >
           <div className="post-detail__header">
             <h1>{title}</h1>

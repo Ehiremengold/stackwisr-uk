@@ -43,17 +43,17 @@
 }
 
 @media (max-width: 385px) {
-  .post-detail__desc{
+  .post-detail__desc {
     flex-direction: column;
   }
 
-  .post-detail__desc div{
+  .post-detail__desc div {
     display: none;
   }
 }
 
 .post-detail__header h1 {
-  font-size: var(--h1-font-size);
+  font-size: clamp(16px, 1rem + 1vw, 70px);
 }
 
 .post-detail__desc p {
@@ -99,4 +99,3 @@
 .left__main-body img {
   width: 50%;
 }
-
