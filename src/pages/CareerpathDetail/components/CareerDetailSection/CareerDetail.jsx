@@ -6,8 +6,17 @@ const CareerDetail = () => {
       <div className="wrapper">
         <div className="tab-control">
           <button className="tab tab-details active">Details</button>
-          <button className="tab tab-products">Products</button>
-          <button className="tab tab-pricing">Pricing</button>
+          {/* <button className="tab tab-products">Products</button> */}
+          <button
+            onClick={() => {
+              document.getElementById("products-pricing").scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className="tab tab-pricing"
+          >
+            Pricing
+          </button>
         </div>
         <div className="tab-body">
           <div className="tab-body-top">
