@@ -34,10 +34,10 @@ const ProjectPack = () => {
           <div className="project-pack-maximize">
             <h2>Maximize the value of your knowledge</h2>
             <p>Increase your relevance to employers with valued experience</p>
-            <button className="action-item-btn">
+            {/* <button className="action-item-btn">
               <img src={buttonCircle} alt="" />
               CLICK TO BEGIN
-            </button>
+            </button> */}
           </div>
           {/* right */}
         </div>
