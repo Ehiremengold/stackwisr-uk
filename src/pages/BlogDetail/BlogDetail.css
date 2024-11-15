@@ -97,5 +97,7 @@
 }
 
 .left__main-body img {
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
 }
