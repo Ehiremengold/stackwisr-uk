@@ -38,18 +38,18 @@ const Footer = () => {
           <div className="col col-2">
             <h3>Company</h3>
             <ul className="footer-items">
-              <NavLink to="/about-us">
+              <a href="/about-us">
                 <li>About</li>
-              </NavLink>
-              <NavLink to="/testimonies">
+              </a>
+              <a href="/testimonies">
                 <li>Success</li>
-              </NavLink>
-              <NavLink to="/careerpaths">
+              </a>
+              <a href="/careerpaths">
                 <li>Products</li>
-              </NavLink>
-              <NavLink to="/blog">
+              </a>
+              <a href="/blog">
                 <li>Blog</li>
-              </NavLink>
+              </a>
             </ul>
           </div>
           <div className="col col-3">
@@ -73,9 +73,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="left-section">
             <p>All Right Reserved &copy; 2024</p>&nbsp;
-            <NavLink to="https://www.stackwisr.co.uk">
+            <a href="https://www.stackwisr.co.uk">
               <span className="footer-link">www.stackwisr.co.uk</span>
-            </NavLink>
+            </a>
           </div>
           <div className="right-section">
             <ul className="socials-icons">
