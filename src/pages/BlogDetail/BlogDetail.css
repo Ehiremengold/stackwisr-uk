@@ -53,7 +53,7 @@
 }
 
 .post-detail__header h1 {
-  font-size: clamp(16px, 1rem + 1vw, 70px);
+  font-size: clamp(19px, 3rem, 70px);
 }
 
 .post-detail__desc p {
