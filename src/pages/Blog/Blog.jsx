@@ -60,7 +60,7 @@ const Blog = () => {
                   </div>
                 </div>
                 <h5>{title}</h5>
-                <NavLink to={`blog/${slug}`}>
+                <NavLink to={`${slug}`}>
                   <h6>Read More</h6>
                 </NavLink>
               </div>

@@ -94,6 +94,7 @@ const Blog = () => {
 
           <div className="more-posts">
             {latestPosts.slice(1, 3).map((post) => {
+              console.log(post.slug)
               return (
                 <div key={post.id} className="more-post-card">
                   <div className="card-img-container">
@@ -111,7 +112,7 @@ const Blog = () => {
                       </div>
                     </div>
                     <h5>{post.title}</h5>
-                    <NavLink to={`blog/${post.slug}`}>
+                    <NavLink to={`${post.slug}`}>
                       <h6>Read More</h6>
                     </NavLink>
                   </div>
