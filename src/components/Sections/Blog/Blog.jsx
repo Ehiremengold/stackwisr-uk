@@ -19,7 +19,7 @@ const Blog = () => {
   );
 
   const location = useLocation();
-  
+
   useEffect(() => {
     dispatch(latestBlogPosts());
   }, [dispatch]);
@@ -82,7 +82,9 @@ const Blog = () => {
                     <p>{mainPost.created}</p>
                   </div>
                 </div>
-                <h2>{mainPost.title}</h2>
+                <a href={`${mainPost.slug}`}>
+                  <h2>{mainPost.title}</h2>
+                </a>
                 {location.pathname === "/blog" || (
                   <NavLink to="/blog">
                     <h4>Explore more like this</h4>
@@ -94,7 +96,7 @@ const Blog = () => {
 
           <div className="more-posts">
             {latestPosts.slice(1, 3).map((post) => {
-              console.log(post.slug)
+              console.log(post.slug);
               return (
                 <div key={post.id} className="more-post-card">
                   <div className="card-img-container">
