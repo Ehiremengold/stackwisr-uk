@@ -23,6 +23,7 @@ const EnrollForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    console.log(Object.fromEntries(formData))
     setEnrollFormData(Object.fromEntries(formData));
     e.currentTarget.reset();
   };
@@ -133,7 +134,7 @@ const EnrollForm = ({
                   <input type="text" placeholder="Company" name="company" />
                 </div>
                 <div className="country-phone">
-                  <select name="country" id="">
+                  <select required name="country" id="">
                     <option value="Choose a country">Choose a country</option>
                     {gettingCountryError && (
                       <div className="center-loader">
@@ -159,7 +160,7 @@ const EnrollForm = ({
                   <input type="text" placeholder="Message" name="message" />
                 </div>
                 <div className="means-of-info">
-                  <select name="source" id="">
+                  <select required name="source" id="">
                     <option value="">How did you hear about StackwisR</option>
                     <option value="A Friend">A Friend</option>
                     <option value="LinkedIn">LinkedIn</option>
