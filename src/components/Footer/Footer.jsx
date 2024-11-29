@@ -80,25 +80,25 @@ const Footer = () => {
           <div className="right-section">
             <ul className="socials-icons">
               <li>
-                <NavLink to="#">
+                <NavLink to="https://www.instagram.com/stackwisr?igsh=M2JteDBuY3k3cTh6">
                   <img src={instagram} alt="" />
                 </NavLink>
               </li>
               <li>
-                <NavLink to="#">
+                <NavLink to="https://www.facebook.com/StackwisR">
                   <img src={facebook} alt="" />
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink to="#">
                   <img src={x} alt="" />
                 </NavLink>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <NavLink to="#">
                   <img src={youtube} alt="" />
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
