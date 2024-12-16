@@ -2,8 +2,8 @@ import "./Footer.css";
 import logo from "../../assets/logo/logo-white.png";
 import facebook from "../../assets/social/facebook.svg";
 import instagram from "../../assets/social/instagram.svg";
-import x from "../../assets/social/x.svg";
-import youtube from "../../assets/social/youtube.svg";
+// import x from "../../assets/social/x.svg";
+// import youtube from "../../assets/social/youtube.svg";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { calendly_URL } from "../../utils";
@@ -55,8 +55,15 @@ const Footer = () => {
           <div className="col col-3">
             <h3>Legal</h3>
             <ul className="footer-items">
-              <li>Privacy</li>
-              <li>Terms</li>
+              <a href="/cookie-policy">
+                <li>Cookie Policy</li>
+              </a>
+              <a href="/privacy-policy">
+                <li>Privacy</li>
+              </a>
+              <a href="/terms-of-service">
+                <li>Terms of Service</li>
+              </a>
             </ul>
           </div>
           <div className="col col-4">

@@ -1,0 +1,23 @@
+.doc-container {
+  max-width: 85%;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: justify;
+}
+
+
+.doc-container ul {
+  margin: 1rem 0;
+}
+.doc-container ul li {
+  font-size: clamp(0.8rem, 1.23rem, 4rem);
+}
+.doc-container h1 {
+  text-align: center;
+  font-size: clamp(0.8rem, 1.5rem, 8rem);
+}
+
+.doc-container p {
+  margin: 1rem 0;
+  font-size: clamp(0.8rem, 1.23rem, 4rem);
+}

@@ -7,6 +7,9 @@ import Resources from "./Resources/Resources.jsx";
 import Testimonies from "./Testimonies/Testimonies.jsx";
 import Event from "./Event/Event.jsx";
 import BlogDetail from "./BlogDetail/BlogDetail.jsx";
+import Terms from "./Terms/Terms.jsx";
+import CookiePolicy from "./CookiePolicy/CookiePolicy.jsx";
+import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy.jsx";
 
 export {
   Home,
@@ -18,4 +21,7 @@ export {
   Resources,
   Testimonies,
   Event,
+  Terms,
+  CookiePolicy,
+  PrivacyPolicy,
 };

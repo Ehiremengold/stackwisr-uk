@@ -11,6 +11,9 @@ import {
   Testimonies,
   Event,
   BlogDetail,
+  Terms,
+  CookiePolicy,
+  PrivacyPolicy,
 } from "./pages/pages";
 
 function App() {
@@ -31,11 +34,9 @@ function App() {
           <Route exact path="/resources" element={<Resources />} />
           <Route exact path="/testimonies" element={<Testimonies />} />
           <Route exact path="/events" element={<Event />} />
-          {/* <Route
-            exact
-            path="/careerpath/:slug"
-            element={<CareerpathDetail />}
-          /> */}
+          <Route exact path="/terms-of-service" element={<Terms />} />
+          <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route exact path="/cookie-policy" element={<CookiePolicy />} />
         </Routes>
       </Base>
     </Router>
