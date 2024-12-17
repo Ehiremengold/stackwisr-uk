@@ -1,6 +1,6 @@
 .doc-container {
   width: 60%;
-  margin: 2rem auto;
+  margin: 5rem auto;
   text-align: justify;
 }
 
@@ -19,7 +19,7 @@
   margin: 1rem 0;
 }
 .doc-container h1 {
-  margin: 5rem auto;
+  margin: 4rem auto;
   text-align: center;
   font-size: clamp(0.3rem, 2rem, 4rem);
 }
