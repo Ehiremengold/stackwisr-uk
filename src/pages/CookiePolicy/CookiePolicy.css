@@ -1,23 +1,35 @@
 .doc-container {
-  max-width: 85%;
-  width: 100%;
+  width: 60%;
   margin: 2rem auto;
   text-align: justify;
 }
 
+@media(max-width:425px){
+  .doc-container{
+    width: 80%;
+  }
+}
 
 .doc-container ul {
   margin: 1rem 0;
 }
 .doc-container ul li {
-  font-size: clamp(0.8rem, 1.23rem, 4rem);
+  font-size: clamp(0.6rem, 1.2rem, 4rem);
+  color: rgb(70, 69, 69);
+  margin: 1rem 0;
 }
 .doc-container h1 {
+  margin: 5rem auto;
   text-align: center;
-  font-size: clamp(0.8rem, 1.5rem, 8rem);
+  font-size: clamp(0.3rem, 2rem, 4rem);
+}
+
+.doc-container h3 {
+  margin-top: 3rem;
 }
 
 .doc-container p {
+  color: rgb(70, 69, 69);
   margin: 1rem 0;
-  font-size: clamp(0.8rem, 1.23rem, 4rem);
+  font-size: clamp(0.6rem, 1.2rem, 4rem);
 }
