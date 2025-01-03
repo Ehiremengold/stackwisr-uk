@@ -25,27 +25,27 @@ const Home = () => {
 
   const imageInContainerRef = useRef(null);
 
-  const heroIsInView = useInView(heroRef, { once: true });
+  const heroIsInView = useInView(heroRef,);
   const careerpathsIsInView = useInView(careerpathsRef, {
-    once: true,
-    threshold: 0.4,
+    // once: true,
+    threshold: 0.7,
   });
   const blogSectionIsInView = useInView(blogRef, {
-    once: true,
-    threshold: 0.4,
+    // once: true,
+    threshold: 0.7,
   });
   const futureProofSection = useInView(futureProofRef, {
-    once: true,
-    threshold: 0.4,
+    // once: true,
+    threshold: 0.7,
   });
   const projectPackSection = useInView(projectPackRef, {
-    once: true,
-    threshold: 0.4,
+    // once: true,
+    threshold: 0.7,
   });
 
   const imageInWhyChooseUsSection = useInView(imageInContainerRef, {
-    once: true,
-    threshold: 0.4,
+    // once: true,
+    threshold: 0.7,
   });
 
   return (

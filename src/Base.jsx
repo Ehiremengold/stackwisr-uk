@@ -13,7 +13,7 @@ const Base = ({ children }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLogoVisible(false);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
