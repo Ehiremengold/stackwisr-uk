@@ -41,8 +41,9 @@
 
 .hero-text-container h1 {
   font-size: var(--hero-font-main);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: clamp(2.5vw, 5.2vw, 8vw);
+  color: var(--secondary-color);
 }
 
 .hero-text-container p {
@@ -78,9 +79,10 @@
   color: white;
 }
 
-.hero-text-container .action-btns a .learn-more-btn{
-  background-color: white;
-  color: black;
+.hero-text-container .action-btns a .learn-more-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid var(--secondary-color);
 }
 
 .hero-img-container {
@@ -163,4 +165,37 @@
   bottom: 27px;
   overflow: hidden;
   z-index: 2;
+}
+
+.we-offer-button-like {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+}
+
+@media (max-width: 768px) {
+  .we-offer-button-like {
+    justify-content: center;
+  }
+}
+
+.we-offer-button-like .button-like {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border-radius: 5px;
+  padding: .8rem 1rem;
+  border: 1px solid #fff;
+
+}
+
+.we-offer-button-like .button-like p{
+  font-size: clamp(14px, .4rem, 30px);
+}
+
+.we-offer-button-like .button-like img {
+  width: 20px;
 }
