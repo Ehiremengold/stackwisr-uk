@@ -29,8 +29,7 @@ const Hero = ({ heroRef, heroIsInView }) => {
                 StackwisR
               </h1>
               <p>
-                We offer on-demand career programs designed to prepare you for
-                pivotal career moments
+              Secure your future with job-specific skills tailored for fields in the digital economy.
               </p>
             </div>
 

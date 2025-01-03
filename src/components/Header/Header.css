@@ -169,3 +169,18 @@ nav {
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.nav-tel-container{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-tel-container img{
+  width: 10%;
+}
+
+.right-nav-items button{
+  background-color: #fff;
+  border: 1px solid grey;
+}

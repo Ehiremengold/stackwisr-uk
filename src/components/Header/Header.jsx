@@ -5,6 +5,7 @@ import Menu from "../Menu/Menu.jsx";
 import CloseMenu from "../CloseMenu/CloseMenu.jsx";
 import orangePlane from "../../assets/icons/orange-plane.png";
 import orangeMan from "../../assets/icons/orange-man.png";
+import telephone from "../../assets/icons/telephone.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -61,29 +62,33 @@ const Header = () => {
             <CloseMenu />
           </div>
           <ul className="center-nav-items">
-            <NavLink to="/careerpaths">
-              <li>Career Paths</li>
+            <NavLink to="/about-us">
+              <li>About Us</li>
             </NavLink>
-            <NavLink to="/testimonies">
-              <li>Our Success</li>
+            <NavLink to="/courses">
+              <li>Courses</li>
             </NavLink>
-            <a href="/blog">
-              <li>Blog</li>
-            </a>
-            <NavLink to="/resources">
-              <li>Resources</li>
+            <NavLink to="/advisory">
+              <li>Advisory & Consulting Services</li>
+            </NavLink>
+            <NavLink to="/events">
+              <li>Events</li>
+            </NavLink>
+            <NavLink to="/contact-us">
+              <li>Contact Us</li>
             </NavLink>
           </ul>
 
           {menu && <img src={orangePlane} className="asset" alt="" />}
           {menu && <img src={orangeMan} className="man-asset" alt="" />}
           <ul className="right-nav-items">
-            <NavLink to="/about-us">
-              <li>About Us</li>
-            </NavLink>
-            <NavLink to="/events">
-              <li>Events</li>
-            </NavLink>
+            <div className="nav-tel-container">
+              <img src={telephone} alt="" />
+              <a href="tel:0333 772 0285">
+                <li>0333 772 0285</li>
+              </a>
+            </div>
+            <button>Sign in</button>
           </ul>
         </nav>
       </div>
