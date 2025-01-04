@@ -1,1 +1,22 @@
+.associated-companies {
+  margin: 7.4rem 0;
+}
 
+.company-icon {
+  width: 100px;
+}
+
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 18);
+}

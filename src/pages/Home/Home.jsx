@@ -10,6 +10,7 @@ import {
   Testimonial,
   CallToAction,
 } from "../../components/Sections/export.js";
+import companyIcons from "../../assets/company-icons/bullet.js";
 
 import "./Home.css";
 import { useInView } from "framer-motion";
@@ -25,7 +26,7 @@ const Home = () => {
 
   const imageInContainerRef = useRef(null);
 
-  const heroIsInView = useInView(heroRef,);
+  const heroIsInView = useInView(heroRef);
   const careerpathsIsInView = useInView(careerpathsRef, {
     // once: true,
     threshold: 0.7,
@@ -56,6 +57,34 @@ const Home = () => {
 
       <>
         <Hero heroRef={heroRef} heroIsInView={heroIsInView} />
+
+        <div className="associated-companies">
+          <div className="wrapper">
+            <div className="section-header__text">
+              <div className="main-desc">
+                <div className="desc-bar"></div>
+                <h4>Associated companies</h4>
+                <div className="desc-bar"></div>
+              </div>
+              <h1>Our Graduates</h1>
+              <h3>
+                Our programs are designed not only to equip you with new skills
+                but to launch our graduates into fulfilling and well-paid
+                careers
+              </h3>
+            </div>
+          </div>
+          {/* <div className="slider">
+            <div className="slide-track">
+              {companyIcons.map((icon, index) => (
+                <div key={index} className="slide">
+                  <img src={icon} className="company-icon" alt="" />
+                </div>
+              ))}
+            </div>
+          </div> */}
+        </div>
+
         <motion.div
           ref={careerpathsRef}
           initial={{ opacity: 0, y: 100 }}

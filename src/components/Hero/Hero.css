@@ -7,7 +7,7 @@
   place-content: center;
   overflow: hidden;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 4.5rem;
 }
 
 @media (max-width: 768px) {
@@ -175,7 +175,7 @@
   /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1238px) {
   .we-offer-button-like {
     justify-content: center;
   }

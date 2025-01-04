@@ -9,13 +9,6 @@ a.active{
   padding: 0;
 }
 
-@media (max-width:768px) {
-  header {
-    height: 40px;
-    /* teach-akj */
-  }
-  
-}
 header .wrapper {
   display: flex;
   align-items: center;
@@ -24,14 +17,20 @@ header .wrapper {
 }
 
 @media (max-width: 768px) {
+  header {
+    height: 40px;
+  }
   header .wrapper {
     width: 90%;
   }
 }
 
 header img {
-  width: 100%;
-  max-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  max-width: 200px;
 }
 
 header svg {
@@ -58,17 +57,17 @@ nav {
 }
 
 .right-nav-items {
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
 
 .center-nav-items,
 .right-nav-items {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style-type: none;
   cursor: pointer;
   font-weight: 600;
-  flex-shrink: 0;
+  flex-shrink: 1;
   /* justify-content: center;  causes no issue*/
 }
 .center-nav-items li,
@@ -88,7 +87,7 @@ nav {
 .man-asset {
   display: none;
 }
-@media (max-width: 854px) {
+@media (max-width: 976px) {
   header svg {
     width: 100%;
     max-width: 40px;
@@ -110,7 +109,7 @@ nav {
     left: 0;
     right: 0;
     margin: 0;
-    height: 80vh;
+    height: 100vh;
     top: 0;
     bottom: 0;
     opacity: 0;
@@ -174,6 +173,7 @@ nav {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-tel-container img{
@@ -183,4 +183,8 @@ nav {
 .right-nav-items button{
   background-color: #fff;
   border: 1px solid grey;
+}
+
+.nav-sign-in{
+  padding: .4rem 1rem;
 }

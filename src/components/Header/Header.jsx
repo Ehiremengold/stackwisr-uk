@@ -63,19 +63,29 @@ const Header = () => {
           </div>
           <ul className="center-nav-items">
             <NavLink to="/about-us">
-              <li>About Us</li>
+              <li>
+                <h4>About Us</h4>
+              </li>
             </NavLink>
             <NavLink to="/courses">
-              <li>Courses</li>
+              <li>
+                <h4>Courses</h4>
+              </li>
             </NavLink>
             <NavLink to="/advisory">
-              <li>Advisory & Consulting Services</li>
+              <li>
+                <h4>Advisory & Consulting Services</h4>
+              </li>
             </NavLink>
             <NavLink to="/events">
-              <li>Events</li>
+              <li>
+                <h4>Events</h4>
+              </li>
             </NavLink>
             <NavLink to="/contact-us">
-              <li>Contact Us</li>
+              <li>
+                <h4>Contact Us</h4>
+              </li>
             </NavLink>
           </ul>
 
@@ -85,10 +95,12 @@ const Header = () => {
             <div className="nav-tel-container">
               <img src={telephone} alt="" />
               <a href="tel:0333 772 0285">
-                <li>0333 772 0285</li>
+                <li>
+                  <h4>0333 772 0285</h4>
+                </li>
               </a>
             </div>
-            <button>Sign in</button>
+            <button className="nav-sign-in">Sign in</button>
           </ul>
         </nav>
       </div>
