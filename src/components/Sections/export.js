@@ -6,6 +6,8 @@ import Blog from "./Blog/Blog";
 import Testimonial from "./Testimonial/Testimonial";
 import CallToAction from "./CallToAction/CallToAction";
 import AssociatedCompanies from "./AssociatedCompanies/AssociatedCompanies";
+import Cohort from "./Cohort/Cohort";
+import OurProgrammeOffer from "./OurProgrammeOffers/OurProgrammeOffer";
 
 export {
   Careerpaths,
@@ -16,4 +18,6 @@ export {
   Testimonial,
   CallToAction,
   AssociatedCompanies,
+  Cohort,
+  OurProgrammeOffer,
 };

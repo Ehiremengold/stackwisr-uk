@@ -88,10 +88,12 @@
 .hero-img-container {
   position: relative;
   border: none;
+  align-self: self-end;
 }
 
 .hero-img-container img {
-  width: 100%;
+  width: 150%;
+  height: 100%;
 }
 
 .hero-img-container .blue-container-blur {

@@ -1,0 +1,44 @@
+.our-programme-offer-container {
+  margin: 3rem 0;
+}
+.our-programme-offer-container .wrapper {
+  place-items: center;
+}
+
+.our-programme-offer-container .wrapper h1 {
+  font-size: clamp(22px, 2.5vw, 60px);
+}
+.our-programme-offer-content {
+  width: 80%;
+  place-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.our-programme-offer-content .programme-offering h3 {
+  margin: 0.5rem 0;
+}
+
+.programme-offering .offering-img-container {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  place-content: center;
+  border-radius: 50%;
+  height: clamp(4rem, 6vw, 4rem);
+  width: clamp(4rem, 6vw, 4rem);
+  border: 4px solid var(--secondary-color);
+  margin: 1.5rem 0;
+  padding: 3rem;
+}
+
+.programme-offering .offering-img-container img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}

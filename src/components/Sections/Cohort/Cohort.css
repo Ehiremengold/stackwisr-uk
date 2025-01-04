@@ -1,0 +1,67 @@
+.cohort .wrapper {
+  place-items: center;
+}
+
+.cohort .wrapper h4{
+  font-weight: 400;
+}
+
+.cohort .wrapper h1{
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
+
+.cohort .wrapper .we-offer-button-like {
+  margin: 1rem 0;
+}
+.cohort .wrapper .we-offer-button-like .button-like {
+  border: 1px solid var(--primary-color);
+}
+
+.countdown {
+  display: flex;
+  gap: 1rem;
+}
+
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(white 0%, rgba(255, 255, 255, 0.1) 0%);
+}
+
+.time {
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  font-weight: bold;
+}
+
+.label {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .cohort .wrapper h1,
+  .cohort .wrapper h4 {
+    width: 90%;
+    text-align: center;
+  }
+  .countdown{
+    width: 85%;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width:436px) {
+  .cohort .wrapper .we-offer-button-like {
+    flex-direction: column;
+  }
+}

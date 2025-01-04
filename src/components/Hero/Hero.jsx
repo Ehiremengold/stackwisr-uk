@@ -6,7 +6,6 @@ import planeImg from "../../assets/icons/plane.svg";
 import bookmarkPng from "../../assets/icons/bookmark.png";
 import starPng from "../../assets/icons/star.png";
 import userPng from "../../assets/icons/user.png";
-import { NavLink } from "react-router-dom";
 
 const Hero = ({ heroRef, heroIsInView }) => {
   return (
