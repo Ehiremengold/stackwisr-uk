@@ -3,6 +3,14 @@
 }
 .our-programme-offer-container .wrapper {
   place-items: center;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .our-programme-offer-container .wrapper {
+    text-align: center;
+  }
+  
 }
 
 .our-programme-offer-container .wrapper h1 {
@@ -22,6 +30,10 @@
 
 .our-programme-offer-content .programme-offering h3 {
   margin: 0.5rem 0;
+}
+
+.our-programme-offer-content .programme-offering p{
+  text-align: justify;
 }
 
 .programme-offering .offering-img-container {

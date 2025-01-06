@@ -36,6 +36,56 @@ const CareerpathDetail = () => {
     }
   }, [productPlan, careerpath.career_name, enrollFormData, dispatch]);
 
+  const countries = [
+    "uk",
+    "canada",
+    "usa",
+    "america",
+    "nigeria",
+    "india",
+    "australia",
+    "south africa",
+    "ghana",
+    "kenya",
+    "uganda",
+    "tanzania",
+    "new zealand",
+    "ireland",
+    "germany",
+    "france",
+    "spain",
+    "italy",
+    "switzerland",
+    "netherlands",
+    "belgium",
+    "portugal",
+    "sweden",
+    "norway",
+    "denmark",
+    "finland",
+    "poland",
+    "czech republic",
+    "slovakia",
+    "slovenia",
+    "croatia",
+    "hungary",
+    "romania",
+    "bulgaria",
+    "greece",
+    "turkey",
+    "russia",
+    "china",
+    "japan",
+    "south korea",
+    "singapore",
+    "malaysia",
+    "indonesia",
+    "philippines",
+    "vietnam",
+    "thailand",
+    "ukraine",
+  ];
+
   const location = useLocation();
 
   useEffect(() => {
@@ -78,10 +128,36 @@ const CareerpathDetail = () => {
     potential_jobs,
     course_start_date,
   } = careerpath;
+
+  const countryDescriptions = countries
+    .map(
+      (country) =>
+        `${career_name} in ${country}, learn ${career_name} in ${country}`
+    )
+    .join(", ");
+
+  // ${career_name} programs in uk,
+
+  const programInCountry = countries
+    .map((country) => `${career_name} programs in ${country}`)
+    .join(", ");
+
+  // data analytics certification online canada
+
+  const careerCertificationInCountries = countries
+    .map((country) => `${career_name} certification online ${country}`)
+    .join(", ");
+  
+  const bestTraining = countries((country) => `best ${career_name} training  in ${country}`).join(", ");
+
   return (
     <>
       <Helmet>
         <title>{`Careerpath | ${career_name} `}</title>
+        <meta
+          name="description"
+          content={`${bestTraining}, learning path for ${career_name}, learn to become a ${career_name}, start a career in ${career_name}, build a career in ${career_name}, switching career to ${career_name} in your 30s, ${career_name} live classes, career switch to ${career_name}, ${career_name} job opportunities, courses to become a ${career_name}, what is ${career_name}, training to be a ${career_name}, best courses for ${career_name}, ${career_name} role, ${career_name} what to learn, get started in IT, get started in tech, path to be ${career_name}, job ${career_name}, hands on it training, fastest way  to become a ${career_name}, ${countryDescriptions}, ${careerCertificationInCountries}, best courses for ${career_name}, ${career_name} job training, getting into ${career_name}, difference between ${career_name}, ${career_name} in india, path to ${career_name}, ${career_name} certificate program, about ${career_name}, learn ${career_name} from scratch, professional certificate in ${career_name}, ${career_name} programmes, ${programInCountry},skills required for ${career_name}, best place to learn ${career_name}, ${career_name} job requirements, ${career_name} program, ${career_name} programs,v${career_name} certification online, ${career_name} certification courses, best ${career_name} courses, ${career_name} courses for working professionals, learn to be a ${career_name},${career_name} career, ${career_name} skill, ${career_name} schooling,${career_name} skills, ${career_name} classes near me, ${career_name} training uk, ${career_name} near me, ${career_name} professional certification, ${career_name} professional certificate, ${career_name} classes, ${career_name} how to become, become a ${career_name}, ${career_name} career path, learn ${career_name}, ${career_name} courses, learn ${career_name} UK,learn ${career_name} uk, learn ${career_name} nigeria, ${career_name} education, ${career_name} certification, ${career_name} certificate, ${career_name} training, ${career_name} course, ${career_name} learning, `}
+        />
       </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent

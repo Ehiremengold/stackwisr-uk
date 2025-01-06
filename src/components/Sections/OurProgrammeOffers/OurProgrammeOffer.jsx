@@ -5,7 +5,19 @@ const OurProgrammeOffer = () => {
   return (
     <div className="our-programme-offer-container">
       <div className="wrapper">
-        <h1>Our Programme Offers</h1>
+        <div className="section-header__text">
+          <div className="main-desc">
+            <div className="desc-bar"></div>
+            <h4>Our Program</h4>
+            <div className="desc-bar"></div>
+          </div>
+        </div>
+        <h1>Program Offering</h1>
+        <p>
+          Our programs provide tailored learning paths to help you achieve your
+          career goals, offering expert guidance and practical skills to
+          succeed.
+        </p>
         <div className="our-programme-offer-content">
           {programmeOffering.map((item, index) => {
             return (

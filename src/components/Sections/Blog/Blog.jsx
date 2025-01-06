@@ -96,7 +96,6 @@ const Blog = () => {
 
           <div className="more-posts">
             {latestPosts.slice(1, 3).map((post) => {
-              console.log(post.slug);
               return (
                 <div key={post.id} className="more-post-card">
                   <div className="card-img-container">

@@ -8,6 +8,7 @@ import CallToAction from "./CallToAction/CallToAction";
 import AssociatedCompanies from "./AssociatedCompanies/AssociatedCompanies";
 import Cohort from "./Cohort/Cohort";
 import OurProgrammeOffer from "./OurProgrammeOffers/OurProgrammeOffer";
+import OurFaculty from "./OurFaculty/OurFaculty";
 
 export {
   Careerpaths,
@@ -20,4 +21,5 @@ export {
   AssociatedCompanies,
   Cohort,
   OurProgrammeOffer,
+  OurFaculty
 };

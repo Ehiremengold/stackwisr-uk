@@ -12,6 +12,7 @@ import {
   AssociatedCompanies,
   Cohort,
   OurProgrammeOffer,
+  OurFaculty,
 } from "../../components/Sections/export.js";
 
 import "./Home.css";
@@ -55,6 +56,10 @@ const Home = () => {
     <>
       <Helmet>
         <title>StackwisR | Home </title>
+        <meta
+          name="description"
+          content="Unlock your career potential with Stackwisr's innovative programs, expert guidance, and a growth-oriented community. Start your journey to success today!"
+        ></meta>
       </Helmet>
 
       <>
@@ -86,6 +91,13 @@ const Home = () => {
 
         <OurProgrammeOffer />
 
+        <OurFaculty />
+
+        <WhyChooseUs
+          imageInContainerRef={imageInContainerRef}
+          imageInWhyChooseUsSection={imageInWhyChooseUsSection}
+        />
+
         <motion.div
           ref={projectPackRef}
           initial={{ opacity: 0, x: -200 }} // `x: -200` translates to `translateX(-200px)`
@@ -101,10 +113,6 @@ const Home = () => {
           <ProjectPack />
         </motion.div>
 
-        <WhyChooseUs
-          imageInContainerRef={imageInContainerRef}
-          imageInWhyChooseUsSection={imageInWhyChooseUsSection}
-        />
         <motion.div
           ref={blogRef}
           initial={{ opacity: 0, scale: 0.8 }}

@@ -29,7 +29,7 @@ const Testimonies = () => {
         <TestimoniesHero />
       </motion.div>
       <br />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <motion.div
         ref={delegateSay}
         initial={{ opacity: 0, y: 50 }}

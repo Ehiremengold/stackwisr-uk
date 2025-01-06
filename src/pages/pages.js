@@ -11,6 +11,7 @@ import Terms from "./Terms/Terms.jsx";
 import CookiePolicy from "./CookiePolicy/CookiePolicy.jsx";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy.jsx";
 
+
 export {
   Home,
   Careerpaths,

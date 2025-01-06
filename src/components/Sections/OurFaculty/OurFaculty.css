@@ -1,0 +1,25 @@
+.ourFaculty {
+  margin: 3rem 0;
+}
+.ourFaculty .wrapper {
+  place-items: center;
+  width: 90%;
+}
+
+.ourFaculty .wrapper h1 {
+  font-size: clamp(22px, 2.5vw, 60px);
+}
+
+.ourFaculty .wrapper p {
+  margin-bottom: 1rem;
+}
+
+.ourFaculty .wrapper .section_header__text h1{
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .ourFaculty .wrapper {
+    text-align: center;
+  }
+}
