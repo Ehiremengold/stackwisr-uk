@@ -55,7 +55,7 @@ const Cohort = () => {
   };
 
   return (
-    <div className="cohort">
+    <section className="cohort">
       <div className="wrapper">
         <h1>Join our next Cohort Starting Jan 10th</h1>
         <h4>Register Now and Start your first Class for FREE &rarr;</h4>
@@ -83,16 +83,16 @@ const Cohort = () => {
 
         <div className="we-offer-button-like">
           <div className="button-like">
-            <img src={addUser} alt="" />
+            <img src={addUser} alt="add-user" />
             <p>Live Virtual - Instruction Led</p>
           </div>
           <div className="button-like">
-            <img src={selfpace} alt="" />
+            <img src={selfpace} alt="self-paced" />
             <p>Self Paced</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Cohort;

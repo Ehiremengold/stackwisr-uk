@@ -50,7 +50,7 @@ const Blog = () => {
 
   return (
     <section className="blog">
-      <img src={blogBg} className="blog-bg" alt="" />
+      <img src={blogBg} className="blog-bg" alt="blog-hero-bg" />
       <div className="wrapper">
         <div className="blog-section-title">
           <div className="desc-bar"></div>
@@ -68,17 +68,17 @@ const Blog = () => {
             <img
               className="main-post-img"
               src={ROOT_URL + mainPost.image}
-              alt=""
+              alt="post-img"
             />
             <div className="dark-shade">
               <div className="post-desc">
                 <div className="author-date">
                   <div className="author">
-                    <img src={author} alt="" />
+                    <img src={author} alt="author-user-icon" />
                     <p>{mainPost.author}</p>
                   </div>
                   <div className="date">
-                    <img src={date} alt="" />
+                    <img src={date} alt="date-icon" />
                     <p>{mainPost.created}</p>
                   </div>
                 </div>
@@ -99,16 +99,16 @@ const Blog = () => {
               return (
                 <div key={post.id} className="more-post-card">
                   <div className="card-img-container">
-                    <img src={ROOT_URL + post.image} alt="" />
+                    <img src={ROOT_URL + post.image} alt="post-iimg" />
                   </div>
                   <div className="card-post-desc-container">
                     <div className="author-date">
                       <div className="author">
-                        <img src={darkAuthor} alt="" />
+                        <img src={darkAuthor} alt="author-icon" />
                         <p>{post.author}</p>
                       </div>
                       <div className="date">
-                        <img src={darkDate} alt="" />
+                        <img src={darkDate} alt="date-icon" />
                         <p>{post.created}</p>
                       </div>
                     </div>

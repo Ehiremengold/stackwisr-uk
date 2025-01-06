@@ -16,7 +16,11 @@ const Footer = () => {
       <div className="wrapper">
         <div className="footer-top">
           <div className="col col-1 col-width">
-            <img src={logo} className="footer-logo" alt="" />
+            <img
+              src={logo}
+              className="footer-logo"
+              alt="Empowering professionals with tailored career pathways, expert guidance, and actionable resources. Achieve your goals with Stackwisr's innovative programs."
+            />
             <p>
               Future-proof your career with our AI-driven training and career
               development
@@ -88,12 +92,12 @@ const Footer = () => {
             <ul className="socials-icons">
               <li>
                 <NavLink to="https://www.instagram.com/stackwisr?igsh=M2JteDBuY3k3cTh6">
-                  <img src={instagram} alt="" />
+                  <img src={instagram} alt="Stackwisr Instagram" />
                 </NavLink>
               </li>
               <li>
                 <NavLink to="https://www.facebook.com/StackwisR">
-                  <img src={facebook} alt="" />
+                  <img src={facebook} alt="Stackwisr Facebook" />
                 </NavLink>
               </li>
               {/* <li>

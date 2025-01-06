@@ -27,7 +27,7 @@ const Base = ({ children }) => {
           transition={{ duration: 2, ease: "easeInOut" }}
           className="logo-container"
         >
-          <img src={logo} alt="Company Logo" className="logo" />
+          <img src={logo} alt="Stackwisr Logo" className="logo" />
         </motion.div>
       ) : (
         <>

@@ -16,8 +16,8 @@ const Careerpaths = () => {
   return (
     <section className="career-paths">
       <div className="wrapper">
-        <img src={greyPlane} className="section-plane-2" alt="" />
-        <img src={greyPlaneDown} className="section-plane" alt="" />
+        <img src={greyPlane} className="section-plane-2" alt="grey-plane" />
+        <img src={greyPlaneDown} className="section-plane" alt="grey-plane" />
         <div className="section-header__text">
           <div className="main-desc">
             <div className="desc-bar"></div>
@@ -46,7 +46,7 @@ const Careerpaths = () => {
                 const { id, career_name, slug, description } = careerpath;
                 return (
                   <div key={id} className="career-paths__card">
-                    <img src={careerpathBg} alt="" />
+                    <img src={careerpathBg} alt="careerpath-bg" />
                     <h3>{career_name}</h3>
                     <p>{truncateText(description, 90)}</p>
                     <a href={`/careerpaths/${slug}`}>

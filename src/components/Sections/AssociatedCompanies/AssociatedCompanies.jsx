@@ -3,7 +3,7 @@ import "./AssociatedCompanies.css";
 
 const AssociatedCompanies = () => {
   return (
-    <div className="associated-companies">
+    <section className="associated-companies">
       <div className="wrapper">
         <div className="section-header__text">
           <div className="main-desc">
@@ -22,17 +22,17 @@ const AssociatedCompanies = () => {
         <div className="slide-track">
           {companyIcons.map((icon, index) => (
             <div key={index} className="slide">
-              <img src={icon} className="company-icon" alt="" />
+              <img src={icon} className="company-icon" alt="company-icon" />
             </div>
           ))}
           {companyIcons.map((icon, index) => (
             <div key={index} className="slide">
-              <img src={icon} className="company-icon" alt="" />
+              <img src={icon} className="company-icon" alt="company-icon" />
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default AssociatedCompanies;

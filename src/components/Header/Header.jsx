@@ -51,13 +51,13 @@ const Header = () => {
     <header>
       <div className="wrapper">
         <NavLink to="/">
-          <img src={logo} alt="" />
+          <img src={logo} alt="Stackwisr logo" />
         </NavLink>
         <div className="menu-btn" onClick={toggleMenu}>
           <Menu />
         </div>
         <nav className={menu ? "show" : ""}>
-          {menu && <img src={logoWhite} className="nav-show-icon" alt="" />}
+          {menu && <img src={logoWhite} className="nav-show-icon" alt="Stackwisr logo" />}
           <div onClick={toggleMenu}>
             <CloseMenu />
           </div>
@@ -89,11 +89,11 @@ const Header = () => {
             </NavLink>
           </ul>
 
-          {menu && <img src={orangePlane} className="asset" alt="" />}
-          {menu && <img src={orangeMan} className="man-asset" alt="" />}
+          {menu && <img src={orangePlane} className="asset" alt="plane-icon" />}
+          {menu && <img src={orangeMan} className="man-asset" alt="plane-icon" />}
           <ul className="right-nav-items">
             <div className="nav-tel-container">
-              <img src={telephone} alt="" />
+              <img src={telephone} alt="telephone-icon" />
               <a href="tel:0333 772 0285">
                 <li>
                   <h4>0333 772 0285</h4>

@@ -18,11 +18,11 @@ const Hero = ({ heroRef, heroIsInView }) => {
         }}
       >
         <div className="wrapper">
-          <img className="hero-plane-img" src={planeImg} alt="" />
+          <img className="hero-plane-img" src={planeImg} alt="hero-plane-icon" />
           <div className="hero-text-container">
             <div className="desc-container">
-              <img src={descImg} className="desc-img " alt="" />
-              <img src={arrowImg} className="desc-img arrow" alt="" />
+              <img src={descImg} className="desc-img " alt="desc-icon" />
+              <img src={arrowImg} className="desc-img arrow" alt="arrow-icon" />
             </div>
 
             <div className="hero-text__container">
@@ -36,15 +36,15 @@ const Hero = ({ heroRef, heroIsInView }) => {
 
             <div className="we-offer-button-like">
               <div className="button-like">
-                <img src={userPng} alt="" />
+                <img src={userPng} alt="user-icon" />
                 <p>2000+ Learners</p>
               </div>
               <div className="button-like">
-                <img src={bookmarkPng} alt="" />
+                <img src={bookmarkPng} alt="bookmark-icon" />
                 <p>80% Completion</p>
               </div>
               <div className="button-like">
-                <img src={starPng} alt="" />
+                <img src={starPng} alt="star-icon" />
                 <p>4.7+ Rating</p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const Hero = ({ heroRef, heroIsInView }) => {
             </div>
           </div>
           <div className="hero-img-container">
-            <img src={heroUser} alt="" />
+            <img src={heroUser} alt="hero-user-icon" />
             <div className="blue-container-blur"></div>
           </div>
         </div>

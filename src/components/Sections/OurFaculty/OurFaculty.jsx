@@ -3,7 +3,7 @@ import groupImage from "../../../assets/images/about-us.png";
 
 const OurFaculty = () => {
   return (
-    <div className="ourFaculty">
+    <section className="ourFaculty">
       <div className="wrapper">
         <div className="section_header__text">
           <div className="main-desc">
@@ -19,7 +19,7 @@ const OurFaculty = () => {
         </div>
         <img src={groupImage} className="group-img" alt="" />
       </div>
-    </div>
+    </section>
   );
 };
 export default OurFaculty;

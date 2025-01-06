@@ -3,7 +3,7 @@ import { programmeOffering } from "./bullet";
 
 const OurProgrammeOffer = () => {
   return (
-    <div className="our-programme-offer-container">
+    <section className="our-programme-offer-container">
       <div className="wrapper">
         <div className="section-header__text">
           <div className="main-desc">
@@ -33,7 +33,7 @@ const OurProgrammeOffer = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default OurProgrammeOffer;

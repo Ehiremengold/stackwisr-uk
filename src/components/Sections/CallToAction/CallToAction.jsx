@@ -11,10 +11,10 @@ const CallToAction = () => {
 
   return (
     <section className="call-to-action">
-      <img src={getStarted} className="get-started" alt="" />
+      <img src={getStarted} className="get-started" alt="getStarted-icon" />
       <img src={topDrop} className="cta-top-drop" alt="" />
-      <img src={orangeMan} className="orange-man" alt="" />
-      <img src={orangePlane} className="orange-plane" alt="" />
+      <img src={orangeMan} className="orange-man" alt="orange-man" />
+      <img src={orangePlane} className="orange-plane" alt="orange-plane" />
       {/* <img src={ctaBackdrop} className="cta-backdrop" alt="" /> */}
       <div className="wrapper">
         <div className="cta__section_content">
