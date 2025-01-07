@@ -10,7 +10,7 @@ import BlogDetail from "./BlogDetail/BlogDetail.jsx";
 import Terms from "./Terms/Terms.jsx";
 import CookiePolicy from "./CookiePolicy/CookiePolicy.jsx";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy.jsx";
-
+import ContactUs from "./ContactUs/ContactUs.jsx";
 
 export {
   Home,
@@ -25,4 +25,5 @@ export {
   Terms,
   CookiePolicy,
   PrivacyPolicy,
+  ContactUs,
 };

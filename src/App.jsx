@@ -14,6 +14,7 @@ import {
   Terms,
   CookiePolicy,
   PrivacyPolicy,
+  ContactUs
 } from "./pages/pages";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about-us" element={<AboutUs />} />
+          <Route exact path="/contact-us" element={<ContactUs />} />
           <Route exact path="/careerpaths" element={<Careerpaths />} />
           <Route
             exact
