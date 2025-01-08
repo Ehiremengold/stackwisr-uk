@@ -2,10 +2,9 @@
   position: relative;
   margin-bottom: 0;
   overflow: hidden;
-  margin: 5rem 0;
+  margin: 5.5rem 0;
   /* border: 1px solid green; */
 }
-
 
 .testimonials-bg {
   position: absolute;
@@ -19,7 +18,7 @@
   text-align: center;
 }
 
-.testimonials .wrapper p{
+.testimonials .wrapper p {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -30,12 +29,64 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  width: fit-content;
+  /* padding: 2rem; */
+  height: fit-content;
   place-self: center;
+  margin: 0 2rem;
 }
 
-.testimonials .wrapper h3{
+.testimonials .wrapper h3 {
   text-align: center;
   margin: 2rem 0;
+}
+
+.box-replica {
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 10px;
+  /* padding: 1.5rem; */
+  position: relative;
+  border-bottom: 7px solid var(--secondary-color);
+  box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.testimonial-body-grid {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* border: 1px solid red; */
+  place-content: center;
+  margin: 4rem auto;
+  gap: 2rem;
+}
+
+.testimonial-grid-boxx {
+  place-content: center;
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  /* border: 1px solid red; */
+  /* border-bottom: 7px solid var(--secondary-color); */
+  /* text-align: left; */
+  margin: 0;
+}
+
+.box-replica .logo {
+  position: absolute;
+  top: -17px;
+  left: 5%;
+  width: 15%;
+}
+
+.box-replica h2{
+  margin-top: 2rem;
+}
+
+.box-replica h5{
+  font-weight: 400;
+  font-size:clamp(1rem, 18px, 3.5rem)
 }
