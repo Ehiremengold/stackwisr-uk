@@ -64,7 +64,7 @@ const Cohort = () => {
         <div className="countdown">
           <div className="circle" id="days">
             <span className="time">0</span>
-            <span className="label">Days</span>
+            <span className="label">Day(s)</span>
           </div>
           <div className="circle" id="hours">
             <span className="time">0</span>
