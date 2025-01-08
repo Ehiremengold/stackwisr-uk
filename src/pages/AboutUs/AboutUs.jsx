@@ -23,7 +23,7 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>StackwisR | About Us</title>
+        <title>About Us | StackwisR</title>
       </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent

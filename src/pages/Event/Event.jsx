@@ -5,6 +5,7 @@ import leftEventIcon from "../../assets/icons/left-events-icon.png";
 import rightEventIcon from "../../assets/icons/right-events-icon.png";
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Event = () => {
   const sectionRefs = [useRef(null), useRef(null), useRef(null)];
@@ -42,6 +43,9 @@ const Event = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Events | Stackwisr</title>
+    </Helmet>
       {/* Animation for the Event Hero */}
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent

@@ -1,8 +1,11 @@
 import "./CookiePolicy.css";
-
+import { Helmet } from "react-helmet";
 const CookiePolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Cookie Policy | Stackwisr</title>
+      </Helmet>
       <div className="doc-container">
         <h1 className="">COOKIE POLICY OF STACKWISR</h1>
         <p>

@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet";
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | Stackwisr</title>
+      </Helmet>
+
       <div className="doc-container">
         <h1 className="">РRІVАСY РОLІСY OF STACKWISR</h1>
         <p>

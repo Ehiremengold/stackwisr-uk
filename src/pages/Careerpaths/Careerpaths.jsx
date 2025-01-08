@@ -10,11 +10,14 @@ import { useRef } from "react";
 
 const Careerpaths = () => {
   const careerpathsRef = useRef(null);
-  const careerpathsIsInView = useInView(careerpathsRef, { once: true, threshold: 0.4 });
+  const careerpathsIsInView = useInView(careerpathsRef, {
+    once: true,
+    threshold: 0.4,
+  });
   return (
     <>
       <Helmet>
-        <title>Stackwisr | Careerpaths</title>
+        <title>Careerpaths | Stackwisr </title>
       </Helmet>
 
       <motion.div

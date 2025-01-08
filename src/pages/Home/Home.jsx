@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>StackwisR | Home </title>
+        <title>Home | StackwisR</title>
         <meta
           name="description"
           content="Unlock your career potential with Stackwisr's innovative programs, expert guidance, and a growth-oriented community. Start your journey to success today!"

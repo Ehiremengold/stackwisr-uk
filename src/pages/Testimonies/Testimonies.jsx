@@ -9,7 +9,6 @@ import leftEventIcon from "../../assets/icons/left-events-icon.png";
 import rightEventIcon from "../../assets/svg/pink-white.svg";
 import sidePink from "../../assets/svg/side-pink.svg";
 
-
 const Testimonies = () => {
   const delegateSay = useRef(null);
   const delegateSayInView = useInView(delegateSay, {
@@ -19,7 +18,7 @@ const Testimonies = () => {
   return (
     <>
       <Helmet>
-        <title>StackwisR | Testimonies</title>
+        <title>Testimonies | StackwisR</title>
       </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 50 }} // Starts off-screen and transparent
@@ -47,7 +46,6 @@ const Testimonies = () => {
         <img src={rightEventIcon} className="right-one-testimony" alt="" />
       </section>
       <section className="after-test join">
-      
         <img src={sidePink} alt="" />
         <h1>
           Join over 1000+ delegates who used StackwisR to upskill and handle

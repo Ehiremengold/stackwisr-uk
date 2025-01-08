@@ -15,9 +15,7 @@ import sidePink from "../../assets/svg/side-pink.svg";
 const Resources = () => {
   const dispatch = useDispatch();
   const [openModal, setOpenModal] = useState(false);
-  const { countries, isError } = useSelector(
-    (store) => store.countries
-  );
+  const { countries, isError } = useSelector((store) => store.countries);
 
   useEffect(() => {
     if (openModal) {
@@ -46,7 +44,7 @@ const Resources = () => {
   return (
     <>
       <Helmet>
-        <title>StackwisR | Resources</title>
+        <title>Resources | StackwisR</title>
       </Helmet>
 
       <motion.div
