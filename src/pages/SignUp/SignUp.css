@@ -8,11 +8,11 @@
 }
 
 .signup-form-body {
-  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 1rem;
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .signup-form-body h2 {
@@ -27,15 +27,47 @@
 .form-input-row {
   margin: 1rem 0;
 }
+
+.input-password-validators {
+  position: relative;
+}
+
+.input-password-validators .password-validators {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1.3rem;
+  color: #fff;
+  border-radius: 8px;
+  /* right: -5px; */
+  top: 40px; /* Adjusted positioning for better visibility */
+  z-index: 10;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.input-password-validators input:focus + .password-validators {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.input-password-validators .password-validators li{
+  font-size: clamp(.6rem, .8rem, 1.1rem);
+  /* list-style-type:lower-greek; */
+}
+
 .sign-up-body .signup-form-body .form-input-row label {
   margin: 0.2rem;
 }
 
 .sign-up-body .signup-form-body .form-input-row input {
+  background-color: rgba(0, 0, 0, 0.05);
   padding: 0.6rem 1rem;
   border-radius: 3px;
   width: 100%;
-  border: 1px solid grey;
+  border:none;
   transition: outline 0.4s ease-in-out;
 }
 .sign-up-body .signup-form-body .form-input-row input:focus {
@@ -46,4 +78,10 @@
   color: #fff;
   width: 100%;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
+
+.form-submit-btn h3{
+  font-weight: 500;
+}
+
