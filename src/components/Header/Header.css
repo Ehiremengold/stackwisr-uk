@@ -1,9 +1,15 @@
 header {
-  height: 50px;
   z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
 
-a.active{
+a.active {
   color: var(--accent-color);
   background-color: transparent;
   padding: 0;
@@ -13,13 +19,12 @@ header .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
+
+  /* border: 1px solid green; */
 }
 
 @media (max-width: 768px) {
-  header {
-    height: 40px;
-  }
   header .wrapper {
     width: 90%;
   }
@@ -163,28 +168,28 @@ nav {
   }
 }
 
-.disable-link{
+.disable-link {
   color: grey;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.nav-tel-container{
+.nav-tel-container {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
 }
 
-.nav-tel-container img{
+.nav-tel-container img {
   width: 10%;
 }
 
-.right-nav-items button{
+.right-nav-items button {
   background-color: #fff;
   border: 1px solid grey;
 }
 
-.nav-sign-in{
-  padding: .4rem 1rem;
+.nav-sign-in {
+  padding: 0.4rem 1rem;
 }

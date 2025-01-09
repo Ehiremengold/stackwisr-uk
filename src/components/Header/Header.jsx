@@ -57,16 +57,17 @@ const Header = () => {
           <Menu />
         </div>
         <nav className={menu ? "show" : ""}>
-          {menu && <img src={logoWhite} className="nav-show-icon" alt="Stackwisr logo" />}
+          {menu && (
+            <img
+              src={logoWhite}
+              className="nav-show-icon"
+              alt="Stackwisr logo"
+            />
+          )}
           <div onClick={toggleMenu}>
             <CloseMenu />
           </div>
           <ul className="center-nav-items">
-            <NavLink to="/about-us">
-              <li>
-                <h4>About Us</h4>
-              </li>
-            </NavLink>
             <NavLink to="/careerpaths">
               <li>
                 <h4>Courses</h4>
@@ -82,6 +83,12 @@ const Header = () => {
                 <h4>Events</h4>
               </li>
             </NavLink>
+            <NavLink to="/about-us">
+              <li>
+                <h4>About Us</h4>
+              </li>
+            </NavLink>
+
             <NavLink to="/contact-us">
               <li>
                 <h4>Contact Us</h4>
@@ -90,7 +97,9 @@ const Header = () => {
           </ul>
 
           {menu && <img src={orangePlane} className="asset" alt="plane-icon" />}
-          {menu && <img src={orangeMan} className="man-asset" alt="plane-icon" />}
+          {menu && (
+            <img src={orangeMan} className="man-asset" alt="plane-icon" />
+          )}
           <ul className="right-nav-items">
             <div className="nav-tel-container">
               <img src={telephone} alt="telephone-icon" />
@@ -100,7 +109,12 @@ const Header = () => {
                 </li>
               </a>
             </div>
-            <button className="nav-sign-in">Sign in</button>
+            <a
+              href="/auth/login
+            "
+            >
+              <button className="nav-sign-in">Sign in</button>
+            </a>
           </ul>
         </nav>
       </div>

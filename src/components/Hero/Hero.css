@@ -7,7 +7,7 @@
   place-content: center;
   overflow: hidden;
   position: relative;
-  margin-top: 4.5rem;
+  margin-top: 6.5rem;
 }
 
 @media (max-width: 768px) {

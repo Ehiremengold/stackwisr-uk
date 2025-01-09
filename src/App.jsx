@@ -14,7 +14,10 @@ import {
   Terms,
   CookiePolicy,
   PrivacyPolicy,
-  ContactUs
+  ContactUs,
+  NotFound,
+  SignIn,
+  SignUp,
 } from "./pages/pages";
 
 function App() {
@@ -39,6 +42,9 @@ function App() {
           <Route exact path="/terms-of-service" element={<Terms />} />
           <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route exact path="/cookie-policy" element={<CookiePolicy />} />
+          <Route exact path="/auth/login" element={<SignIn />} />
+          <Route exact path="/auth/create-account" element={<SignUp />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Base>
     </Router>

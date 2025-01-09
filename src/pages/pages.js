@@ -11,6 +11,9 @@ import Terms from "./Terms/Terms.jsx";
 import CookiePolicy from "./CookiePolicy/CookiePolicy.jsx";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
+import NotFound from "./NotFound/NotFound.jsx";
+import SignIn from "./SignIn/SignIn.jsx";
+import SignUp from "./SignUp/SignUp.jsx";
 
 export {
   Home,
@@ -26,4 +29,7 @@ export {
   CookiePolicy,
   PrivacyPolicy,
   ContactUs,
+  NotFound,
+  SignIn,
+  SignUp,
 };

@@ -1,0 +1,17 @@
+.not-found-container {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px){
+  .not-found-container img{
+    width: 12%;
+  }
+}
+
+.not-found-container h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 7rem);
+}
