@@ -2,7 +2,7 @@ export const truncateText = (text, limit) => {
   return text.length > limit ? text.substring(0, limit) + "..." : text;
 };
 
-const env = "PROD"; // PROD or LOCAL
+const env = "LOCAL"; // PROD or LOCAL
 
 export const LOCAL_ROOT_URL = import.meta.env.VITE_LOCAL_ROOT;
 

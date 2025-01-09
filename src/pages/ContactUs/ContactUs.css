@@ -88,10 +88,15 @@
   /* border: none; */
 }
 
+.contact-form-column textarea:focus,
 .contact-form-column input:focus {
   outline-color: transparent;
 }
 
+
+.contact-form-column textarea{
+  font-family: 'Poppins';
+}
 .contact-form-row {
   display: flex;
   flex-wrap: wrap;
