@@ -14,6 +14,7 @@ import ContactUs from "./ContactUs/ContactUs.jsx";
 import NotFound from "./NotFound/NotFound.jsx";
 import SignIn from "./SignIn/SignIn.jsx";
 import SignUp from "./SignUp/SignUp.jsx";
+import Dashboard from "./Dashboard/Dashboard.jsx";
 
 export {
   Home,
@@ -32,4 +33,5 @@ export {
   NotFound,
   SignIn,
   SignUp,
+  Dashboard,
 };

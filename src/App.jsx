@@ -18,7 +18,9 @@ import {
   NotFound,
   SignIn,
   SignUp,
+  Dashboard,
 } from "./pages/pages";
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/blog/:slug" element={<BlogDetail />} />
           <Route exact path="/resources" element={<Resources />} />
+          <Route exact path="/dashboard" element={<PrivateRoute element={<Dashboard />} />} />
           <Route exact path="/testimonies" element={<Testimonies />} />
           <Route exact path="/events" element={<Event />} />
           <Route exact path="/terms-of-service" element={<Terms />} />
