@@ -1,6 +1,6 @@
 header {
   z-index: 1000;
-  padding: 1rem 0;
+  padding: .7rem 0;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -210,5 +210,5 @@ nav {
   padding: 0.6rem;
 }
 .authenticated button img {
-  width: 20px;
+  width: 25px;
 }

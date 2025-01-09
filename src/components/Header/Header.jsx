@@ -5,14 +5,13 @@ import Menu from "../Menu/Menu.jsx";
 import CloseMenu from "../CloseMenu/CloseMenu.jsx";
 import orangePlane from "../../assets/icons/orange-plane.png";
 import orangeMan from "../../assets/icons/orange-man.png";
-import telephone from "../../assets/icons/telephone.png";
+import profileIcon from "../../assets/icons/profile.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCountries } from "../../features/countries/countriesSlice.js";
 import { getCareerpaths } from "../../features/careerpaths/careerpathSlice.js";
-import { logout } from "../../features/accounts/signin/signInSlice.js";
-import logoutIcon from "../../assets/icons/logout-btn.png";
+
 
 const Header = () => {
   const { isAuthenticated, email } = useSelector((store) => store.signIn);
@@ -35,10 +34,7 @@ const Header = () => {
   useEffect(() => {
     setMenu(false);
   }, [location]);
-  
-  const handleLogout = () => {
-    dispatch(logout());
-  };
+
 
   useEffect(() => {
     // Set body overflow based on the menu state
@@ -108,20 +104,12 @@ const Header = () => {
             <img src={orangeMan} className="man-asset" alt="plane-icon" />
           )}
           <ul className="right-nav-items">
-            {/* <div className="nav-tel-container">
-              <img src={telephone} alt="telephone-icon" />
-              <a href="tel:0333 772 0285">
-                <li>
-                  <h4>0333 772 0285</h4>
-                </li>
-              </a>
-            </div> */}
             {isAuthenticated ? (
               <div className="authenticated">
+                <a href="/dashboard">
+                  <img src={profileIcon} alt="" />
+                </a>
                 <p>Hi, {email?.split("@")[0]}</p>
-                <button onClick={handleLogout}>
-                  <img src={logoutIcon} alt="" />
-                </button>
               </div>
             ) : (
               <a

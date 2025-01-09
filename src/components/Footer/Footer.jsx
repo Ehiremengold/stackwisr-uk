@@ -4,6 +4,7 @@ import facebook from "../../assets/social/facebook.svg";
 import instagram from "../../assets/social/instagram.svg";
 // import x from "../../assets/social/x.svg";
 // import youtube from "../../assets/social/youtube.svg";
+import telephone from "../../assets/icons/telephone.png";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { calendly_URL } from "../../utils";
@@ -90,6 +91,14 @@ const Footer = () => {
           </div>
           <div className="right-section">
             <ul className="socials-icons">
+              <div className="nav-tel-container">
+                <img src={telephone} alt="telephone-icon" />
+                <a href="tel:0333 772 0285">
+                  <li>
+                    <h3>0333 772 0285</h3>
+                  </li>
+                </a>
+              </div>
               <li>
                 <NavLink to="https://www.instagram.com/stackwisr?igsh=M2JteDBuY3k3cTh6">
                   <img src={instagram} alt="Stackwisr Instagram" />
@@ -100,6 +109,7 @@ const Footer = () => {
                   <img src={facebook} alt="Stackwisr Facebook" />
                 </NavLink>
               </li>
+
               {/* <li>
                 <NavLink to="#">
                   <img src={x} alt="" />
