@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { ROOT_URL } from "../../utils";
 import axios from "axios";
+import { ROOT_URL } from "../../utils";
 
 const initialState = {
   isLoading: false,
@@ -8,16 +8,19 @@ const initialState = {
   isSuccess: false,
 };
 
-export const createLead = createAsyncThunk(
-  "create/lead",
+export const contactUs = createAsyncThunk(
+  "create/contactUs",
   async (formData, thunkAPI) => {
     try {
-      const response = await axios.post(`${ROOT_URL}/api/leads/`, formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      // console.log(response.data);
+      const response = await axios.post(
+        `${ROOT_URL}/api/contact-us/`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -25,20 +28,20 @@ export const createLead = createAsyncThunk(
   }
 );
 
-const leadSlice = createSlice({
-  name: "leads",
+const contactSlice = createSlice({
+  name: "contactUs",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(createLead.pending, (state) => {
+      .addCase(contactUs.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(createLead.fulfilled, (state) => {
+      .addCase(contactUs.fulfilled, (state) => {
         state.isLoading = false;
         state.isSuccess = true;
       })
-      .addCase(createLead.rejected, (state) => {
+      .addCase(contactUs.rejected, (state) => {
         state.isLoading = false;
         state.isSuccess = false;
         state.isError = true;
@@ -46,4 +49,4 @@ const leadSlice = createSlice({
   },
 });
 
-export default leadSlice.reducer;
+export default contactSlice.reducer
