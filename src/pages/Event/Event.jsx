@@ -82,8 +82,8 @@ const Event = () => {
         return (
           <motion.div
             ref={ref} // Attach ref for in-view trigger
-            initial={{ opacity: 0, [isEven ? "x" : "y"]: 50 }} // Initial offscreen state
-            animate={inView && { opacity: 1, [isEven ? "x" : "y"]: 0 }} // Animate on view
+            initial={{ opacity: 0, y: 50 }} // Initial offscreen state
+            animate={inView && { opacity: 1, y: 0 }} // Animate on view
             transition={{ duration: 0.8, ease: "easeOut" }} // Customize speed/easing
             className={`event-section section-${index + 1}`}
             key={index}

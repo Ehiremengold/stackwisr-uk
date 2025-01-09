@@ -5,10 +5,10 @@ import { ROOT_URL } from "../../../utils";
 const initialState = {
   isError: false,
   isLoading: false,
-  isAuthenticated: false,
+  isAuthenticated: JSON.parse(localStorage.getItem("auth_status")) || false,
   accessToken: "",
   refreshToken: "",
-  email: "",
+  email: localStorage.getItem("current_user_email") || "",
 };
 
 export const signIn = createAsyncThunk(
@@ -33,7 +33,10 @@ const signInSlice = createSlice({
   initialState,
   reducers: {
     logout: (state) => {
-      return { ...initialState };
+      localStorage.clear();
+      state.isAuthenticated = false; // Reset authentication
+      state.email = ""; // Reset email;
+      // return { ...initialState };
     },
   },
   extraReducers: (builder) => {
@@ -43,6 +46,9 @@ const signInSlice = createSlice({
       })
       .addCase(signIn.fulfilled, (state, { payload }) => {
         const { email, access, refresh } = payload;
+        localStorage.setItem("current_user_email", email);
+        localStorage.setItem("auth_status", true);
+
         state.isLoading = false;
         state.isAuthenticated = true;
         state.email = email;

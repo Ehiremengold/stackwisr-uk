@@ -7,7 +7,7 @@ import leadReducer from "./features/lead/leadSlice.js";
 import resourcesReducer from "./features/resources/resourcesSlice.js";
 import contactUsReducer from "./features/contactus/contactusSlice.js";
 import signInReducer from "./features/accounts/signin/signInSlice.js";
-import signUpReducer from "./features/accounts/signup/signupSlice.js";
+import createAccountReducer from "./features/accounts/signup/createAccountSlice.js";
 import passwordResetReducer from "./features/accounts/passwordreset/passwordresetSlice.js";
 
 export const store = configureStore({
@@ -18,9 +18,9 @@ export const store = configureStore({
     testimonials: testimonialReducer,
     leads: leadReducer,
     resources: resourcesReducer,
-    contactUs: contactUsReducer, // to test
-    signIn: signInReducer, // to test
-    signUp: signUpReducer, // to test
+    contactUs: contactUsReducer,
+    signIn: signInReducer,
+    createAccount: createAccountReducer,
     passwordReset: passwordResetReducer, // to test
   },
 });

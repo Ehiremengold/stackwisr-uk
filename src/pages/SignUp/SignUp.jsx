@@ -1,8 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { Helmet } from "react-helmet";
+import { useSelector, useDispatch } from "react-redux";
+import { createAccount } from "../../features/accounts/signup/createAccountSlice";
+import ButtonLoader from "../../components/ButtonLoader/ButtonLoader";
+import { div } from "framer-motion/client";
 
 const SignUp = () => {
+  const { isError, isLoading, isSuccess, errorMsg } = useSelector(
+    (store) => store.createAccount
+  );
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const formDataObj = Object.fromEntries(formData);
+    dispatch(createAccount(formDataObj));
+  };
+
+  if (isSuccess) {
+    navigate("/auth/login");
+  }
+
   return (
     <>
       <Helmet>
@@ -15,16 +37,16 @@ const SignUp = () => {
       <section className="sign-up-body">
         <div className="signup-form-body">
           <h2>SIGN UP</h2>
-          <form>
+          <form onSubmit={handleSignUp}>
             <div className="form-input-row">
               <label htmlFor="email">Email</label>
-              <input type="email" />
+              <input name="email" type="email" />
             </div>
 
             <div className="form-input-row">
               <label htmlFor="password">Password</label>
               <div className="input-password-validators">
-                <input type="password" />
+                <input name="password" type="password" />
                 <div className="password-validators">
                   <ul>
                     {[
@@ -42,11 +64,16 @@ const SignUp = () => {
 
             <div className="form-input-row">
               <label htmlFor="password">Repeat Password</label>
-              <input type="password" />
+              <input name="confirm_password" type="password" />
             </div>
-            <button disabled className="form-submit-btn">
-              <h3>CREATE ACCOUNT</h3>
+            <button className="form-submit-btn">
+              {isLoading ? <ButtonLoader /> : <h3>CREATE ACCOUNT</h3>}
             </button>
+            {isError && (
+              <div className="errorMsg-container">
+                <p>{errorMsg}</p>
+              </div>
+            )}
           </form>
           <p>
             Already have an account? <Link to="/auth/login">Sign in</Link>

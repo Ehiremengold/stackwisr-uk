@@ -2,8 +2,8 @@
   display: flex;
   place-content: center;
   place-items: center;
-  height: 51vh;
-  margin-top: 5rem;
+  /* height: 51vh; */
+  margin-top: 7rem;
   /* border: 1px solid red; */
 }
 
@@ -53,8 +53,8 @@
   display: block;
 }
 
-.input-password-validators .password-validators li{
-  font-size: clamp(.6rem, .8rem, 1.1rem);
+.input-password-validators .password-validators li {
+  font-size: clamp(0.6rem, 0.8rem, 1.1rem);
   /* list-style-type:lower-greek; */
 }
 
@@ -67,7 +67,7 @@
   padding: 0.6rem 1rem;
   border-radius: 3px;
   width: 100%;
-  border:none;
+  border: none;
   transition: outline 0.4s ease-in-out;
 }
 .sign-up-body .signup-form-body .form-input-row input:focus {
@@ -77,11 +77,17 @@
   background-color: var(--primary-color);
   color: #fff;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-.form-submit-btn h3{
+.form-submit-btn h3 {
   font-weight: 500;
 }
 
+.errorMsg-container {
+  margin: 1rem 0;
+  background-color: rgba(220, 0, 0, 0.3);
+  padding: 0.7rem;
+  border-radius: 5px;
+}

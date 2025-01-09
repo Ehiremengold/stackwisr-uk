@@ -2,7 +2,8 @@
   display: flex;
   place-content: center;
   place-items: center;
-  height: 55vh;
+  margin-top: 10rem;
+  /* height: 55dvh; */
   /* border: 1px solid red; */
 }
 

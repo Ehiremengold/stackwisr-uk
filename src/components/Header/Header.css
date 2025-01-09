@@ -55,7 +55,8 @@ nav {
 }
 
 .center-nav-items {
-  flex: 1;
+  /* flex: 1; */
+  flex-shrink: 1;
   display: flex;
   justify-content: center;
   margin-right: 2rem;
@@ -68,7 +69,7 @@ nav {
 .center-nav-items,
 .right-nav-items {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   list-style-type: none;
   cursor: pointer;
   font-weight: 600;
@@ -192,4 +193,22 @@ nav {
 
 .nav-sign-in {
   padding: 0.4rem 1rem;
+}
+
+.authenticated {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.authenticated p{
+  flex-shrink: 0;
+}
+.authenticated button {
+  flex-shrink: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.6rem;
+}
+.authenticated button img {
+  width: 20px;
 }

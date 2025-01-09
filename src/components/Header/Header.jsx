@@ -8,11 +8,14 @@ import orangeMan from "../../assets/icons/orange-man.png";
 import telephone from "../../assets/icons/telephone.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCountries } from "../../features/countries/countriesSlice.js";
 import { getCareerpaths } from "../../features/careerpaths/careerpathSlice.js";
+import { logout } from "../../features/accounts/signin/signInSlice.js";
+import logoutIcon from "../../assets/icons/logout-btn.png";
 
 const Header = () => {
+  const { isAuthenticated, email } = useSelector((store) => store.signIn);
   const location = useLocation();
 
   const dispatch = useDispatch();
@@ -32,6 +35,10 @@ const Header = () => {
   useEffect(() => {
     setMenu(false);
   }, [location]);
+  
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   useEffect(() => {
     // Set body overflow based on the menu state
@@ -75,7 +82,7 @@ const Header = () => {
             </NavLink>
             <NavLink to="/advisory">
               <li>
-                <h4>Advisory & Consulting Services</h4>
+                <h4>Services</h4>
               </li>
             </NavLink>
             <NavLink to="/events">
@@ -101,20 +108,29 @@ const Header = () => {
             <img src={orangeMan} className="man-asset" alt="plane-icon" />
           )}
           <ul className="right-nav-items">
-            <div className="nav-tel-container">
+            {/* <div className="nav-tel-container">
               <img src={telephone} alt="telephone-icon" />
               <a href="tel:0333 772 0285">
                 <li>
                   <h4>0333 772 0285</h4>
                 </li>
               </a>
-            </div>
-            <a
-              href="/auth/login
+            </div> */}
+            {isAuthenticated ? (
+              <div className="authenticated">
+                <p>Hi, {email?.split("@")[0]}</p>
+                <button onClick={handleLogout}>
+                  <img src={logoutIcon} alt="" />
+                </button>
+              </div>
+            ) : (
+              <a
+                href="/auth/login
             "
-            >
-              <button className="nav-sign-in">Sign in</button>
-            </a>
+              >
+                <button className="nav-sign-in">Sign in</button>
+              </a>
+            )}
           </ul>
         </nav>
       </div>

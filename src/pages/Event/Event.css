@@ -30,7 +30,7 @@
   /* border: 1px solid purple; */
 }
 .event-section .wrapp {
-  overflow: hidden;
+  /* border: 1px solid red; */
   width: 60%;
   margin: 0 auto;
 }
@@ -72,6 +72,7 @@
 .right-one {
   z-index: 10;
   position: absolute;
+  overflow: hidden;
 }
 .left-one {
   bottom: -30px;

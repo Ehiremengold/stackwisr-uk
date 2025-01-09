@@ -1,8 +1,29 @@
 import { Link } from "react-router-dom";
 import "./SignIn.css";
 import { Helmet } from "react-helmet";
-
+import { useSelector, useDispatch } from "react-redux";
+import { signIn } from "../../features/accounts/signin/signInSlice";
+import { useNavigate } from "react-router-dom";
+import ButtonLoader from "../../components/ButtonLoader/ButtonLoader";
 const SignIn = () => {
+  const { isError, isLoading, isAuthenticated } = useSelector(
+    (store) => store.signIn
+  );
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const formDataObj = Object.fromEntries(formData);
+    dispatch(signIn(formDataObj));
+  };
+
+  // Redirect after successful login
+  if (isAuthenticated) {
+    navigate("/careerpaths");
+  }
+
   return (
     <>
       <Helmet>
@@ -15,19 +36,24 @@ const SignIn = () => {
       <section className="sign-in-body">
         <div className="login-form-body">
           <h2>SIGN IN</h2>
-          <form>
+          <form onSubmit={handleSignIn}>
             <div className="form-input-row">
               <label htmlFor="email">Email</label>
-              <input type="email" />
+              <input name="email" type="email" />
             </div>
 
             <div className="form-input-row">
               <label htmlFor="password">Password</label>
-              <input type="password" />
+              <input name="password" type="password" />
             </div>
-            <button disabled className="form-submit-btn">
-              <h3>LOGIN</h3>
+            <button className="form-submit-btn">
+              {isLoading ? <ButtonLoader /> : <h3>LOGIN</h3>}
             </button>
+            {isError && (
+              <p className="signin-error-message">
+                Login failed. Please try again.
+              </p>
+            )}
           </form>
           <p>
             Don&apos;t have an account?{" "}

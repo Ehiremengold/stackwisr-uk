@@ -6,14 +6,11 @@ const initialState = {
   isError: false,
   isLoading: false,
   isSuccess: false,
-  // isAuthenticated: false,
-  // accessToken: "",
-  // refreshToken: "",
-  // email: "",
+  errorMsg: "",
 };
 
-export const signUp = createAsyncThunk(
-  "auth/signup",
+export const createAccount = createAsyncThunk(
+  "auth/createAccount",
   async (formData, thunkAPI) => {
     try {
       const response = await axios.post(
@@ -33,27 +30,30 @@ export const signUp = createAsyncThunk(
   }
 );
 
-const signUpSlice = createSlice({
-  name: "signUp",
+const createAccountSlice = createSlice({
+  name: "createAccount",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(signUp.pending, (state) => {
+      .addCase(createAccount.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(signUp.fulfilled, (state, { payload }) => {
-        // const { email, access, refresh } = payload;
+      .addCase(createAccount.fulfilled, (state) => {
         state.isLoading = false;
         state.isSuccess = true;
-        // state.email = email;
-        // state.accessToken = access;
-        // state.refreshToken = refresh;
       })
-      .addCase(signUp.rejected, (state) => {
+      .addCase(createAccount.rejected, (state, { payload }) => {
+        state.isLoading = false;
         state.isError = true;
+        if (payload && payload.password) {
+          state.errorMsg = payload.password.join("\n");
+        } else if(payload && payload.email) {
+          state.errorMsg = payload.email;
+        }
+        // state.errorMsg = payload.join(", ");
       });
   },
 });
 
-export default signUpSlice.reducer;
+export default createAccountSlice.reducer;

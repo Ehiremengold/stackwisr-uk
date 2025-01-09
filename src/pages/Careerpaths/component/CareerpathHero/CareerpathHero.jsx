@@ -9,13 +9,10 @@ const CareerpathHero = () => {
     });
   };
   return (
-    <section className="careerpaths">
-      <div className="wrapper">
+    <section className="careerpaths-hero">
+      <div className="hero-overlay">
         <div className="career-paths-title">
-          <h1>
-            CAREER <br />
-            &nbsp;&nbsp;&nbsp;PATHS
-          </h1>
+          <h1>CAREER PATHS</h1>
         </div>
         <p>
           Our flexible programs are designed to fit your work schedule and
@@ -27,7 +24,6 @@ const CareerpathHero = () => {
             Get Started
           </button>
         </div>
-        <img src={careerPathsHero} alt="" />
       </div>
     </section>
   );
