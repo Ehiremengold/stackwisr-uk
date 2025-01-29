@@ -1,23 +1,10 @@
 .career-paths {
-  margin: 6rem 0;
-  overflow: hidden;
 }
 .career-paths .wrapper {
-  width: 85%;
+  width: 100%;
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .career-paths .wrapper {
-    width: 90%;
-  }
-}
-
-@media (max-width: 360px) {
-  .career-paths .wrapper {
-    width: 95%;
-  }
-}
 .career-paths .wrapper .career-paths .section-plane,
 .career-paths .section-plane-2 {
   position: absolute;
@@ -63,21 +50,28 @@
 
 .career-paths__cards {
   display: grid;
-  width: 80%;
+  width: 75%;
+  grid-template-columns: repeat(3, 1fr);
   place-content: center;
-  padding: 2rem;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  margin: 3rem auto;
 }
-
-@media (min-width: 1024px) {
+.line-clamp-1 {
+  line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+}
+@media (max-width: 960px) {
   .career-paths__cards {
-    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
   .career-paths__cards {
-    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

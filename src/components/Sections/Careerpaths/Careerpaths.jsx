@@ -47,7 +47,7 @@ const Careerpaths = () => {
                 return (
                   <div key={id} className="career-paths__card">
                     <img src={careerpathBg} alt="careerpath-bg" />
-                    <h3>{career_name}</h3>
+                    <h3 className="line-clamp-1">{career_name}</h3>
                     <p>{truncateText(description, 90)}</p>
                     <a href={`/careerpaths/${slug}`}>
                       <button className="more-btn">Learn more</button>
