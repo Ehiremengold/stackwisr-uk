@@ -8,7 +8,7 @@ import resourcesReducer from "./features/resources/resourcesSlice.js";
 import contactUsReducer from "./features/contactus/contactusSlice.js";
 import signInReducer from "./features/accounts/signin/signInSlice.js";
 import createAccountReducer from "./features/accounts/signup/createAccountSlice.js";
-import passwordResetReducer from "./features/accounts/passwordreset/passwordresetSlice.js";
+import forgotPasswordReducer from "././features/accounts/forgotpassword/forgotpassswordSlice.js";
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +21,6 @@ export const store = configureStore({
     contactUs: contactUsReducer,
     signIn: signInReducer,
     createAccount: createAccountReducer,
-    passwordReset: passwordResetReducer, // to test
+    forgotPassword: forgotPasswordReducer,
   },
 });

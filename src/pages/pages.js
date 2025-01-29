@@ -15,6 +15,8 @@ import NotFound from "./NotFound/NotFound.jsx";
 import SignIn from "./SignIn/SignIn.jsx";
 import SignUp from "./SignUp/SignUp.jsx";
 import Dashboard from "./Dashboard/Dashboard.jsx";
+import ForgotPassword from "./ForgotPassword/ForgotPassword.jsx";
+import ConfirmForgotPassword from "./ForgotPassword/ConfirmForgotPassword/ConfirmPassword.jsx";
 
 export {
   Home,
@@ -34,4 +36,6 @@ export {
   SignIn,
   SignUp,
   Dashboard,
+  ForgotPassword,
+  ConfirmForgotPassword
 };

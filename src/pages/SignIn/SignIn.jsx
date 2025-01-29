@@ -21,7 +21,9 @@ const SignIn = () => {
 
   // Redirect after successful login
   if (isAuthenticated) {
-    navigate("/careerpaths");
+    console.log("dashboard");
+
+    setTimeout(() => navigate("/dashboard"), 2000);
   }
 
   return (
@@ -36,6 +38,11 @@ const SignIn = () => {
       <section className="sign-in-body">
         <div className="login-form-body">
           <h2>SIGN IN</h2>
+          {isError && (
+            <p className="signin-error-message">
+              Login failed. Please Check Email/Password.
+            </p>
+          )}
           <form onSubmit={handleSignIn}>
             <div className="form-input-row">
               <label htmlFor="email">Email</label>
@@ -46,14 +53,12 @@ const SignIn = () => {
               <label htmlFor="password">Password</label>
               <input name="password" type="password" />
             </div>
+            <a href="/auth/forgot-password">
+              <p style={{ textAlign: "right" }}>Forgot Password?</p>
+            </a>
             <button className="form-submit-btn">
               {isLoading ? <ButtonLoader /> : <h3>LOGIN</h3>}
             </button>
-            {isError && (
-              <p className="signin-error-message">
-                Login failed. Please try again.
-              </p>
-            )}
           </form>
           <p>
             Don&apos;t have an account?{" "}

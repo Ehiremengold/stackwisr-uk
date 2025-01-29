@@ -19,6 +19,8 @@ import {
   SignIn,
   SignUp,
   Dashboard,
+  ForgotPassword,
+  ConfirmForgotPassword
 } from "./pages/pages";
 import PrivateRoute from "./PrivateRoute";
 
@@ -39,12 +41,26 @@ function App() {
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/blog/:slug" element={<BlogDetail />} />
           <Route exact path="/resources" element={<Resources />} />
-          <Route exact path="/dashboard" element={<PrivateRoute element={<Dashboard />} />} />
+          <Route
+            exact
+            path="/dashboard"
+            element={<PrivateRoute element={<Dashboard />} />}
+          />
           <Route exact path="/testimonies" element={<Testimonies />} />
           <Route exact path="/events" element={<Event />} />
           <Route exact path="/terms-of-service" element={<Terms />} />
           <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route exact path="/cookie-policy" element={<CookiePolicy />} />
+          <Route
+            exact
+            path="/auth/forgot-password"
+            element={<ForgotPassword />}
+          />
+          <Route
+            exact
+            path="/auth/forgot-password-confirm"
+            element={<ConfirmForgotPassword />}
+          />
           <Route exact path="/auth/login" element={<SignIn />} />
           <Route exact path="/auth/create-account" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />

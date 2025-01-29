@@ -6,15 +6,15 @@ const initialState = {
   isSuccess: false,
   isError: false,
   isLoading: false,
-  errorMsg: {},
+  errorMsg: [],
 };
 
 // sample data for this:
 // const sample_data = {
 //   "email": "user@example.com"
 // }
-export const passwordReset = createAsyncThunk(
-  "auth/passwordReset",
+export const forgotPassword = createAsyncThunk(
+  "auth/forgotPassword",
   async (formData, thunkAPI) => {
     try {
       const response = await axios.post(
@@ -39,8 +39,8 @@ export const passwordReset = createAsyncThunk(
 //   token: "def456",
 //   new_password: "NewStrongPassword123!",
 // };
-export const passwordResetConfirm = createAsyncThunk(
-  "auth/passwordResetConfirm",
+export const forgotPasswordConfirm = createAsyncThunk(
+  "auth/forgotPasswordConfirm",
   async (formData, thunkAPI) => {
     try {
       const response = await axios.post(
@@ -59,37 +59,37 @@ export const passwordResetConfirm = createAsyncThunk(
   }
 );
 
-const passwordResetSlice = createSlice({
+const forgotPasswordSlice = createSlice({
   name: "passwordReset",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(passwordReset.pending, (state) => {
+      .addCase(forgotPassword.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(passwordReset.fulfilled, (state) => {
+      .addCase(forgotPassword.fulfilled, (state) => {
         state.isSuccess = true;
         state.isLoading = false;
       })
-      .addCase(passwordReset.rejected, (state) => {
+      .addCase(forgotPassword.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.isError = true;
-        state.errorMsg = state.payload;
+        state.errorMsg = payload.email[0];
       })
-      .addCase(passwordResetConfirm.pending, (state) => {
+      .addCase(forgotPasswordConfirm.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(passwordResetConfirm.fulfilled, (state) => {
+      .addCase(forgotPasswordConfirm.fulfilled, (state) => {
         state.isSuccess = true;
         state.isLoading = false;
       })
-      .addCase(passwordResetConfirm.rejected, (state) => {
+      .addCase(forgotPasswordConfirm.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.isError = true;
-        state.errorMsg = state.payload;
+        state.errorMsg = payload.new_password.join(' ');
       });
   },
 });
 
-export default passwordResetSlice.reducer;
+export default forgotPasswordSlice.reducer;

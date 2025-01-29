@@ -62,36 +62,25 @@
 }
 
 .career-paths__cards {
+  display: grid;
   width: 80%;
   place-content: center;
-  margin: 0 auto;
   padding: 2rem;
-  /* border: 1px solid red; */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.5rem;
-  flex-wrap: wrap;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+  .career-paths__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
   .career-paths__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 1182px) {
-  .career-paths__cards {
-    width: 85%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 864px) {
-  .career-paths__cards {
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
 .career-paths__card {
   box-shadow: 2px 3px 4px 5px rgba(96, 96, 96, 0.3);
   border-radius: 10px;

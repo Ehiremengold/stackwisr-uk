@@ -37,6 +37,11 @@ const SignUp = () => {
       <section className="sign-up-body">
         <div className="signup-form-body">
           <h2>SIGN UP</h2>
+          {isError && (
+            <div className="errorMsg-container">
+              <p>{errorMsg}</p>
+            </div>
+          )}
           <form onSubmit={handleSignUp}>
             <div className="form-input-row">
               <label htmlFor="email">Email</label>
@@ -69,11 +74,6 @@ const SignUp = () => {
             <button className="form-submit-btn">
               {isLoading ? <ButtonLoader /> : <h3>CREATE ACCOUNT</h3>}
             </button>
-            {isError && (
-              <div className="errorMsg-container">
-                <p>{errorMsg}</p>
-              </div>
-            )}
           </form>
           <p>
             Already have an account? <Link to="/auth/login">Sign in</Link>
